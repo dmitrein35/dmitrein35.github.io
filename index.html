@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій перший сайт на Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .hero-section { padding: 60px 0; background: #e9ecef; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Мій Проєкт</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#">Головна</a>
+                <a class="nav-link" href="#">Про мене</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Привіт! Це мій перший сайт</h1>
+            <p class="lead">Я вчуся верстати за допомогою блочної системи Bootstrap.</p>
+            <a href="#" class="btn btn-primary btn-lg">Дізнатися більше</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Блок №1</h5>
+                        <p class="card-text">Це приклад того, як працюють колонки у Bootstrap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title">Блок №2 (Центр)</h5>
+                        <p class="card-text">Тут можна розмістити важливу інформацію.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Блок №3</h5>
+                        <p class="card-text">Всього таких блоків у рядку може бути до 12 одиниць сітки.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2026 Створено мною для навчання</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
