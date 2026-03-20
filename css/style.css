@@ -73,18 +73,19 @@ body {
 }
 
 .vision-mission {
-    background: black url('../images/Vision.png') no-repeat center center;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('../images/Vision.png') no-repeat center center;
     background-size: cover;
     padding: 100px 0;
     min-height: 800px;
-    color: white;
+    color: #4b6352;
 }
 
 .v-m-row {
     min-height: 350px;
 }
 
-.vision-mission .section-title { color: white; }
+.vision-mission .section-title { color: #3d5045; }
 .section-title { font-weight: bold; font-size: 34px; }
 .dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; }
 .section-text { font-size: 18px; line-height: 1.6; max-width: 500px; }
