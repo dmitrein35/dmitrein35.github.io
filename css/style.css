@@ -73,19 +73,47 @@ body {
 }
 
 .vision-mission {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Робимо фон трохи темнішим (світло-сірим) */
     padding: 100px 0;
     color: #4b6352;
 }
 
 .v-m-row {
     min-height: 300px;
+    margin-bottom: 80px; /* Додаємо відступ між блоками Vision і Mission */
 }
 
 .vision-mission .section-title { color: #4b6352; }
 .section-title { font-weight: bold; font-size: 34px; }
 .dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; }
-.section-text { font-size: 18px; line-height: 1.6; max-width: 500px; color: #4b6352; }
+
+.section-text { 
+    font-size: 18px; 
+    line-height: 1.6; 
+    max-width: 500px; 
+    color: #4b6352; 
+}
+
+/* Центруємо текст Vision */
+.vision-mission .row.v-m-row:first-of-type div[class^="col-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Центруємо текст Mission */
+.vision-mission .row.v-m-row:last-of-type div[class^="col-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Щоб max-width тексту працював при flex- центруванні */
+.vision-mission .section-text {
+    margin: 0 auto;
+}
 
 .footer-dark {
     padding: 0;
