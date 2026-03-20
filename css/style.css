@@ -55,12 +55,12 @@ body {
 
 .products-bar {
     background-color: #ffffff;
-    padding: 25px 0;
+    padding: 0; /* Прибрали відступи, щоб картинка була впритул */
     border-bottom: 1px solid #eeeeee;
 }
 
 .products-line-img {
-    max-height: 55px;
+    height: 70px; /* Збільшили висоту, щоб іконки були чіткими */
     width: auto;
 }
 
@@ -170,4 +170,5 @@ body {
     .text-right { text-align: left; }
     .offset-md-1 { margin-left: 0; }
     .vm-image-wrapper, .vm-video-wrapper { margin-top: 30px; }
+    .products-line-img { height: 50px; } /* На мобільних трохи менше */
 }
