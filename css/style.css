@@ -52,13 +52,20 @@ body {
 }
 
 .crops-section {
-    background-color: #fff;
+    background-color: #ffffff;
     border-bottom: 1px solid #eee;
 }
 
+.crop-item {
+    flex: 1;
+    padding: 10px;
+}
+
 .crop-item img {
-    height: 40px;
+    height: 50px;
     width: auto;
+    max-width: 60px;
+    object-fit: contain;
     margin-bottom: 10px;
 }
 
@@ -66,6 +73,7 @@ body {
     font-size: 12px;
     color: #4b6352;
     margin: 0;
+    font-weight: 500;
 }
 
 .vision-mission {
