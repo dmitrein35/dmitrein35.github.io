@@ -53,15 +53,18 @@ body {
     font-size: 14px;
 }
 
+/* Секція іконок під колосками */
 .products-bar {
     background-color: #ffffff;
-    padding: 0; /* Прибрали відступи, щоб картинка була впритул */
+    padding: 40px 0; /* Збільшили відступи для повітря */
     border-bottom: 1px solid #eeeeee;
 }
 
 .products-line-img {
-    height: 70px; /* Збільшили висоту, щоб іконки були чіткими */
+    height: 120px; /* Суттєво збільшили висоту */
     width: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .vision-mission {
@@ -170,5 +173,5 @@ body {
     .text-right { text-align: left; }
     .offset-md-1 { margin-left: 0; }
     .vm-image-wrapper, .vm-video-wrapper { margin-top: 30px; }
-    .products-line-img { height: 50px; } /* На мобільних трохи менше */
+    .products-line-img { height: 80px; } /* На мобільних теж збільшено */
 }
