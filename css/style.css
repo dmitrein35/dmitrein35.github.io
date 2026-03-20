@@ -51,7 +51,22 @@ body {
     font-weight: bold;
 }
 
-.products-bar { background-color: #ffffff; padding: 30px 0; }
+.crops-section {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.crop-item img {
+    height: 40px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.crop-item p {
+    font-size: 12px;
+    color: #4b6352;
+    margin: 0;
+}
 
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
