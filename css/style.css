@@ -120,12 +120,17 @@ body {
     color: #fff; 
 }
 
+.footer-top-content {
+    padding: 25px 0;
+}
+
 .footer-links a {
     color: #fff;
     font-size: 11px;
     margin-right: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .social-box {
@@ -149,10 +154,9 @@ body {
 .copyright-bar {
     background-color: #374147;
     padding: 15px 0;
-    font-size: 12px;
+    font-size: 11px;
     color: #8a9196;
     text-transform: uppercase;
-    text-align: center;
 }
 
 @media (max-width: 768px) {
