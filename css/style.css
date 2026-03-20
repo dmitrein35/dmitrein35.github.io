@@ -72,19 +72,18 @@ body {
     padding: 30px 0;
 }
 
+/* Чиста секція без фонового зображення */
 .vision-mission {
-    background: black url('../images/Vision.png') no-repeat center center;
-    background-size: cover;
+    background-color: #ffffff;
     padding: 100px 0;
-    min-height: 800px;
-    color: white;
+    color: #4b6352;
 }
 
 .v-m-row {
-    min-height: 350px;
+    min-height: 300px;
 }
 
-.vision-mission .section-title { color: white; }
+.vision-mission .section-title { color: #4b6352; }
 .section-title { font-weight: bold; font-size: 34px; }
 .dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; }
 .section-text { font-size: 18px; line-height: 1.6; max-width: 500px; }
@@ -131,9 +130,4 @@ body {
     line-height: 28px;
     margin-left: 10px;
     font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .vision-mission { background-size: contain; background-position: top; }
-    .section-text { max-width: 100%; }
 }
