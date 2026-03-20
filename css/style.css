@@ -6,7 +6,7 @@
 body {
     font-family: 'RobotoSlab', serif;
     margin: 0;
-    color: #4b6352;
+    color: #333333;
 }
 
 .hero-wrapper {
@@ -40,7 +40,7 @@ body {
 }
 
 .banner { flex-grow: 1; display: flex; align-items: center; }
-.banner-title { font-size: 48px; font-weight: bold; }
+.banner-title { font-size: 48px; font-weight: bold; color: #4b6352; }
 
 .btn-read-more {
     display: inline-block;
@@ -56,24 +56,42 @@ body {
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
-    padding: 100px 0;
-    color: #4b6352;
-    min-height: 700px;
+    padding: 120px 0;
+    min-height: 800px;
 }
 
-.v-m-row { margin-bottom: 50px; }
-.section-title { font-weight: bold; font-size: 34px; margin-bottom: 5px; color: #4b6352; }
-.dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; margin-bottom: 15px; }
-.section-text { font-size: 18px; line-height: 1.6; }
+.v-m-row { margin-bottom: 80px; }
+
+.section-title { 
+    font-weight: bold; 
+    font-size: 42px; 
+    margin-bottom: 0px; 
+    color: #3d525a; 
+}
+
+.dots { 
+    color: #556b2f; 
+    letter-spacing: 4px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    font-size: 24px; 
+}
+
+.section-text { 
+    font-size: 19px; 
+    line-height: 1.6; 
+    color: #555555; 
+}
+
 .text-right { text-align: right; }
 
 .vm-main-img {
     max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
-.shadow { box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+.shadow { box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
 
 .footer-dark { padding: 0; }
 .footer-top-block { background-color: #2b3339; padding: 20px 0; }
@@ -85,6 +103,6 @@ body {
 @media (max-width: 768px) {
     .text-right { text-align: left; }
     .offset-md-1 { margin-left: 0; }
-    .vm-main-img { margin-top: 20px; }
-    .vision-mission { background-size: cover; }
+    .vm-main-img { margin-top: 30px; }
+    .vision-mission { background-size: cover; padding: 60px 0; }
 }
