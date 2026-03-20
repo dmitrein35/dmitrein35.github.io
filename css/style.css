@@ -108,6 +108,22 @@ body {
     height: auto;
 }
 
+.vm-video-wrapper {
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.vm-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: auto;
+    cursor: pointer;
+}
+
 .main-activities {
     background-color: #ebebeb;
     padding: 80px 0;
@@ -153,5 +169,5 @@ body {
 @media (max-width: 768px) {
     .text-right { text-align: left; }
     .offset-md-1 { margin-left: 0; }
-    .vm-image-wrapper { margin-top: 30px; }
+    .vm-image-wrapper, .vm-video-wrapper { margin-top: 30px; }
 }
