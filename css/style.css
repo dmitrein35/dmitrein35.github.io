@@ -70,31 +70,24 @@ body {
 .products-bar {
     background-color: #ffffff;
     padding: 30px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.products-line-img {
-    max-width: 100%;
-    height: auto;
 }
 
 .vision-mission {
-    background-color: #d1d5d2;
-    padding: 80px 0;
-    background-image: url('../images/Union.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    background: black url('../images/Vision.png') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    min-height: 800px;
+    color: white;
 }
 
-.section-title { font-weight: bold; font-size: 34px; color: #3d5045; }
+.v-m-row {
+    min-height: 350px;
+}
+
+.vision-mission .section-title { color: white; }
+.section-title { font-weight: bold; font-size: 34px; }
 .dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; }
-.section-text { font-size: 16px; line-height: 1.6; }
-
-.custom-img { 
-    border-radius: 4px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-}
+.section-text { font-size: 18px; line-height: 1.6; max-width: 500px; }
 
 .footer-dark {
     padding: 0;
@@ -141,9 +134,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .banner-title { font-size: 28px; }
-    .main-menu { flex-wrap: wrap; justify-content: center; }
-    .main-menu a { margin: 5px 10px; }
-    .footer-links { text-align: center; margin-bottom: 15px; }
-    .social-box { justify-content: center; }
+    .vision-mission { background-size: contain; background-position: top; }
+    .section-text { max-width: 100%; }
 }
