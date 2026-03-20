@@ -73,62 +73,51 @@ body {
 }
 
 .vision-mission {
-    background: #f2f2f2 url('../images/Union.png') no-repeat center center;
+    background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
     padding: 120px 0;
     color: #4b6352;
-    position: relative;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .v-m-row {
     margin-bottom: 60px;
 }
 
-.vision-mission .section-title { color: #4b6352; }
-.section-title { font-weight: bold; font-size: 34px; }
-.dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; }
-.section-text { font-size: 18px; line-height: 1.6; max-width: 600px; margin: 0 auto; color: #4b6352; }
-
-.footer-dark {
-    padding: 0;
-}
-
-.footer-top-block {
-    background-color: #2b3339;
-    padding: 20px 0;
-}
-
-.footer-bottom-block {
-    background-color: #374147;
-    padding: 15px 0;
-    font-size: 11px;
-    color: #8a9196;
-    text-transform: uppercase;
-}
-
-.footer-links a {
-    color: #fff;
-    font-size: 11px;
-    margin-right: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
+.vision-mission .section-title {
     font-weight: bold;
+    font-size: 34px;
+    margin-bottom: 5px;
+    color: #4b6352;
 }
 
-.social-box {
-    display: flex;
-    justify-content: flex-end;
+.dots {
+    color: #82a43a;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.social-circle {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #7c945b;
-    border-radius: 50%;
-    color: #7c945b !important;
-    text-align: center;
-    line-height: 28px;
-    margin-left: 10px;
-    font-size: 14px;
+.section-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.footer-dark { padding: 0; }
+.footer-top-block { background-color: #2b3339; padding: 20px 0; }
+.footer-bottom-block { background-color: #374147; padding: 15px 0; font-size: 11px; color: #8a9196; text-transform: uppercase; }
+.footer-links a { color: #fff; font-size: 11px; margin-right: 15px; text-decoration: none; text-transform: uppercase; font-weight: bold; }
+.social-box { display: flex; justify-content: flex-end; }
+.social-circle { display: inline-block; width: 30px; height: 30px; border: 1px solid #7c945b; border-radius: 50%; color: #7c945b !important; text-align: center; line-height: 28px; margin-left: 10px; font-size: 14px; }
+
+@media (max-width: 768px) {
+    .text-right { text-align: left; }
+    .offset-md-6 { margin-left: 0; }
 }
