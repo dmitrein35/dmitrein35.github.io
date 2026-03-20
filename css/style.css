@@ -80,11 +80,18 @@ body {
 
 .vision-mission {
     background-color: #f8f9fa;
-    padding: 80px 0;
+    padding: 100px 0;
+    background-image: url('../images/Union.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
 }
 
+.vision-row { margin-bottom: 100px; }
 .section-title { font-weight: bold; font-size: 34px; color: #3d5045; }
-.dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; }
+.dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; margin-bottom: 15px; }
 .section-text { font-size: 16px; line-height: 1.6; }
 
 .custom-img { 
@@ -142,4 +149,6 @@ body {
     .main-menu a { margin: 5px 10px; }
     .footer-links { text-align: center; margin-bottom: 15px; }
     .social-box { justify-content: center; }
+    .vision-mission { background-size: cover; padding: 50px 0; }
+    .vision-row { margin-bottom: 50px; }
 }
