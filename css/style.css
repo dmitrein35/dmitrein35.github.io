@@ -27,25 +27,9 @@ body {
     padding-bottom: 2px;
 }
 
-.search-label { 
-    font-size: 20px; 
-    color: #4b6352; 
-    margin-right: 15px; 
-}
-
-.search-input-line {
-    border: none;
-    background: transparent;
-    outline: none;
-    width: 250px;
-    font-size: 18px;
-}
-
-.search-icon-main { 
-    color: #4b6352; 
-    font-size: 20px;
-    cursor: pointer; 
-}
+.search-label { font-size: 20px; color: #4b6352; margin-right: 15px; }
+.search-input-line { border: none; background: transparent; outline: none; width: 250px; font-size: 18px; }
+.search-icon-main { color: #4b6352; font-size: 20px; cursor: pointer; }
 
 .main-menu a {
     text-decoration: none;
@@ -67,15 +51,12 @@ body {
     font-weight: bold;
 }
 
-.products-bar {
-    background-color: #ffffff;
-    padding: 30px 0;
-}
+.products-bar { background-color: #ffffff; padding: 30px 0; }
 
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
-    padding: 120px 0;
+    padding: 100px 0;
     color: #4b6352;
     min-height: 650px;
     display: flex;
@@ -83,31 +64,15 @@ body {
     justify-content: center;
 }
 
-.v-m-row {
-    margin-bottom: 60px;
-}
+.v-m-row { margin-bottom: 60px; }
+.vision-mission .section-title { font-weight: bold; font-size: 34px; margin-bottom: 5px; color: #4b6352; }
+.dots { color: #82a43a; letter-spacing: 4px; font-weight: bold; margin-bottom: 15px; }
+.section-text { font-size: 18px; line-height: 1.6; }
+.text-right { text-align: right; }
 
-.vision-mission .section-title {
-    font-weight: bold;
-    font-size: 34px;
-    margin-bottom: 5px;
-    color: #4b6352;
-}
-
-.dots {
-    color: #82a43a;
-    letter-spacing: 4px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.section-text {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.text-right {
-    text-align: right;
+.vm-icon {
+    max-width: 120px;
+    height: auto;
 }
 
 .footer-dark { padding: 0; }
@@ -119,5 +84,6 @@ body {
 
 @media (max-width: 768px) {
     .text-right { text-align: left; }
-    .offset-md-6 { margin-left: 0; }
+    .offset-md-4, .offset-md-1 { margin-left: 0; }
+    .vision-mission { background-size: cover; }
 }
