@@ -67,6 +67,17 @@ body {
     font-weight: bold;
 }
 
+.products-bar {
+    background-color: #ffffff;
+    padding: 30px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.products-line-img {
+    max-width: 100%;
+    height: auto;
+}
+
 .vision-mission {
     background-color: #f8f9fa;
     padding: 80px 0;
@@ -137,7 +148,6 @@ body {
     color: #8a9a90;
 }
 
-/* Мобільна адаптивність */
 @media (max-width: 768px) {
     .banner-title { font-size: 28px; }
     .main-menu { flex-wrap: wrap; justify-content: center; }
