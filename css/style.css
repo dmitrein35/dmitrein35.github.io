@@ -223,19 +223,34 @@ body.pink-bg {
 }
 
 .breeding-section {
-    background: url('../images/Rectangle2.png') no-repeat center center;
-    background-size: cover;
-    padding: 70px 0;
-    margin: 50px 0;
+    padding: 60px 0;
+    margin: 40px 0;
+}
+
+.breeding-card {
+    background-color: #ffffff;
+    padding: 60px 45px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border-radius: 4px;
 }
 
 .program-card h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
-    border-bottom: 1.5px solid #3d525a;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    min-height: 65px;
+    color: #3d525a;
+    border-bottom: 2px solid #3d525a;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    min-height: 70px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.program-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 0;
 }
 
 .tomato-grid { 
@@ -338,4 +353,6 @@ body.pink-bg {
     .footer-links a { display: block; margin-bottom: 10px; }
     .products-line-img { height: 70px; }
     .banner-title { font-size: 30px; }
+    .breeding-card { padding: 30px 20px; }
+    .program-card { margin-bottom: 40px; }
 }
