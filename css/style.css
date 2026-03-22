@@ -3,7 +3,7 @@
     src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
 }
 
-* {
+*:not(i):not([class*="fa-"]) {
     font-family: 'RobotoSlab', serif !important;
 }
 
