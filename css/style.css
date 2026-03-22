@@ -10,7 +10,11 @@
 body {
     margin: 0;
     color: #555555;
-    background-color: #fff;
+    background-color: #ffffff;
+}
+
+body.pink-bg {
+    background-color: #fdf5f5 !important;
 }
 
 .container {
