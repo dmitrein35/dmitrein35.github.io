@@ -1,12 +1,8 @@
-/* --- 1. ПІДКЛЮЧЕННЯ ШРИФТУ ТА БАЗОВІ СТИЛІ --- */
 @font-face {
     font-family: 'RobotoSlab';
-    src: url('../fonts/RobotoSlab.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
 }
 
-/* Застосовуємо шрифт до всього сайту */
 *:not(i):not([class*="fa-"]) {
     font-family: 'RobotoSlab', serif !important;
 }
@@ -17,11 +13,14 @@ body {
     background-color: #ffffff;
 }
 
+body.pink-bg {
+    background-color: #fdf5f5 !important;
+}
+
 .container {
     max-width: 1140px;
 }
 
-/* --- 2. HEADER (ШАПКА) --- */
 .header-section { 
     background: transparent !important; 
     position: relative; 
@@ -30,12 +29,6 @@ body {
 
 .main-logo { 
     height: 80px; 
-}
-
-.nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 }
 
 .search-field {
@@ -79,11 +72,10 @@ body {
     color: #6a8d32; 
 }
 
-/* --- 3. HERO BANNER (ЗБІЛЬШЕНИЙ ТА КОЛЬОРОВИЙ) --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
-    min-height: 650px; /* Збільшена висота як ти просив */
+    min-height: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -95,42 +87,21 @@ body {
 }
 
 .banner-title { 
-    font-size: 44px; 
+    font-size: 40px; 
     font-weight: bold; 
-    color: #645646; /* Колір зі скріншоту */
-    margin-bottom: 25px;
+    color: #4b6352; 
 }
 
 .btn-read-more {
     display: inline-block;
     background-color: #6a8d32;
     color: white !important;
-    padding: 12px 35px;
+    padding: 10px 30px;
     text-decoration: none !important;
     font-weight: bold;
     font-size: 14px;
-    transition: 0.3s;
 }
 
-.btn-read-more:hover {
-    background-color: #4b6352;
-}
-
-/* --- 4. PRODUCTS BAR (ЛІНІЯ ПРОДУКТІВ) --- */
-.products-bar {
-    background-color: #ffffff;
-    padding: 40px 0;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.products-line-img { 
-    height: 120px; 
-    width: auto; 
-    display: block; 
-    margin: 0 auto; 
-}
-
-/* --- 5. VISION & MISSION (ВИПРАВЛЕНЕ ВИРІВНЮВАННЯ) --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
@@ -168,13 +139,11 @@ body {
 .vm-image-wrapper, .vm-video-wrapper {
     display: inline-block;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-    position: relative;
 }
 
 .vm-main-img { 
     max-width: 100%; 
     height: auto; 
-    display: block;
 }
 
 .vm-play-button {
@@ -186,7 +155,6 @@ body {
     cursor: pointer;
 }
 
-/* --- 6. MAIN ACTIVITIES --- */
 .main-activities { 
     background-color: #ebebeb; 
     padding: 80px 0; 
@@ -222,16 +190,83 @@ body {
     font-size: 14px; 
 }
 
-/* --- 7. TOMATOES / PRODUCTS GRID (ДОДАТКОВІ СТИЛІ) --- */
+.products-bar {
+    background-color: #ffffff;
+    padding: 40px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.products-line-img { 
+    height: 120px; 
+    width: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.tomato-banner-img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.red-accent-row {
+    border-left: 6px solid #e34e4e;
+    padding: 10px 25px;
+    margin: 35px 0;
+}
+
+.accent-text { 
+    font-size: 18px; 
+    line-height: 1.5; 
+    color: #3d525a; 
+    margin-bottom: 0; 
+}
+
+.breeding-section {
+    padding: 60px 0;
+    margin: 40px 0;
+}
+
+.breeding-card {
+    background-color: #ffffff;
+    padding: 60px 45px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border-radius: 4px;
+}
+
+.program-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3d525a;
+    border-bottom: 2px solid #3d525a;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    min-height: 70px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.program-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 0;
+}
+
 .tomato-grid { 
     margin-top: 60px; 
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .tomato-item { 
     margin-bottom: 45px; 
     transition: 0.3s; 
+}
+
+.tomato-item:hover { 
+    transform: translateY(-8px); 
 }
 
 .tomato-item img { 
@@ -244,9 +279,14 @@ body {
     color: #6a8d32; 
     font-weight: bold; 
     font-size: 17px; 
+    margin-bottom: 4px; 
 }
 
-/* --- 8. FOOTER --- */
+.tomato-type { 
+    font-size: 13px; 
+    color: #888; 
+}
+
 .footer-dark { 
     padding: 0; 
     width: 100%; 
@@ -302,18 +342,17 @@ body {
     color: #fff !important; 
 }
 
-/* --- 9. АДАПТИВНІСТЬ --- */
 @media (max-width: 992px) {
-    .banner-title { font-size: 32px; }
-    .hero-wrapper { min-height: 500px; }
+    .tomato-name { font-size: 15px; }
 }
 
 @media (max-width: 768px) {
-    .nav-container { align-items: center; text-align: center; }
-    .main-menu { flex-wrap: wrap; justify-content: center; margin-top: 15px; }
-    .main-menu a { margin: 5px 10px; }
-    .text-right, .text-left { text-align: center !important; }
-    .social-box { justify-content: center; margin-top: 20px; }
-    .footer-links { text-align: center; margin-bottom: 20px; }
-    .v-m-row { margin-bottom: 40px; }
+    .text-right { text-align: left !important; }
+    .social-box { justify-content: flex-start; margin-top: 20px; }
+    .footer-links { margin-bottom: 20px; display: block; }
+    .footer-links a { display: block; margin-bottom: 10px; }
+    .products-line-img { height: 70px; }
+    .banner-title { font-size: 30px; }
+    .breeding-card { padding: 30px 20px; }
+    .program-card { margin-bottom: 40px; }
 }
