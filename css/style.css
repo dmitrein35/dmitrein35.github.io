@@ -91,7 +91,7 @@ body.pink-bg {
     font-size: 52px; 
     font-weight: bold; 
     color: #4b6352; 
-    line-height: 1; /* Змінено з 1.2, щоб було в один рядок */
+    line-height: 1; 
 }
 
 .btn-read-more {
@@ -230,6 +230,25 @@ body.pink-bg {
     margin-bottom: 0; 
 }
 
+.white-content-box {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.white-content-box .program-card h3 {
+    color: #3d525a;
+    border-bottom: 1.5px solid #3d525a;
+}
+
+.white-content-box .program-card p {
+    color: #555555;
+}
+
+.text-white-on-bg {
+    color: inherit !important;
+}
+
 .breeding-section {
     padding: 80px 0;
     margin: 50px 0;
@@ -344,6 +363,7 @@ body.pink-bg {
     line-height: 38px; 
     transition: 0.3s;
     font-size: 18px;
+    box-shadow: none !important; /* Прибрано тінь */
 }
 
 .social-circle:hover { 
@@ -352,7 +372,7 @@ body.pink-bg {
 }
 
 @media (max-width: 992px) {
-    .banner-title { font-size: 38px; } /* Зменшено для мобільних, щоб не розривало рядок */
+    .banner-title { font-size: 38px; }
     .section-title { font-size: 34px; }
 }
 
@@ -362,7 +382,7 @@ body.pink-bg {
     .footer-links { margin-bottom: 25px; display: block; }
     .footer-links a { display: block; margin-bottom: 12px; }
     .products-line-img { height: 100px; }
-    .banner-title { font-size: 28px; } /* Ще менше для зовсім малих екранів */
+    .banner-title { font-size: 28px; }
     .hero-wrapper { min-height: 500px; }
     .breeding-card { padding: 40px 25px; }
 }
