@@ -1,38 +1,96 @@
-/* --- ШРИФТ РОБОТО --- */
+/* --- 1. ПІДКЛЮЧЕННЯ ШРИФТУ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 
-/* Пригнічуємо RobotoSlab для іконок примусово */
-body, html, p, h1, h2, h3, h4, span, a, input {
+/* --- 2. ЗАГАЛЬНІ НАЛАШТУВАННЯ --- */
+/* Застосовуємо шрифт до всього, крім іконок */
+body, html, p, h1, h2, h3, h4, span, a, input, div {
     font-family: 'RobotoSlab', serif !important;
 }
 
-/* ВИПРАВЛЕННЯ: додаємо псевдоелементи :before, де зазвичай живуть іконки */
-.fas, .fab, .fa, .far, .fas::before, .fab::before {
+/* КРИТИЧНЕ ВИПРАВЛЕННЯ: Повертаємо іконкам їхній рідний шрифт */
+/* Додаємо селектори для всіх типів іконок FontAwesome */
+.fas, .fab, .fa, .far, 
+.fas::before, .fab::before, .fa::before, .far::before {
     font-family: "Font Awesome 5 Free" !important; 
     font-style: normal !important;
     font-weight: 900 !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    /* Скидаємо Roboto Slab саме для цих елементів */
     font-variant: normal !important;
     text-transform: none !important;
-    line-height: 1 !important;
-    display: inline-block !important;
 }
 
-/* Решта ваших стилів для кружечків... */
+body { margin: 0; padding: 0; background: #fff; }
+
+/* --- 3. HERO СЕКЦІЯ --- */
+.hero-wrapper {
+    background: url('../images/bg.png') no-repeat center center;
+    background-size: cover;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.header-section { background: transparent !important; }
+.main-logo { height: 75px; }
+.search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
+.search-input-line { border: none; outline: none; background: transparent; width: 150px; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; text-transform: uppercase; }
+
+.hero-content { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+.banner-title { font-size: 48px; font-weight: bold; color: #645646; }
+.btn-read-more { background: #7c945b; color: white !important; padding: 12px 35px; font-weight: bold; text-decoration: none !important; display: inline-block; }
+
+/* --- 4. ПРОДУКТОВИЙ БАР (Іконки насіння) --- */
+.products-image-bar { border-bottom: 1px solid #eee; }
+.products-image-bar img { max-height: 50px; margin-bottom: 10px; }
+.products-image-bar span { font-size: 12px; color: #4b6352; display: block; }
+
+/* --- 5. VISION & MISSION --- */
+.mb-100 { margin-bottom: 100px; }
+.vm-title { font-size: 42px; font-weight: bold; color: #3d525a; }
+.vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; }
+.vm-text { font-size: 18px; color: #555; line-height: 1.6; }
+.vm-photo { width: 100%; height: 400px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+/* --- 6. ВИРІВНЮВАННЯ ФОТО (Activities) --- */
+.img-fixed-height {
+    height: 180px;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.img-fixed-height img {
+    max-height: 100%;
+    width: auto;
+}
+.activity-name { font-size: 22px; font-weight: bold; color: #6a8d32; text-transform: uppercase; }
+
+/* --- 7. ФУТЕР ТА КРУЖЕЧКИ --- */
+.main-footer { background-color: #2b3339; color: #fff; padding: 50px 0 20px; }
+.footer-links a { color: #fff; font-size: 12px; margin-right: 15px; text-decoration: none !important; font-weight: bold; }
+
+.footer-socials { display: flex; gap: 10px; justify-content: center; }
+
 .social-circle {
-    display: inline-flex; /* змінено для кращого центрування */
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid #7c945b;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #7c945b; /* Зелений контур кружечка */
     border-radius: 50%;
     color: #7c945b !important;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    background: transparent;
 }
 .social-circle:hover {
     background-color: #7c945b;
     color: #fff !important;
 }
+
+.footer-copy { font-size: 11px; color: #666; border-top: 1px solid #333; padding-top: 20px; margin-top: 30px; }
