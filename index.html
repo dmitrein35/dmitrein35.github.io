@@ -10,18 +10,21 @@
 </head>
 <body>
 
-<header class="header-section py-3">
-    <div class="container d-flex align-items-center justify-content-between">
+<header class="header-section">
+    <div class="container d-flex align-items-center justify-content-between py-3">
         <div class="logo-box">
-            <a href="index.html"><img src="images/logo.png" alt="Logo" class="main-logo"></a>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
+            </a>
         </div>
+
         <div class="nav-container d-flex flex-column align-items-end">
             <div class="search-field mb-2">
                 <span class="search-label">SEARCH</span>
                 <input type="text" class="search-input-line">
                 <i class="fas fa-search search-icon-main"></i>
             </div>
-            <nav class="main-menu">
+            <nav class="main-menu d-flex">
                 <a href="index.html">HOME</a>
                 <a href="#">COMPANY PROFILE</a>
                 <a href="tomato.html">PRODUCTS</a>
@@ -42,15 +45,15 @@
     </div>
 </section>
 
-<div class="products-bar py-4 border-bottom">
+<div class="products-bar py-4 border-bottom shadow-sm">
     <div class="container">
-        <div class="row text-center">
-            <div class="col"><img src="images/seed1.png" alt="seed"></div>
-            <div class="col"><img src="images/seed2.png" alt="seed"></div>
-            <div class="col"><img src="images/seed3.png" alt="seed"></div>
-            <div class="col"><img src="images/seed4.png" alt="seed"></div>
-            <div class="col"><img src="images/seed5.png" alt="seed"></div>
-            <div class="col"><img src="images/seed6.png" alt="seed"></div>
+        <div class="row text-center align-items-center">
+            <div class="col"><img src="images/seed1.png" alt="Wheat" class="img-fluid"></div>
+            <div class="col"><img src="images/seed2.png" alt="Confection Watermelon" class="img-fluid"></div>
+            <div class="col"><img src="images/seed3.png" alt="Clover" class="img-fluid"></div>
+            <div class="col"><img src="images/seed4.png" alt="Sunflower" class="img-fluid"></div>
+            <div class="col"><img src="images/seed5.png" alt="Tomato" class="img-fluid"></div>
+            <div class="col"><img src="images/seed6.png" alt="Eggplant" class="img-fluid"></div>
         </div>
     </div>
 </div>
@@ -61,31 +64,50 @@
             <div class="col-md-5 offset-md-1">
                 <h2 class="section-title">Vision</h2>
                 <div class="dots">*****</div>
-                <p class="section-text">We believe in long-term growth with an emphasis on the potential of emerging markets.</p>
+                <p class="section-text">
+                    We believe in long-term growth with an emphasis on the potential of emerging markets. 
+                    We also support the global need of feeding the growing population.
+                </p>
             </div>
             <div class="col-md-5">
-                <img src="images/image3.png" alt="Vision" class="img-fixed-size shadow">
+                <img src="images/vision.jpg" alt="Vision" class="img-fixed-size shadow">
             </div>
         </div>
+
         <div class="row align-items-center">
             <div class="col-md-5 offset-md-1 order-2 order-md-1">
                 <div class="position-relative">
-                    <img src="images/image2.png" alt="Mission" class="img-fixed-size shadow">
-                    <img src="images/play.png" alt="Play" class="vm-play-button">
+                    <img src="images/mission.jpg" alt="Mission" class="img-fixed-size shadow">
+                    <div class="play-btn-wrapper">
+                        <img src="images/play.png" alt="Play" class="vm-play-button">
+                    </div>
                 </div>
             </div>
             <div class="col-md-5 order-1 order-md-2">
                 <h2 class="section-title">Mission</h2>
                 <div class="dots">*****</div>
-                <p class="section-text">Breeding and marketing seeds for advanced field crops and vegetable varieties.</p>
+                <p class="section-text">
+                    Breeding and marketing seeds for advanced field crops and vegetable varieties 
+                    that provide an added value to all supply chain partners.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="footer-dark text-center py-4">
-    <div class="container">
-        <p class="mb-0">AGRIDERA SEEDS & AGRICULTURE LTD. © 2026</p>
+<footer class="footer-dark py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <nav class="footer-nav">
+            <a href="#">PROFILE</a> <a href="#">PRODUCTS</a> <a href="#">R&D</a> <a href="#">CONTACT</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="text-center mt-3 small text-muted">
+        AGRIDERA SEEDS & AGRICULTURE LTD. © 2026
     </div>
 </footer>
 
