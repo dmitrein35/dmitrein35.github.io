@@ -69,7 +69,7 @@ body.pink-bg {
 .banner { flex-grow: 1; display: flex; align-items: center; }
 
 .banner-title { 
-    font-size: 54px; 
+    font-size: 48px; /* Зменшено з 54px для Agridera Seeds... */
     font-weight: bold; 
     color: #645646; 
     line-height: 1.2;
@@ -91,7 +91,7 @@ body.pink-bg {
     background-color: #627a31;
 }
 
-/* --- VISION & MISSION (Тексти та Симетрія) --- */
+/* --- VISION & MISSION --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
@@ -125,14 +125,14 @@ body.pink-bg {
     color: #555555;
 }
 
-/* Контейнери однакової висоти для симетрії зображень */
+/* Збільшено висоту контейнерів для image2 та image3 до 450px */
 .vm-image-wrapper, .vm-video-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    height: 350px; 
+    height: 450px; 
 }
 
 .vm-main-img { 
@@ -160,7 +160,7 @@ body.pink-bg {
 .activity-name { font-size: 18px; font-weight: bold; color: #6a8d32; margin-bottom: 10px; }
 .activity-desc { font-size: 14px; }
 
-/* --- PRODUCTS & BREEDING (tomato.html) --- */
+/* --- PRODUCTS & BREEDING --- */
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
