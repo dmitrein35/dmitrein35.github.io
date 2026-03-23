@@ -22,6 +22,8 @@ body, html, p, h1, h2, h3, h4, span, a, input, div {
     text-transform: none !important;
 }
 
+body { margin: 0; padding: 0; background: #fff; }
+
 /* --- 3. HERO WRAPPER ТА ФОН --- */
 .hero-wrapper {
     /* Додано ../ щоб вийти з папки css до картинок */
@@ -65,15 +67,15 @@ body, html, p, h1, h2, h3, h4, span, a, input, div {
     display: inline-block; 
 }
 
-/* --- 4. ПРОДУКТОВИЙ БАР (Іконки насіння) --- */
+/* --- 4. ПРОДУКТОВИЙ БАР (ЗАФІКСОВАНО: Products.png тепер великий) --- */
 .products-image-bar { 
     border-bottom: 1px solid #eee; 
     padding: 25px 0; 
 }
+/* ВИПРАВЛЕННЯ: Прибрано max-height, щоб картинка була на всю ширину */
 .products-image-bar img { 
-    max-height: 45px; 
-    width: auto; 
-    margin: 0 15px; 
+    max-width: 100%; /* Гарантує, що вона впишеться в контейнер */
+    height: auto; /* Зберігає пропорції */
 }
 
 /* --- 5. VISION & MISSION --- */
