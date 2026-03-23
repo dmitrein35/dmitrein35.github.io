@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'RobotoSlab', serif !important;
-    background-color: #f2f2f2; /* Сірий фон сайту */
+    background-color: #f2f2f2;
 }
 
 .hero-wrapper {
@@ -54,9 +54,9 @@ body {
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 34px; height: 34px;
-    border: 1px solid #7c945b; /* Зелений контур */
+    border: 1px solid #7c945b;
     border-radius: 50%;
-    color: #7c945b !important; /* Зелена іконка */
+    color: #7c945b !important;
     margin-left: 8px; transition: 0.3s;
 }
 .social-dot:hover { background: #7c945b; color: white !important; }
