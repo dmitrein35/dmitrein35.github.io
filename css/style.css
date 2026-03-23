@@ -70,18 +70,22 @@ body {
     padding-top: 200px; 
 }
 
-/* Банер 2-го сайту (image7.png) */
+/* --- ОНОВЛЕНИЙ БАНЕР (image7.png) --- */
 .tomato-hero-section {
     width: 100%;
-    line-height: 0; 
-    margin: 0;
-    padding: 0;
+    overflow: hidden; /* Щоб картинка не вилізала за краї при збільшенні */
+    line-height: 0;
+    margin-bottom: 20px; /* Додав відступ знизу, щоб текст не прилипав */
 }
 
 .tomato-hero-section img {
     width: 100%;
     height: auto;
     display: block;
+    /* Збільшуємо масштаб на 5% (1.05). 
+       Можеш поставити 1.1, якщо хочеш ще більше */
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
 }
 
 /* --- 4. КОНТЕНТ СТОРІНКИ ТОМАТІВ --- */
