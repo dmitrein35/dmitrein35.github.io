@@ -10,7 +10,6 @@ body {
     background-color: #f2f2f2; /* Сірий фон сайту */
 }
 
-/* HERO */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -24,7 +23,6 @@ body {
 .hero-title { color: #5c5044; font-size: 44px; font-weight: bold; margin-top: 130px; text-align: center; }
 .btn-read-more { background: #7c945b; color: white !important; padding: 10px 30px; font-weight: bold; display: inline-block; margin-top: 20px; text-decoration: none !important; }
 
-/* ПРОДУКТИ ТА UNION */
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section {
     background: url('../images/Union.png') no-repeat center center;
@@ -44,14 +42,12 @@ body {
     color: rgba(255,255,255,0.8); font-size: 70px; cursor: pointer;
 }
 
-/* ACTIVITIES */
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-img { max-height: 180px; object-fit: contain; }
 .activity-name { font-size: 20px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 .activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; line-height: 1.4; }
 
-/* ФУТЕР */
 .footer-dark { background: #2b3339; color: white; border-top: 1px solid #3d454b; }
 .footer-links a { color: white; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
 
