@@ -1,4 +1,4 @@
-/* --- ЗАГАЛЬНІ СТИЛІ --- */
+/* --- 1. ЗАГАЛЬНІ СТИЛІ --- */
 @font-face {
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
@@ -7,7 +7,7 @@
 body { font-family: 'Roboto Slab', serif; color: #555; margin: 0; }
 .pink-bg { background-color: #fdf2f2 !important; }
 
-/* Header & Footer (Спільні) */
+/* Header & Footer */
 .header-section { padding: 15px 0; }
 .main-logo { height: 80px; }
 .search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
@@ -19,7 +19,7 @@ body { font-family: 'Roboto Slab', serif; color: #555; margin: 0; }
 .social-circle { display: inline-block; width: 35px; height: 35px; border: 2px solid #7c945b; border-radius: 50%; color: #7c945b; text-align: center; line-height: 32px; margin-left: 10px; }
 .footer-bottom-block { background: #374147; color: #8a9196; padding: 15px 0; font-size: 11px; }
 
-/* --- СТИЛІ 1-ГО САЙТУ (НЕ ЗМІНЮЄМО) --- */
+/* --- 2. СТИЛІ 1-ГО САЙТУ (БЕЗ ЗМІН) --- */
 .hero-wrapper { background: url('../images/bg.png') no-repeat center center; background-size: cover; min-height: 700px; }
 .banner-title { font-size: 42px; font-weight: bold; color: #4b6352; margin-top: 200px; }
 .btn-read-more { background: #6a8d32; color: #fff !important; padding: 12px 35px; font-weight: bold; text-decoration: none; }
@@ -33,33 +33,33 @@ body { font-family: 'Roboto Slab', serif; color: #555; margin: 0; }
     .mission-align-right { text-align: right; }
     .mission-align-right .section-text { margin-left: auto; }
 }
-
 .vm-img-square { width: 460px; height: 460px; object-fit: cover; border-radius: 4px; }
 .vm-video-wrapper { position: relative; display: inline-block; }
 .vm-play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; }
 
-/* --- СТИЛІ 2-ГО САЙТУ (ВИПРАВЛЕНО ЗА СКРІНШОТАМИ) --- */
+/* --- 3. СТИЛІ 2-ГО САЙТУ (ТОЧНО ЗА МАКЕТОМ "ТРЕБА ЯК") --- */
 .tomato-main-content { padding-top: 50px; }
 
-/* Заголовок та зірочки */
+/* Велика типографіка як на фото */
 .tomato-main-content .section-title { font-size: 52px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
 .tomato-main-content .dots { color: #82a43a; font-size: 24px; letter-spacing: 3px; margin-bottom: 30px; }
 .tomato-main-content .section-text p { font-size: 17px; line-height: 1.6; color: #555; margin-bottom: 20px; }
 
-/* Червоні акценти (лінії зліва замість плашок) */
+/* Червона лінія зліва (image_6530ce.png) */
 .red-accent-row {
-    border-left: 4px solid #df4a4a;
-    padding-left: 20px;
-    margin: 60px 0;
+    border-left: 4px solid #df4a4a; /* Тонка вертикальна лінія */
+    padding: 10px 0 10px 25px;      /* Відступ тексту від лінії */
+    margin: 50px 0;
 }
-.accent-text { font-size: 19px; line-height: 1.5; color: #444; margin: 0; }
+.accent-text { font-size: 19px; line-height: 1.4; color: #3d525a; margin: 0; }
 
 /* Картки програм розведення */
 .breeding-card {
     background: #fff;
-    padding: 60px 40px;
-    border-radius: 4px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    padding: 50px 40px;
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    margin-bottom: 60px;
 }
 .program-card h3 { 
     color: #3d525a; 
@@ -67,14 +67,15 @@ body { font-family: 'Roboto Slab', serif; color: #555; margin: 0; }
     font-weight: bold; 
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #ccc; /* Лінія під заголовком */
+    border-bottom: 1.5px solid #eee; /* Сіра лінія під заголовком */
 }
-.program-card p { font-size: 16px; color: #555; line-height: 1.6; }
+.program-card p { font-size: 15.5px; color: #555; line-height: 1.6; margin-top: 15px; }
 
 /* Сітка томатів */
 .tomato-grid-container img { 
     border-radius: 4px; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-    margin-bottom: 30px; 
-    max-width: 100%;
+    margin-bottom: 30px;
+    transition: 0.3s;
 }
+.tomato-grid-container img:hover { transform: translateY(-5px); }
