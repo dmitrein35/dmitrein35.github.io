@@ -1,50 +1,41 @@
-/* --- ШРИФТИ --- */
+/* --- БАЗОВІ НАЛАШТУВАННЯ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 * { font-family: 'RobotoSlab', serif !important; }
 
-/* --- HERO WRAPPER --- */
+/* --- HERO WRAPPER (Колоски) --- */
 .hero-wrapper {
-    /* Ця обгортка тримає фон-колоски */
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
-    min-height: 700px; /* Велика висота для ефекту */
+    min-height: 700px;
     display: flex;
-    flex-direction: column; /* Шапка зверху, банер по центру */
-    width: 100%;
+    flex-direction: column;
+    position: relative;
 }
 
-/* --- HEADER — ТЕПЕР ПРОЗОРИЙ --- */
-.header-section { 
-    /* Прозорий фон, щоб бачити колоски */
-    background: transparent !important; 
-    width: 100%;
+/* ПРОЗОРА ШАПКА */
+.header-section {
+    background: transparent !important;
     position: relative;
     z-index: 10;
 }
-.main-logo { height: 75px; width: auto; }
-.search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; padding-bottom: 3px; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
-.search-input-line { border: none; outline: none; width: 150px; background: transparent; }
-.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none; text-transform: uppercase; }
-.main-menu a:hover, .main-menu a.active { color: #7c945b; }
 
-/* --- BANNER — ТЕПЕР ТЕКСТ ПО ЦЕНТРУ --- */
-.banner {
-    flex-grow: 1; /* Займає всю висоту hero-wrapper під шапкою */
+/* ЦЕНТРУВАННЯ ТЕКСТУ ТА КНОПКИ */
+.hero-content {
+    flex-grow: 1;
     display: flex;
-    align-items: center; /* Центрування по вертикалі */
-    justify-content: center; /* Центрування по горизонталі */
-    text-align: center;
+    align-items: center; /* Центр по вертикалі */
+    justify-content: center; /* Центр по горизонталі */
 }
+
 .banner-title { 
     font-size: 48px; 
     font-weight: bold; 
-    color: #645646; /* Точний колір з макета */
-    line-height: 1.1; 
+    color: #645646; /* Колір з макета */
 }
+
 .btn-read-more { 
     background: #7c945b; 
     color: white !important; 
@@ -54,23 +45,27 @@
     display: inline-block; 
 }
 
-/* --- VISION & MISSION --- */
+/* ШАПКА: ПОШУК ТА МЕНЮ */
+.main-logo { height: 75px; }
+.search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
+.search-input-line { border: none; outline: none; background: transparent; width: 150px; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none; text-transform: uppercase; }
+
+/* БЛОК З PRODUCTS.PNG */
+.products-image-bar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.products-image-bar img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* VISION & MISSION */
 .section-title { font-weight: bold; font-size: 38px; color: #3d525a; }
 .dots { color: #82a43a; letter-spacing: 5px; font-size: 20px; margin-bottom: 10px; }
 .img-fixed-size { width: 100%; height: 450px; object-fit: cover; }
-.vm-play-button { width: 80px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; }
 
-/* --- TOMATO PAGE --- */
-.tomato-page { background-color: #fdf6f6; }
-.tomato-card img { height: 200px; width: 100%; object-fit: cover; }
-.tomato-id { color: #6a8d32; font-weight: bold; font-size: 14px; margin-top: 10px; }
-.tomato-info { font-size: 11px; color: #777; line-height: 1.2; }
-
-/* --- FOOTER --- */
+/* FOOTER */
 .footer-dark { background: #2b3339; color: white; }
-
-/* Адаптивність для мобілок */
-@media (max-width: 768px) {
-    .banner-title { font-size: 32px; }
-    .img-fixed-size { height: 300px; }
-}
