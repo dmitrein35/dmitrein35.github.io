@@ -1,23 +1,23 @@
-/* --- ШРИФТИ ТА БАЗОВІ НАЛАШТУВАННЯ --- */
+/* --- ШРИФТИ ТА ВИПРАВЛЕННЯ ІКОНОК --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 
-/* Назначаємо шрифт усім, але КРІМ іконок FontAwesome */
+/* Застосовуємо шрифт до всього, крім тегів <i> (іконки FontAwesome) */
 *:not(i) { 
     font-family: 'RobotoSlab', serif !important; 
 }
 
-/* Гарантуємо, що іконки FontAwesome (фаби та фаси) використовують свій шрифт, ігноруючи Roboto Slab */
+/* Налаштування для іконок, щоб вони не ламалися */
 .fab, .fas {
     font-family: "Font Awesome 5 Free" !important;
     font-weight: 900;
 }
 
-body { margin: 0; padding: 0; background: #fff; }
+body { margin: 0; padding: 0; }
 
-/* --- HERO & ШАПКА --- */
+/* --- HERO SECTION --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -25,10 +25,9 @@ body { margin: 0; padding: 0; background: #fff; }
     display: flex;
     flex-direction: column;
 }
-.header-section { background: transparent !important; z-index: 10; }
+.header-section { background: transparent !important; }
 .main-logo { height: 75px; }
 .search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
 .search-input-line { border: none; outline: none; background: transparent; width: 150px; }
 .main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; text-transform: uppercase; }
 
@@ -36,85 +35,48 @@ body { margin: 0; padding: 0; background: #fff; }
 .banner-title { font-size: 48px; font-weight: bold; color: #645646; }
 .btn-read-more { background: #7c945b; color: white !important; padding: 12px 35px; font-weight: bold; text-decoration: none !important; display: inline-block; }
 
-/* --- PRODUCTS & VM --- */
-.products-image-bar { background: #fff; }
+/* --- VISION & MISSION --- */
 .mb-100 { margin-bottom: 100px; }
 .vm-title { font-size: 42px; font-weight: bold; color: #3d525a; }
 .vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; }
 .vm-text { font-size: 18px; color: #555; line-height: 1.6; }
 .vm-photo { width: 100%; height: 400px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+/* Play Icon */
 .video-play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.play-icon { width: 70px; cursor: pointer; }
+.play-icon-fa { font-size: 60px; color: rgba(255,255,255,0.9); cursor: pointer; }
 
-/* --- MAIN ACTIVITIES --- */
-.activities-main-title { font-size: 42px; font-weight: bold; color: #3d525a; margin-top: 40px; }
-.centered-dots { display: block; text-align: center; }
-
-/* СТИЛІ ДЛЯ ВИРІВНЮВАННЯ НА ОДНОМУ РІВНІ */
+/* --- ACTIVITIES (ВИРІВНЮВАННЯ) --- */
 .row-equal-height {
     display: flex;
     flex-wrap: wrap;
-    align-items: end; /* Вирівнюємо фото по нижньому краю, щоб назви були на одному рівні */
+    align-items: flex-end; /* Вирівнює картинки по низу для однакового рівня тексту */
 }
 .activity-photo {
+    max-height: 180px; /* Єдина висота для всіх трьох зображень */
     width: auto;
-    max-width: 100%;
-    height: 180px; /* Фіксована висота для всіх фото */
-    object-fit: contain; /* Зберігаємо пропорції */
-    display: inline-block;
+    object-fit: contain;
 }
+.activity-name { font-size: 20px; font-weight: bold; color: #6a8d32; text-transform: uppercase; }
+.activity-desc { color: #777; line-height: 1.4; padding: 0 15px; }
 
-.activity-name { font-size: 22px; font-weight: bold; color: #6a8d32; margin-top: 15px; text-transform: uppercase; }
-.activity-desc { font-size: 14px; color: #777; line-height: 1.4; padding: 0 20px; }
+/* --- FOOTER & SOCIALS --- */
+.main-footer { background-color: #2b3339; color: #fff; }
+.footer-links a { color: #fff; font-size: 12px; margin: 0 8px; text-decoration: none !important; font-weight: bold; }
 
-/* --- ФУТЕР --- */
-.main-footer {
-    background-color: #2b3339;
-    color: #fff;
-}
-.footer-links a {
-    color: #fff;
-    font-size: 13px;
-    margin: 0 10px;
-    text-decoration: none !important;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.footer-socials { display: flex; gap: 10px; }
-
-/* СТИЛІ ДЛЯ ІКОНОК У КРУЖЕЧКАХ */
-.social-circle-link {
+.footer-socials { display: flex; gap: 12px; }
+.social-circle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid #7c945b; /* Зелений колір рамки */
-    border-radius: 50%; /* Робимо круг */
-    color: #7c945b !important; /* Зелений колір іконки */
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid #7c945b; /* Зелене коло */
+    border-radius: 50%;
+    color: #7c945b !important;
     text-decoration: none !important;
-    font-size: 16px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
-.social-circle-link:hover {
-    background: #7c945b; /* Зелений фон при наведенні */
-    color: #fff !important; /* Біла іконка при наведенні */
-}
+.social-circle:hover { background: #7c945b; color: #fff !important; }
 
-.footer-copy {
-    font-size: 11px;
-    color: #777;
-    margin-top: 20px;
-    border-top: 1px solid #3d454b;
-    padding-top: 20px;
-}
-
-/* Адаптивність */
-@media (max-width: 768px) {
-    .banner-title { font-size: 32px; }
-    .activities-main-title { font-size: 30px; }
-    .vm-dots { text-align: center; }
-    .vm-title { text-align: center; }
-    .footer-links { text-align: center; margin-bottom: 20px; }
-    .vm-photo { height: 300px; }
-}
+.footer-copy { font-size: 11px; color: #777; margin-top: 25px; border-top: 1px solid #3d454b; padding-top: 20px; }
