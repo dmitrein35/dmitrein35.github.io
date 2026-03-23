@@ -11,15 +11,17 @@ body {
     line-height: 1.6;
 }
 
+/* Рожевий фон для сторінки Tomato */
 .pink-bg { background-color: #fdf2f2 !important; }
 
-/* --- 2. HEADER (ВИПРАВЛЕНО) --- */
+/* --- 2. HEADER (БІЛА ЛІНІЯ ЗВЕРХУ) --- */
 .header-section { 
-    padding: 20px 0; 
+    padding: 15px 0; 
     background: #fff; 
     width: 100%;
     position: relative;
     z-index: 10;
+    border-bottom: 1px solid #f0f0f0; /* Легка роздільна лінія */
 }
 
 .main-logo { height: 80px; }
@@ -50,10 +52,10 @@ body {
 .hero-wrapper { 
     background: url('../images/bg.png') no-repeat center center; 
     background-size: cover; 
-    min-height: 600px; 
+    min-height: 550px; 
     display: flex;
-    align-items: center;  /* Центрування по вертикалі */
-    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; 
+    justify-content: center;
     text-align: center;
 }
 
@@ -62,13 +64,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .banner-title { 
     font-size: 52px; 
     font-weight: bold; 
     color: #4b6352; 
-    margin: 0 0 30px 0; /* Відступ тільки знизу до кнопки */
+    margin: 0 0 30px 0; 
+    line-height: 1.1;
 }
 
 /* ЗЕЛЕНА КНОПКА READ MORE */
@@ -122,4 +126,5 @@ body {
 @media (max-width: 768px) {
     .banner-title { font-size: 32px; }
     .social-box { justify-content: center; margin-top: 20px; }
+    .footer-links { text-align: center; }
 }
