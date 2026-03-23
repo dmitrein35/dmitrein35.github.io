@@ -16,7 +16,6 @@ body {
     line-height: 1.6;
 }
 
-body.pink-bg { background-color: #fdf5f5 !important; }
 .container { max-width: 1140px; }
 
 /* --- 3. HEADER --- */
@@ -33,7 +32,7 @@ body.pink-bg { background-color: #fdf5f5 !important; }
 }
 .main-menu a:hover { color: #6a8d32; }
 
-/* --- 4. HERO SECTION (Баннер 700px) --- */
+/* --- 4. HERO SECTION --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -44,49 +43,45 @@ body.pink-bg { background-color: #fdf5f5 !important; }
 
 .banner { flex-grow: 1; display: flex; align-items: center; }
 .banner-title { font-size: 40px; font-weight: bold; color: #4b6352; }
-
 .btn-read-more {
     display: inline-block; background-color: #6a8d32; color: white !important;
     padding: 10px 30px; text-decoration: none !important; font-weight: bold; font-size: 14px;
 }
 
-/* --- 5. VISION & MISSION (Увеличение фото) --- */
+/* --- 5. VISION & MISSION (ФИКСАЦИЯ РАЗМЕРОВ) --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain; padding: 80px 0;
 }
-.v-m-row { margin-bottom: 80px; } /* Чуть больше отступ между рядами */
+.v-m-row { margin-bottom: 60px; }
 .section-title { font-weight: bold; font-size: 36px; color: #3d525a; }
 .dots { color: #82a43a; letter-spacing: 3px; font-weight: bold; margin-bottom: 15px; font-size: 20px; }
-.section-text { font-size: 16px; color: #555555; }
+.section-text { font-size: 16px; }
 
-/* Контейнеры */
 .vm-image-wrapper, .vm-video-wrapper {
     display: inline-block;
     position: relative;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.25);
-    z-index: 5;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-/* Класс для увеличения размера фото */
-.enlarged-photo {
-    width: 120%; /* Увеличили на 20% */
-    max-width: none !important; /* Отменяем ограничения Bootstrap */
-    height: auto;
+/* ЭТОТ БЛОК ДЕЛАЕТ КАРТИНКИ ОДИНАКОВЫМИ */
+.vm-img-fixed {
+    width: 450px;       /* Задаем фиксированную ширину */
+    height: 320px;      /* Задаем фиксированную высоту */
+    object-fit: cover;  /* Обрезает края, сохраняя пропорции содержимого */
     display: block;
-    margin-left: -10%; /* Центрируем после увеличения */
+    border-radius: 4px; /* Легкое скругление для аккуратности */
 }
 
-/* Кнопка Play (остается по центру увеличенного фото) */
 .vm-play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75px; /* Немного увеличил кнопку под фото */
+    width: 65px; 
     cursor: pointer;
     z-index: 10;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 .vm-play-button:hover { transform: translate(-50%, -50%) scale(1.1); }
 
@@ -109,7 +104,7 @@ body.pink-bg { background-color: #fdf5f5 !important; }
 
 /* --- 8. АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
-    .enlarged-photo { width: 100%; margin-left: 0; } /* На мобильных возвращаем в норму */
-    .hero-wrapper { min-height: 450px; }
+    .vm-img-fixed { width: 100%; height: auto; } /* На мобильных пусть тянутся по ширине */
     .text-right { text-align: left !important; }
+    .social-box { justify-content: flex-start; margin-top: 20px; }
 }
