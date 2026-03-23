@@ -1,79 +1,74 @@
+/* --- ГЛОБАЛЬНІ СТИЛІ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf');
 }
 
-/* Загальний фон сторінки — світло-сірий */
 body {
     margin: 0;
     padding: 0;
     font-family: 'RobotoSlab', serif !important;
-    background-color: #f4f4f4; /* Колір, що відрізняється від білого Union.png */
+    background-color: #f2f2f2; /* Сірий фон сайту, щоб виділити Union.png */
 }
 
-/* HERO */
+/* --- HERO --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
     min-height: 650px;
-    display: flex;
-    flex-direction: column;
 }
 
-.main-logo { height: 70px; }
-.search-text { font-size: 13px; color: #4b6352; font-weight: bold; margin-right: 8px; }
-.search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 140px; }
-.main-nav a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
+.main-logo { height: 75px; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
+.search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
 
-.hero-title { color: #5d5145; font-size: 46px; font-weight: bold; margin-top: 140px; }
-.btn-read-more { background: #7c945b; color: white !important; padding: 12px 35px; font-weight: bold; display: inline-block; text-decoration: none !important; margin-top: 25px; }
+.hero-title { color: #5c5044; font-size: 48px; font-weight: bold; margin-top: 140px; text-align: center; }
+.btn-read-more { background: #7c945b; color: white !important; padding: 12px 35px; font-weight: bold; display: inline-block; margin-top: 25px; text-decoration: none !important; }
 
-/* ОБ'ЄДНАНА СЕКЦІЯ З ФОНОМ Union.png */
-.union-section-bg {
+/* --- ПРОДУКТИ --- */
+.products-strip { background: white; border-bottom: 1px solid #ddd; }
+
+/* --- ОБ'ЄДНАНИЙ ФОН UNION --- */
+.union-bg-section {
     background: url('../images/Union.png') no-repeat center center;
-    background-size: cover; /* Фото Union.png тепер на задньому плані обох блоків */
+    background-size: cover;
     padding: 80px 0;
 }
 
 .mb-100 { margin-bottom: 100px; }
-.vm-title { font-size: 40px; font-weight: bold; color: #3d525a; }
-.vm-dots { color: #82a43a; font-size: 24px; letter-spacing: 4px; margin-bottom: 15px; }
-.vm-text { font-size: 18px; color: #555; line-height: 1.6; }
+.section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
+.section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
+.section-desc { font-size: 18px; color: #555; line-height: 1.6; }
+.vm-image-style { width: 100%; max-width: 480px; border-radius: 4px; }
+.shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-/* Тінь для фото, щоб вони виділялися на білому фоні Union */
-.vm-img-shadow {
-    width: 100%;
-    max-width: 480px;
-    border-radius: 4px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-}
-
-.play-overlay {
+.video-play-btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.85);
-    font-size: 70px;
+    color: rgba(255,255,255,0.8);
+    font-size: 80px;
     cursor: pointer;
 }
 
-/* ФУТЕР */
+/* --- ФУТЕР --- */
 .footer-dark { background: #2b3339; color: white; border-top: 1px solid #3d454b; }
-.footer-nav a { color: white; font-size: 12px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
+.footer-links a { color: white; font-size: 12px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
 
-.social-btn {
+.social-dot {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border: 1px solid #7c945b; /* Зелений кружечок */
+    width: 38px;
+    height: 38px;
+    border: 1px solid #7c945b; /* Зелений контур кружечка */
     border-radius: 50%;
-    color: #7c945b !important;
-    margin-left: 8px;
+    color: #7c945b !important; /* Зелений колір іконки */
+    margin-left: 10px;
     transition: 0.3s;
 }
 
-.social-btn:hover { background: #7c945b; color: white !important; }
-.copyright-text { color: #666; font-size: 11px; border-top: 1px solid #333; padding-top: 20px; }
+.social-dot:hover { background: #7c945b; color: white !important; }
+.copyright-bar { color: #666; font-size: 11px; border-top: 1px solid #333; padding-top: 20px; }
