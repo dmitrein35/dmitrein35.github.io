@@ -64,10 +64,10 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-/* ЭТОТ БЛОК ДЕЛАЕТ КАРТИНКИ ОДИНАКОВЫМИ */
-.vm-img-fixed {
-    width: 450px;       /* Задаем фиксированную ширину */
-    height: 320px;      /* Задаем фиксированную высоту */
+/* ЭТОТ БЛОК ДЕЛАЕТ КАРТИНКИ КВАДРАТНЫМИ И ОДИНАКОВЫМИ */
+.vm-img-square {
+    width: 400px;       /* Задаем фиксированную ширину */
+    height: 400px;      /* Задаем фиксированную высоту (такую же, как ширина) */
     object-fit: cover;  /* Обрезает края, сохраняя пропорции содержимого */
     display: block;
     border-radius: 4px; /* Легкое скругление для аккуратности */
@@ -104,7 +104,7 @@ body {
 
 /* --- 8. АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
-    .vm-img-fixed { width: 100%; height: auto; } /* На мобильных пусть тянутся по ширине */
+    .vm-img-square { width: 100%; height: auto; } /* На мобильных пусть тянутся по ширине */
     .text-right { text-align: left !important; }
     .social-box { justify-content: flex-start; margin-top: 20px; }
 }
