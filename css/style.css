@@ -11,6 +11,7 @@ body {
     margin: 0;
     color: #555555;
     background-color: #ffffff;
+    font-size: 18px;
 }
 
 body.pink-bg {
@@ -18,7 +19,7 @@ body.pink-bg {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1200px;
 }
 
 .header-section { 
@@ -28,7 +29,7 @@ body.pink-bg {
 }
 
 .main-logo { 
-    height: 80px; 
+    height: 100px; 
 }
 
 .search-field {
@@ -39,7 +40,7 @@ body.pink-bg {
 }
 
 .search-label { 
-    font-size: 18px; 
+    font-size: 20px; 
     color: #4b6352; 
     margin-right: 15px; 
 }
@@ -48,13 +49,13 @@ body.pink-bg {
     border: none; 
     background: transparent; 
     outline: none; 
-    width: 200px; 
-    font-size: 16px; 
+    width: 220px; 
+    font-size: 18px; 
 }
 
 .search-icon-main { 
     color: #4b6352; 
-    font-size: 18px; 
+    font-size: 20px; 
     cursor: pointer; 
 }
 
@@ -62,8 +63,8 @@ body.pink-bg {
     text-decoration: none;
     color: #4b6352;
     font-weight: bold;
-    margin-left: 18px;
-    font-size: 13px;
+    margin-left: 25px;
+    font-size: 15px;
     text-transform: uppercase;
     transition: 0.3s;
 }
@@ -75,7 +76,7 @@ body.pink-bg {
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
-    min-height: 500px;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
 }
@@ -87,34 +88,40 @@ body.pink-bg {
 }
 
 .banner-title { 
-    font-size: 40px; 
+    font-size: 52px; 
     font-weight: bold; 
     color: #4b6352; 
+    line-height: 1.2;
 }
 
 .btn-read-more {
     display: inline-block;
     background-color: #6a8d32;
     color: white !important;
-    padding: 10px 30px;
+    padding: 15px 45px;
     text-decoration: none !important;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-read-more:hover {
+    background-color: #4b6352;
 }
 
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .v-m-row { 
-    margin-bottom: 60px; 
+    margin-bottom: 80px; 
 }
 
 .section-title { 
     font-weight: bold; 
-    font-size: 36px; 
+    font-size: 42px; 
     color: #3d525a; 
 }
 
@@ -122,8 +129,8 @@ body.pink-bg {
     color: #82a43a; 
     letter-spacing: 3px; 
     font-weight: bold; 
-    margin-bottom: 15px; 
-    font-size: 20px; 
+    margin-bottom: 20px; 
+    font-size: 24px; 
 }
 
 .centered-dots { 
@@ -132,8 +139,8 @@ body.pink-bg {
 }
 
 .section-text { 
-    font-size: 16px; 
-    line-height: 1.6; 
+    font-size: 19px; 
+    line-height: 1.8; 
 }
 
 .vm-image-wrapper, .vm-video-wrapper {
@@ -151,53 +158,54 @@ body.pink-bg {
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 65px; 
+    width: 80px; 
     cursor: pointer;
 }
 
 .main-activities { 
     background-color: #ebebeb; 
-    padding: 80px 0; 
+    padding: 100px 0; 
 }
 
 .activities-title { 
-    font-size: 36px; 
+    font-size: 42px; 
     font-weight: bold; 
     color: #3d525a; 
 }
 
 .activity-icon-box { 
-    height: 120px; 
+    height: 140px; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    margin-bottom: 20px; 
+    margin-bottom: 25px; 
 }
 
 .activity-icon { 
-    max-height: 100px; 
+    max-height: 120px; 
     width: auto; 
 }
 
 .activity-name { 
-    font-size: 18px; 
+    font-size: 22px; 
     font-weight: bold; 
     color: #6a8d32; 
-    margin-bottom: 10px; 
+    margin-bottom: 12px; 
 }
 
 .activity-desc { 
-    font-size: 14px; 
+    font-size: 16px; 
+    line-height: 1.6;
 }
 
 .products-bar {
     background-color: #ffffff;
-    padding: 40px 0;
+    padding: 60px 0;
     border-bottom: 1px solid #eeeeee;
 }
 
 .products-line-img { 
-    height: 120px; 
+    height: 150px; 
     width: auto; 
     display: block; 
     margin: 0 auto; 
@@ -211,57 +219,57 @@ body.pink-bg {
 
 .red-accent-row {
     border-left: 6px solid #e34e4e;
-    padding: 10px 25px;
-    margin: 35px 0;
+    padding: 15px 30px;
+    margin: 45px 0;
 }
 
 .accent-text { 
-    font-size: 18px; 
-    line-height: 1.5; 
+    font-size: 20px; 
+    line-height: 1.6; 
     color: #3d525a; 
     margin-bottom: 0; 
 }
 
 .breeding-section {
-    padding: 60px 0;
-    margin: 40px 0;
+    padding: 80px 0;
+    margin: 50px 0;
 }
 
 .breeding-card {
     background-color: #ffffff;
-    padding: 60px 45px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    padding: 70px 50px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
     border-radius: 4px;
 }
 
 .program-card h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: #3d525a;
     border-bottom: 2px solid #3d525a;
     padding-bottom: 15px;
     margin-bottom: 25px;
-    min-height: 70px;
+    min-height: 80px;
     display: flex;
     align-items: flex-end;
 }
 
 .program-card p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.7;
     color: #555555;
     margin-bottom: 0;
 }
 
 .tomato-grid { 
-    margin-top: 60px; 
+    margin-top: 80px; 
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
 
 .tomato-item { 
-    margin-bottom: 45px; 
+    margin-bottom: 60px; 
     transition: 0.3s; 
 }
 
@@ -272,18 +280,18 @@ body.pink-bg {
 .tomato-item img { 
     border: 1px solid #f0f0f0; 
     width: 100%; 
-    margin-bottom: 15px; 
+    margin-bottom: 20px; 
 }
 
 .tomato-name { 
     color: #6a8d32; 
     font-weight: bold; 
-    font-size: 17px; 
-    margin-bottom: 4px; 
+    font-size: 20px; 
+    margin-bottom: 6px; 
 }
 
 .tomato-type { 
-    font-size: 13px; 
+    font-size: 15px; 
     color: #888; 
 }
 
@@ -294,13 +302,13 @@ body.pink-bg {
 
 .footer-top-block { 
     background-color: #2b3339; 
-    padding: 25px 0; 
+    padding: 40px 0; 
 }
 
 .footer-bottom-block { 
     background-color: #374147; 
-    padding: 15px 0; 
-    font-size: 11px; 
+    padding: 20px 0; 
+    font-size: 13px; 
     color: #8a9196; 
     text-transform: uppercase; 
     letter-spacing: 1px;
@@ -308,8 +316,8 @@ body.pink-bg {
 
 .footer-links a { 
     color: #fff; 
-    font-size: 11px; 
-    margin-right: 15px; 
+    font-size: 13px; 
+    margin-right: 25px; 
     text-decoration: none !important; 
     text-transform: uppercase; 
     font-weight: bold; 
@@ -322,19 +330,20 @@ body.pink-bg {
 .social-box { 
     display: flex; 
     justify-content: flex-end; 
-    gap: 5px; 
+    gap: 8px; 
 }
 
 .social-circle { 
     display: inline-block; 
-    width: 32px; 
-    height: 32px; 
+    width: 40px; 
+    height: 40px; 
     border: 1.5px solid #7c945b; 
     border-radius: 50%; 
     color: #7c945b !important; 
     text-align: center; 
-    line-height: 30px; 
+    line-height: 38px; 
     transition: 0.3s;
+    font-size: 18px;
 }
 
 .social-circle:hover { 
@@ -343,16 +352,17 @@ body.pink-bg {
 }
 
 @media (max-width: 992px) {
-    .tomato-name { font-size: 15px; }
+    .banner-title { font-size: 42px; }
+    .section-title { font-size: 34px; }
 }
 
 @media (max-width: 768px) {
     .text-right { text-align: left !important; }
-    .social-box { justify-content: flex-start; margin-top: 20px; }
-    .footer-links { margin-bottom: 20px; display: block; }
-    .footer-links a { display: block; margin-bottom: 10px; }
-    .products-line-img { height: 70px; }
-    .banner-title { font-size: 30px; }
-    .breeding-card { padding: 30px 20px; }
-    .program-card { margin-bottom: 40px; }
+    .social-box { justify-content: flex-start; margin-top: 25px; }
+    .footer-links { margin-bottom: 25px; display: block; }
+    .footer-links a { display: block; margin-bottom: 12px; }
+    .products-line-img { height: 100px; }
+    .banner-title { font-size: 34px; }
+    .hero-wrapper { min-height: 500px; }
+    .breeding-card { padding: 40px 25px; }
 }
