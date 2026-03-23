@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-/* Применяем Roboto Slab ко всему, КРОМЕ иконок Font Awesome */
+/* Применяем Roboto Slab ко всему сайту, КРОМЕ иконок */
 *:not(i):not([class*="fa-"]) {
     font-family: 'Roboto Slab', serif !important;
 }
@@ -37,11 +37,17 @@ body {
 .search-icon-main { color: #4b6352; font-size: 18px; cursor: pointer; }
 
 .main-menu a {
-    text-decoration: none; color: #4b6352; font-weight: bold;
-    margin-left: 18px; font-size: 13px; text-transform: uppercase;
+    text-decoration: none;
+    color: #4b6352;
+    font-weight: bold;
+    margin-left: 18px;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
+.main-menu a:hover { color: #6a8d32; }
 
-/* --- 4. HERO SECTION --- */
+/* --- 4. HERO SECTION (Баннер 700px) --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -51,6 +57,7 @@ body {
 }
 
 .banner { flex-grow: 1; display: flex; align-items: center; }
+
 .banner-title { 
     font-size: 40px; 
     font-weight: bold; 
@@ -66,7 +73,9 @@ body {
     text-decoration: none !important;
     font-weight: bold;
     font-size: 14px;
+    transition: 0.3s;
 }
+.btn-read-more:hover { background-color: #4b6352; }
 
 /* --- 5. VISION & MISSION --- */
 .vision-mission {
@@ -76,6 +85,11 @@ body {
 .v-m-row { margin-bottom: 60px; }
 .section-title { font-weight: bold; font-size: 36px; color: #3d525a; }
 .dots { color: #82a43a; letter-spacing: 3px; font-weight: bold; margin-bottom: 15px; font-size: 20px; }
+
+.vm-image-wrapper, .vm-video-wrapper {
+    display: inline-block;
+    position: relative;
+}
 
 .vm-img-square {
     width: 400px;       
@@ -92,22 +106,90 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 65px; 
+    cursor: pointer;
     z-index: 10;
+    transition: 0.3s;
 }
+.vm-play-button:hover { transform: translate(-50%, -50%) scale(1.1); }
 
-/* --- 6. ACTIVITIES --- */
+/* --- 6. ACTIVITIES (ИСПРАВЛЕНО ВЫРАВНИВАНИЕ) --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
+
+.activity-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity-icon-box {
+    height: 140px; /* Увеличили высоту для фона */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative; /* Для позиционирования фона */
+}
+
+/* Белый квадрат за фото */
+.activity-icon-bg {
+    position: absolute;
+    width: 120px; /* Размер квадрата */
+    height: 120px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1; /* Фон сзади */
+}
+
+.activity-icon {
+    max-height: 100px;
+    width: auto;
+    position: relative;
+    z-index: 2; /* Фото спереди */
+}
+
+/* Обертки для выравнивания заголовков */
+.activity-name-wrapper {
+    min-height: 60px; /* Фиксированная высота для всех заголовков */
+    display: flex;
+    align-items: flex-start; /* Прижать к верху */
+    justify-content: center;
+    width: 100%;
+}
+
+.activity-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a8d32;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Обертки для выравнивания описаний */
+.activity-desc-wrapper {
+    min-height: 80px; /* Фиксированная высота для всех описаний */
+    display: flex;
+    align-items: flex-start; /* Прижать к верху */
+    justify-content: center;
+    width: 100%;
+}
+
+.activity-desc {
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    max-width: 250px; /* Чтобы текст не растягивался */
+}
 
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
 
-/* --- 7. FOOTER (ТОЧНО ПО ФОТО) --- */
+/* --- 7. FOOTER --- */
+.footer-dark { width: 100%; }
 .footer-top-block {
     background-color: #313d43; 
     padding: 35px 0;
 }
-
 .footer-bottom-block {
     background-color: #3c494f; 
     padding: 15px 0;
@@ -115,7 +197,6 @@ body {
     color: #a3abb0; 
     text-transform: uppercase;
 }
-
 .footer-links a {
     color: #ffffff !important;
     font-size: 14px;
@@ -123,9 +204,8 @@ body {
     text-decoration: none !important;
     font-weight: 500;
 }
-
+.footer-links a:hover { color: #82a43a !important; }
 .social-box { display: flex; gap: 12px; }
-
 .social-circle {
     display: flex;
     align-items: center;
@@ -143,6 +223,8 @@ body {
 
 /* --- 8. АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
+    .main-activities padding: 40px 0;
+    .activity-block { margin-bottom: 40px; }
     .footer-dark .d-flex { flex-direction: column; text-align: center; }
     .footer-links { margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
     .social-box { justify-content: center; }
