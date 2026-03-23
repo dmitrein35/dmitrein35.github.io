@@ -96,7 +96,7 @@ body.pink-bg {
 .banner-title { 
     font-size: 48px; /* Трохи збільшив шрифт для великого баннера */
     font-weight: bold; 
-    color: #4b6352; 
+    color: #645646; 
     /* Щоб текст був в один рядок */
     white-space: nowrap; 
 }
