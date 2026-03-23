@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'RobotoSlab', serif !important;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2; /* Сірий фон сайту */
 }
 
 /* HERO */
@@ -21,7 +21,7 @@ body {
 .search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
 .main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 12px; text-decoration: none !important; }
 
-.hero-title { color: #5c5044; font-size: 44px; font-weight: bold; margin-top: 130px; }
+.hero-title { color: #5c5044; font-size: 44px; font-weight: bold; margin-top: 130px; text-align: center; }
 .btn-read-more { background: #7c945b; color: white !important; padding: 10px 30px; font-weight: bold; display: inline-block; margin-top: 20px; text-decoration: none !important; }
 
 /* ПРОДУКТИ ТА UNION */
@@ -34,7 +34,7 @@ body {
 
 .section-heading { font-size: 38px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; }
-.section-desc { font-size: 16px; color: #555; }
+.section-desc { font-size: 16px; color: #555; line-height: 1.6; }
 .vm-image-style { width: 100%; max-width: 450px; border-radius: 4px; }
 .shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
@@ -44,9 +44,9 @@ body {
     color: rgba(255,255,255,0.8); font-size: 70px; cursor: pointer;
 }
 
-/* СТИЛІ ДЛЯ НОВОГО БЛОКУ ACTIVITIES */
+/* ACTIVITIES */
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; }
-.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
+.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-img { max-height: 180px; object-fit: contain; }
 .activity-name { font-size: 20px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 .activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; line-height: 1.4; }
