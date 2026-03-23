@@ -1,13 +1,11 @@
-/* --- ОСНОВНІ СТИЛІ --- */
+/* --- БАЗОВІ СТИЛІ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 * { font-family: 'RobotoSlab', serif !important; }
 
-body { margin: 0; padding: 0; }
-
-/* --- HERO & ШАПКА --- */
+/* --- HERO --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -15,86 +13,37 @@ body { margin: 0; padding: 0; }
     display: flex;
     flex-direction: column;
 }
-
-.header-section {
-    background: transparent !important;
-    z-index: 10;
-}
-
+.header-section { background: transparent !important; z-index: 10; }
 .main-logo { height: 75px; }
-
-.search-field { 
-    border-bottom: 2px solid #4b6352; 
-    display: inline-flex; 
-    align-items: center; 
-}
-
+.search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
 .search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
 .search-input-line { border: none; outline: none; background: transparent; width: 150px; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; text-transform: uppercase; }
 
-.main-menu a { 
-    color: #4b6352; 
-    font-weight: bold; 
-    margin-left: 20px; 
-    font-size: 13px; 
-    text-decoration: none !important; 
-    text-transform: uppercase; 
-}
+.hero-content { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+.banner-title { font-size: 48px; font-weight: bold; color: #645646; }
+.btn-read-more { background: #7c945b; color: white !important; padding: 12px 35px; font-weight: bold; text-decoration: none !important; display: inline-block; }
 
-/* ЦЕНТРУВАННЯ В HERO */
-.hero-content {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner-title { 
-    font-size: 48px; 
-    font-weight: bold; 
-    color: #645646; /* Коричневий колір заголовка */
-}
-
-.btn-read-more { 
-    background: #7c945b; 
-    color: white !important; 
-    padding: 12px 35px; 
-    font-weight: bold; 
-    text-decoration: none !important; 
-    display: inline-block; 
-}
-
-/* --- PRODUCTS BAR --- */
+/* --- PRODUCTS & VM --- */
 .products-image-bar { background: #fff; }
-
-/* --- VISION & MISSION --- */
 .mb-100 { margin-bottom: 100px; }
-
-.vm-title { font-size: 42px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
-.vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; margin-bottom: 20px; }
+.vm-title { font-size: 42px; font-weight: bold; color: #3d525a; }
+.vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; }
 .vm-text { font-size: 18px; color: #555; line-height: 1.6; }
-
-.vm-photo {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* Кнопка Play на фото Mission */
-.video-play-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+.vm-photo { width: 100%; height: 400px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.video-play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .play-icon { width: 70px; cursor: pointer; }
+
+/* --- MAIN ACTIVITIES --- */
+.activities-main-title { font-size: 42px; font-weight: bold; color: #3d525a; margin-top: 40px; }
+.activity-card img { height: 180px; object-fit: contain; }
+.activity-name { font-size: 22px; font-weight: bold; color: #6a8d32; margin-top: 15px; }
+.activity-desc { font-size: 14px; color: #777; line-height: 1.4; padding: 0 20px; }
 
 /* --- FOOTER --- */
 .footer-dark { background: #2b3339; color: white; }
 
-/* Адаптивність */
 @media (max-width: 768px) {
     .banner-title { font-size: 32px; }
-    .vm-photo { height: 300px; }
+    .activities-main-title { font-size: 30px; }
 }
