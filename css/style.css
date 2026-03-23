@@ -1,4 +1,4 @@
-/* --- 1. ШРИФТИ ТА БАЗОВІ НАЛАШТУВАННЯ --- */
+/* 1. ПІДКЛЮЧЕННЯ ШРИФТУ ТА БАЗОВІ НАЛАШТУВАННЯ */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
@@ -8,40 +8,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'RobotoSlab', serif !important;
 }
 
 body {
+    font-family: 'RobotoSlab', serif !important;
     color: #555;
+    background-color: #fff;
     line-height: 1.6;
 }
 
-/* --- 2. HEADER (ШАПКА) --- */
+/* 2. ШАПКА (HEADER) */
 .header-section {
-    padding: 15px 0;
     background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
 }
 
 .main-logo {
     height: 65px;
+    display: block;
 }
 
 .search-box {
     display: inline-flex;
     align-items: center;
-    border-bottom: 1px solid #333;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #4b6352;
+    padding-bottom: 2px;
 }
 
-.search-box input {
+.search-label {
+    font-weight: bold;
+    color: #4b6352;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.search-input {
     border: none;
     outline: none;
-    padding: 2px 5px;
-    font-size: 14px;
+    width: 120px;
+    background: transparent;
 }
 
 .main-menu {
-    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .main-menu a {
@@ -51,9 +62,14 @@ body {
     font-size: 13px;
     margin-left: 20px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
-/* --- 3. HERO BANNER (ЦЕНТРОВАННИЙ) --- */
+.main-menu a:hover {
+    color: #76923c;
+}
+
+/* 3. ГОЛОВНИЙ БАНЕР (HERO) */
 .hero-banner {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -61,157 +77,164 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .hero-title {
     font-size: 48px;
     font-weight: bold;
     color: #645646;
-    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .btn-hero-read {
     background: #76923c;
     color: #fff !important;
-    padding: 12px 30px;
+    padding: 12px 35px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: 0.3s;
 }
 
-/* --- 4. ICON NAV BAR (7 ІКОНОК ПІД БАНЕРОМ) --- */
-.icon-nav-bar {
+.btn-hero-read:hover {
+    background: #5a712d;
+}
+
+/* 4. РОЗДІЛЬНИК (PRODUCTS BAR) */
+.products-divider-section {
+    padding: 30px 0;
     background: #fff;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.icon-flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.products-divider-section img {
+    max-width: 100%;
+    height: auto;
 }
 
-.icon-nav-item {
-    text-align: center;
-    flex: 1;
-}
-
-.icon-nav-item img {
-    height: 40px;
-    display: block;
-    margin: 0 auto 10px;
-}
-
-.icon-nav-item span {
-    font-size: 12px;
-    color: #3d525a;
-    display: block;
-}
-
-/* --- 5. VISION & MISSION --- */
+/* 5. СЕКЦІЇ VISION ТА MISSION (БЕЗ КРУГІВ) */
 .vision-section, .mission-section {
     padding: 80px 0;
 }
 
 .section-heading {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     color: #3d525a;
+    margin-bottom: 5px;
 }
 
 .green-dots {
     color: #82a43a;
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .section-description {
     font-size: 18px;
-    color: #555;
+    color: #666;
+    line-height: 1.8;
 }
 
-.rounded-circle-custom {
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
+/* Налаштування картинок (ПРЯМОКУТНІ) */
+.content-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.video-placeholder {
-    position: relative;
-    display: inline-block;
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-}
-
-/* --- 6. MAIN ACTIVITIES (3 КАРТИНКИ ВНИЗУ) --- */
-.activities-grid {
+/* 6. MAIN ACTIVITIES (5 В РЯД) */
+.activities-section {
     padding: 80px 0;
-    background: #f4f4f4;
+    background: #fbfbfb;
 }
 
 .activities-main-title {
     font-size: 36px;
-    color: #3d525a;
     font-weight: bold;
+    color: #3d525a;
 }
 
-.activity-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+.activity-item {
+    text-align: center;
+    padding: 15px;
+}
+
+.activity-item img {
+    height: 120px;
+    width: auto;
     margin-bottom: 20px;
 }
 
-.activity-subtitle {
+.act-title {
     color: #76923c;
     font-weight: bold;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.activity-details {
+.act-text {
     font-size: 14px;
-    color: #777;
+    color: #888;
 }
 
-/* --- 7. FOOTER --- */
-.footer-agri {
+/* 7. ФУТЕР (FOOTER) */
+.footer-section {
     background: #2b3339;
     color: #fff;
 }
 
-.footer-top {
-    padding: 20px 0;
-    border-bottom: 1px solid #374147;
-}
-
-.f-nav a {
+.footer-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 12px;
-    margin-right: 15px;
     font-weight: bold;
+    font-size: 12px;
+    margin-right: 20px;
+    text-transform: uppercase;
 }
 
-.f-social a {
+.footer-socials a {
     color: #7c945b;
-    margin-left: 10px;
-    font-size: 16px;
+    margin-left: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #fff;
 }
 
 .footer-copyright {
-    padding: 15px 0;
-    font-size: 11px;
+    background: #1f2529;
     color: #8a9196;
-    background: #222;
+    font-size: 11px;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+/* ДОПОМІЖНІ КЛАСИ */
+.text-right { text-align: right !important; }
+.pr-5 { padding-right: 3rem !important; }
+.pl-5 { padding-left: 3rem !important; }
+
+/* Кастомна сітка для 5 іконок (якщо col-md-2 замало) */
+.col-md-2-custom {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+@media (max-width: 768px) {
+    .col-md-2-custom {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .hero-title { font-size: 32px; }
+    .text-right { text-align: center !important; }
 }
