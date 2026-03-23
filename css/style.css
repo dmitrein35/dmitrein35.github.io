@@ -1,4 +1,4 @@
-/* --- 1. ПОДКЛЮЧЕНИЕ ШРИФТА --- */
+/* --- 1. ШРИФТЫ --- */
 @font-face {
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
@@ -6,6 +6,7 @@
     font-style: normal;
 }
 
+/* Применяем Roboto Slab ко всему сайту */
 * {
     font-family: 'Roboto Slab', serif !important;
 }
@@ -23,16 +24,30 @@ body {
 /* --- 3. HEADER --- */
 .header-section { background: transparent !important; position: relative; z-index: 10; }
 .main-logo { height: 80px; }
-.search-field { display: inline-flex; align-items: center; border-bottom: 2px solid #4b6352; padding-bottom: 2px; }
-.search-label { font-size: 18px; color: #4b6352; margin-right: 15px; }
-.search-input-line { border: none; background: transparent; outline: none; width: 200px; font-size: 16px; }
 
-.main-menu a {
-    text-decoration: none; color: #4b6352; font-weight: bold;
-    margin-left: 18px; font-size: 13px; text-transform: uppercase;
+.search-field {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid #4b6352;
+    padding-bottom: 2px;
 }
 
-/* --- 4. HERO SECTION (Баннер с новым цветом текста) --- */
+.search-label { font-size: 18px; color: #4b6352; margin-right: 15px; }
+.search-input-line { border: none; background: transparent; outline: none; width: 180px; font-size: 16px; }
+.search-icon-main { color: #4b6352; font-size: 18px; cursor: pointer; }
+
+.main-menu a {
+    text-decoration: none;
+    color: #4b6352;
+    font-weight: bold;
+    margin-left: 18px;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.main-menu a:hover { color: #6a8d32; }
+
+/* --- 4. HERO SECTION --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -46,16 +61,23 @@ body {
 .banner-title { 
     font-size: 40px; 
     font-weight: bold; 
-    color: #665444; /* ЦВЕТ КАК НА СКРИНШОТЕ */
+    color: #665444; /* Цвет как на твоем скриншоте */
     letter-spacing: 0.5px;
 }
 
 .btn-read-more {
-    display: inline-block; background-color: #6a8d32; color: white !important;
-    padding: 10px 30px; text-decoration: none !important; font-weight: bold; font-size: 14px;
+    display: inline-block;
+    background-color: #6a8d32;
+    color: white !important;
+    padding: 10px 30px;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
 }
+.btn-read-more:hover { background-color: #4b6352; }
 
-/* --- 5. VISION & MISSION (Квадратные фото) --- */
+/* --- 5. VISION & MISSION --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain; padding: 80px 0;
@@ -63,6 +85,11 @@ body {
 .v-m-row { margin-bottom: 60px; }
 .section-title { font-weight: bold; font-size: 36px; color: #3d525a; }
 .dots { color: #82a43a; letter-spacing: 3px; font-weight: bold; margin-bottom: 15px; font-size: 20px; }
+
+.vm-image-wrapper, .vm-video-wrapper {
+    display: inline-block;
+    position: relative;
+}
 
 .vm-img-square {
     width: 400px;       
@@ -80,12 +107,67 @@ body {
     transform: translate(-50%, -50%);
     width: 65px; 
     cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
 }
+.vm-play-button:hover { transform: translate(-50%, -50%) scale(1.1); }
 
 /* --- 6. ACTIVITIES --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
+.activity-icon-box { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.activity-icon { max-height: 100px; width: auto; }
+.activity-name { font-size: 18px; font-weight: bold; color: #6a8d32; margin-bottom: 10px; }
 
-/* --- 7. FOOTER --- */
-.footer-dark { background-color: #2b3339; padding: 25px 0; color: white; }
-.footer-bottom-block { background-color: #374147; padding: 15px 0; font-size: 11px; text-align: center; color: #8a9196; }
+.products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
+.products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
+
+/* --- 7. FOOTER (Исправлен под фото) --- */
+.footer-dark { width: 100%; }
+
+.footer-top-block {
+    background-color: #313d43; /* Темный фон из примера */
+    padding: 30px 0;
+}
+
+.footer-bottom-block {
+    background-color: #3c494f; /* Чуть более светлый фон */
+    padding: 15px 0;
+    font-size: 11px;
+    color: #a3abb0; /* Серый цвет копирайта */
+    text-transform: uppercase;
+}
+
+.footer-links a {
+    color: #ffffff !important; /* Убираем синий цвет ссылок */
+    font-size: 13px;
+    margin: 0 15px;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.footer-links a:hover { color: #82a43a !important; }
+
+.social-box { gap: 10px; }
+
+.social-circle {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #82a43a; /* Зеленая рамка */
+    border-radius: 50%;
+    color: #82a43a !important; /* Зеленая иконка */
+    text-align: center;
+    line-height: 31px; /* Выравнивание иконки */
+    font-size: 16px;
+    transition: 0.3s;
+}
+.social-circle:hover { background-color: #82a43a; color: #fff !important; }
+
+/* --- 8. АДАПТИВНОСТЬ --- */
+@media (max-width: 768px) {
+    .vm-img-square { width: 100%; height: auto; } 
+    .text-right { text-align: left !important; }
+    .footer-links { flex-direction: column; text-align: center; }
+    .social-box { justify-content: center !important; margin-top: 20px; }
+}
