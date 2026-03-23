@@ -8,6 +8,7 @@ body {
     font-family: 'Roboto Slab', serif;
     color: #555555;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* --- 2. HEADER & HERO --- */
@@ -24,44 +25,60 @@ body {
 .banner-title { font-size: 42px; font-weight: bold; color: #4b6352; margin-top: 200px; }
 .btn-read-more { background: #6a8d32; color: #fff !important; padding: 12px 35px; font-weight: bold; text-decoration: none; }
 
-/* --- 3. VISION & MISSION (ВИПРАВЛЕНО ВИРІВНЮВАННЯ) --- */
+/* --- 3. VISION & MISSION (ВИПРАВЛЕНО ТУТ) --- */
 .vision-mission { 
     background-color: #ebebeb; 
-    padding: 100px 0; 
+    padding: 120px 0; 
     background-image: url('../images/Union.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.v-m-row { margin-bottom: 80px; }
+.v-m-row { margin-bottom: 100px; }
 
-/* Контейнер тексту: примусово все вліво */
+/* Стандартний блок тексту: примусово все вліво */
 .vm-text-content {
     text-align: left; 
 }
 
+/* Окремий клас для Mission: текст притиснутий вправо (на md) */
+@media (min-width: 768px) {
+    .mission-text-align {
+        text-align: right;
+        padding-right: 15px;
+    }
+    .mission-text-align .section-title,
+    .mission-text-align .dots-gray {
+        text-align: right;
+    }
+}
+
 .section-title { 
-    font-size: 58px; /* Збільшений розмір */
+    font-size: 58px; 
     font-weight: bold; 
     color: #3d525a; 
     margin: 0;
-    text-align: left;
+    line-height: 1.1;
 }
 
 .dots-gray { 
-    color: #82a43a; /* Зелені зірочки як на макеті */
+    color: #82a43a; /* Зелені зірочки */
     font-size: 26px; 
     letter-spacing: 3px; 
-    margin-bottom: 20px;
-    text-align: left;
+    margin-bottom: 25px;
 }
 
 .section-text { 
     font-size: 19px; 
     line-height: 1.6; 
     max-width: 480px; 
-    text-align: left;
+    display: inline-block; /* Щоб text-align спрацював */
+}
+
+/* Корекція для тексту Mission */
+.mission-text-align .section-text {
+    max-width: 100%;
 }
 
 .vm-img-square { 
@@ -82,7 +99,7 @@ body {
 
 .activities-panel {
     background: #fff;
-    padding: 60px 20px;
+    padding: 60px 40px;
     border-radius: 5px;
 }
 .activity-icon-box { height: 120px; margin-bottom: 20px; }
