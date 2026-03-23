@@ -115,41 +115,16 @@ body.pink-bg {
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
 
-/* --- СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ (TOMATOES / BREEDING) --- */
+/* --- СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ --- */
 .tomato-banner-img { width: 100%; height: auto; display: block; }
-
-.red-accent-row {
-    border-left: 6px solid #e34e4e;
-    padding: 10px 25px;
-    margin: 35px 0;
-}
-
+.red-accent-row { border-left: 6px solid #e34e4e; padding: 10px 25px; margin: 35px 0; }
 .accent-text { font-size: 18px; line-height: 1.5; color: #3d525a; font-weight: 500; }
-
-.breeding-card {
-    background-color: #ffffff;
-    padding: 60px 45px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-    border-radius: 4px;
-    margin-bottom: 30px;
-}
-
-.program-card h3 {
-    font-size: 20px; font-weight: bold; color: #3d525a;
-    border-bottom: 2px solid #3d525a;
-    padding-bottom: 15px; margin-bottom: 25px;
-    min-height: 70px; display: flex; align-items: flex-end;
-}
-
-.program-card p { font-size: 14px; color: #555; }
-
-/* Сетка товаров/томатов */
+.breeding-card { background-color: #ffffff; padding: 60px 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-radius: 4px; margin-bottom: 30px; }
+.program-card h3 { font-size: 20px; font-weight: bold; color: #3d525a; border-bottom: 2px solid #3d525a; padding-bottom: 15px; margin-bottom: 25px; min-height: 70px; display: flex; align-items: flex-end; }
 .tomato-grid { margin-top: 60px; display: flex; flex-wrap: wrap; }
 .tomato-item { margin-bottom: 45px; transition: 0.3s; text-align: left; }
 .tomato-item:hover { transform: translateY(-8px); }
-.tomato-item img { border: 1px solid #f0f0f0; width: 100%; margin-bottom: 15px; }
-.tomato-name { color: #6a8d32; font-weight: bold; font-size: 17px; margin-bottom: 5px; }
-.tomato-type { font-size: 13px; color: #888; text-transform: uppercase; }
+.tomato-name { color: #6a8d32; font-weight: bold; font-size: 17px; }
 
 /* --- ФУТЕР (FOOTER) --- */
 .footer-dark { padding: 0; width: 100%; }
@@ -163,10 +138,7 @@ body.pink-bg {
 .footer-links a { 
     color: #fff; font-size: 11px; margin-right: 15px; 
     text-decoration: none !important; text-transform: uppercase; font-weight: bold; 
-    transition: 0.3s;
 }
-.footer-links a:hover { color: #82a43a; }
-
 .social-box { display: flex; justify-content: flex-end; gap: 5px; }
 .social-circle { 
     display: inline-block; width: 32px; height: 32px; 
@@ -174,22 +146,10 @@ body.pink-bg {
     color: #7c945b !important; text-align: center; 
     line-height: 30px; transition: 0.3s; 
 }
-.social-circle:hover { background-color: #7c945b; color: #fff !important; }
 
-/* --- АДАПТИВНОСТЬ (MOBILE) --- */
-@media (max-width: 992px) {
-    .banner-title { font-size: 32px; }
-    .main-menu a { margin-left: 10px; font-size: 11px; }
-}
-
+/* --- АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
     .text-right { text-align: left !important; }
     .social-box { justify-content: flex-start; margin-top: 20px; }
     .footer-links a { display: block; margin-bottom: 10px; }
-    .banner-title { font-size: 26px; }
-    .header-section .container { flex-direction: column; text-align: center; }
-    .nav-container { margin-top: 20px; text-align: center !important; }
-    .main-menu { justify-content: center; flex-wrap: wrap; }
-    .vision-mission { padding: 40px 0; }
-    .breeding-card { padding: 30px 20px; }
 }
