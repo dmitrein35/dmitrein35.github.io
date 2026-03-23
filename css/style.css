@@ -1,17 +1,19 @@
+/* --- ШРИФТЫ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
 }
 
-/* Применение шрифта ко всему тексту, кроме иконок */
 *:not(i):not([class*="fa-"]) {
     font-family: 'RobotoSlab', serif !important;
 }
 
+/* --- ОБЩИЕ СТИЛИ --- */
 body {
     margin: 0;
     color: #555555;
     background-color: #ffffff;
+    line-height: 1.6;
 }
 
 body.pink-bg { 
@@ -22,7 +24,7 @@ body.pink-bg {
     max-width: 1140px; 
 }
 
-/* --- HEADER & NAV --- */
+/* --- ХЕДЕР И ПОИСК --- */
 .header-section { 
     background: transparent !important; 
     position: relative; 
@@ -54,7 +56,7 @@ body.pink-bg {
 
 .main-menu a:hover { color: #6a8d32; }
 
-/* --- HERO SECTION --- */
+/* --- ГЛАВНЫЙ БАННЕР (HERO) --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -74,9 +76,12 @@ body.pink-bg {
     text-decoration: none !important;
     font-weight: bold;
     font-size: 14px;
+    transition: 0.3s;
 }
 
-/* --- VISION & MISSION (Центрирование кнопки Play тут) --- */
+.btn-read-more:hover { background-color: #4b6352; }
+
+/* --- СЕКЦИЯ VISION & MISSION --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
@@ -86,12 +91,10 @@ body.pink-bg {
 .v-m-row { margin-bottom: 60px; }
 .section-title { font-weight: bold; font-size: 36px; color: #3d525a; }
 .dots { color: #82a43a; letter-spacing: 3px; font-weight: bold; margin-bottom: 15px; font-size: 20px; }
-.section-text { font-size: 16px; line-height: 1.6; }
+.section-text { font-size: 16px; color: #555555; }
 
-/* Контейнеры для фото */
-.vm-image-wrapper, .vm-video-wrapper {
+.vm-image-wrapper {
     display: inline-block;
-    position: relative; /* Важно: кнопка позиционируется относительно этого блока */
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
@@ -101,35 +104,18 @@ body.pink-bg {
     display: block; 
 }
 
-/* Кнопка Play идеально по центру */
-.vm-play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* transform двигает кнопку назад на половину её размера, достигая центра */
-    transform: translate(-50%, -50%);
-    width: 65px; 
-    cursor: pointer;
-    z-index: 10;
-    transition: 0.3s ease;
-}
-
-.vm-play-button:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-/* --- MAIN ACTIVITIES --- */
+/* --- ОСНОВНАЯ ДЕЯТЕЛЬНОСТЬ (ACTIVITIES) --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-icon-box { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
 .activity-icon { max-height: 100px; width: auto; }
 .activity-name { font-size: 18px; font-weight: bold; color: #6a8d32; margin-bottom: 10px; }
-.activity-desc { font-size: 14px; }
+.activity-desc { font-size: 14px; color: #666; }
 
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
 
-/* --- СТИЛИ ДЛЯ ВТОРОЙ СТРАНИЦЫ (Selection/Products) --- */
+/* --- СТИЛИ ДЛЯ ВНУТРЕННИХ СТРАНИЦ (TOMATOES / BREEDING) --- */
 .tomato-banner-img { width: 100%; height: auto; display: block; }
 
 .red-accent-row {
@@ -138,13 +124,14 @@ body.pink-bg {
     margin: 35px 0;
 }
 
-.accent-text { font-size: 18px; line-height: 1.5; color: #3d525a; }
+.accent-text { font-size: 18px; line-height: 1.5; color: #3d525a; font-weight: 500; }
 
 .breeding-card {
     background-color: #ffffff;
     padding: 60px 45px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     border-radius: 4px;
+    margin-bottom: 30px;
 }
 
 .program-card h3 {
@@ -154,13 +141,17 @@ body.pink-bg {
     min-height: 70px; display: flex; align-items: flex-end;
 }
 
+.program-card p { font-size: 14px; color: #555; }
+
+/* Сетка товаров/томатов */
 .tomato-grid { margin-top: 60px; display: flex; flex-wrap: wrap; }
 .tomato-item { margin-bottom: 45px; transition: 0.3s; text-align: left; }
 .tomato-item:hover { transform: translateY(-8px); }
 .tomato-item img { border: 1px solid #f0f0f0; width: 100%; margin-bottom: 15px; }
-.tomato-name { color: #6a8d32; font-weight: bold; font-size: 17px; }
+.tomato-name { color: #6a8d32; font-weight: bold; font-size: 17px; margin-bottom: 5px; }
+.tomato-type { font-size: 13px; color: #888; text-transform: uppercase; }
 
-/* --- FOOTER --- */
+/* --- ФУТЕР (FOOTER) --- */
 .footer-dark { padding: 0; width: 100%; }
 .footer-top-block { background-color: #2b3339; padding: 25px 0; }
 .footer-bottom-block { 
@@ -172,21 +163,33 @@ body.pink-bg {
 .footer-links a { 
     color: #fff; font-size: 11px; margin-right: 15px; 
     text-decoration: none !important; text-transform: uppercase; font-weight: bold; 
+    transition: 0.3s;
 }
+.footer-links a:hover { color: #82a43a; }
 
+.social-box { display: flex; justify-content: flex-end; gap: 5px; }
 .social-circle { 
     display: inline-block; width: 32px; height: 32px; 
     border: 1.5px solid #7c945b; border-radius: 50%; 
     color: #7c945b !important; text-align: center; 
-    line-height: 30px; transition: 0.3s; margin-left: 5px;
+    line-height: 30px; transition: 0.3s; 
 }
-
 .social-circle:hover { background-color: #7c945b; color: #fff !important; }
 
-/* --- ADAPTIVE --- */
+/* --- АДАПТИВНОСТЬ (MOBILE) --- */
+@media (max-width: 992px) {
+    .banner-title { font-size: 32px; }
+    .main-menu a { margin-left: 10px; font-size: 11px; }
+}
+
 @media (max-width: 768px) {
     .text-right { text-align: left !important; }
-    .banner-title { font-size: 30px; }
     .social-box { justify-content: flex-start; margin-top: 20px; }
     .footer-links a { display: block; margin-bottom: 10px; }
+    .banner-title { font-size: 26px; }
+    .header-section .container { flex-direction: column; text-align: center; }
+    .nav-container { margin-top: 20px; text-align: center !important; }
+    .main-menu { justify-content: center; flex-wrap: wrap; }
+    .vision-mission { padding: 40px 0; }
+    .breeding-card { padding: 30px 20px; }
 }
