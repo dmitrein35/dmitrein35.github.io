@@ -91,7 +91,7 @@ body.pink-bg {
     font-size: 52px; 
     font-weight: bold; 
     color: #4b6352; 
-    line-height: 1.2;
+    line-height: 1; /* Змінено з 1.2, щоб було в один рядок */
 }
 
 .btn-read-more {
@@ -352,7 +352,7 @@ body.pink-bg {
 }
 
 @media (max-width: 992px) {
-    .banner-title { font-size: 42px; }
+    .banner-title { font-size: 38px; } /* Зменшено для мобільних, щоб не розривало рядок */
     .section-title { font-size: 34px; }
 }
 
@@ -362,7 +362,7 @@ body.pink-bg {
     .footer-links { margin-bottom: 25px; display: block; }
     .footer-links a { display: block; margin-bottom: 12px; }
     .products-line-img { height: 100px; }
-    .banner-title { font-size: 34px; }
+    .banner-title { font-size: 28px; } /* Ще менше для зовсім малих екранів */
     .hero-wrapper { min-height: 500px; }
     .breeding-card { padding: 40px 25px; }
 }
