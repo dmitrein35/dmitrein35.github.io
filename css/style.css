@@ -1,14 +1,10 @@
-/* 1. ПІДКЛЮЧЕННЯ ШРИФТУ ТА БАЗОВІ НАЛАШТУВАННЯ */
+/* --- 1. ШРИФТ ТА БАЗОВІ НАЛАШТУВАННЯ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'RobotoSlab', serif !important;
@@ -17,43 +13,54 @@ body {
     line-height: 1.6;
 }
 
-/* 2. ШАПКА (HEADER) */
+/* --- 2. HEADER (ШАПКА) --- */
 .header-section {
     background: #fff;
     border-bottom: 1px solid #eee;
     padding: 10px 0;
+    position: relative; /* Для позиціонування пошуку */
 }
 
-.main-logo {
-    height: 65px;
-    display: block;
+/* Логотип (image2.png) */
+.main-logo { height: 65px; display: block; }
+
+/* НОВИЙ СТИЛЬ ПОШУКУ (image2.png) ЗВЕРХУ СПРАВА */
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Вирівнювання вправо */
 }
 
+/* image2.png */
 .search-box {
     display: inline-flex;
     align-items: center;
-    border-bottom: 1px solid #4b6352;
+    border-bottom: 1px solid #c8d1c9; /* Світліша лінія, як на макеті */
     padding-bottom: 2px;
+    margin-top: 10px;
+    margin-right: 15px; /* Відступ від краю */
 }
 
-.search-label {
-    font-weight: bold;
-    color: #4b6352;
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-.search-input {
+.search-box input {
     border: none;
     outline: none;
-    width: 120px;
+    width: 250px; /* Ширше поле */
     background: transparent;
+    font-size: 14px;
+    color: #4b6352;
+    placeholder-color: #4b6352;
 }
 
-.main-menu {
-    display: flex;
-    justify-content: flex-end;
+.search-box input::placeholder { color: #4b6352; }
+
+.search-box i {
+    color: #4b6352;
+    font-size: 16px;
+    cursor: pointer;
 }
+
+/* МЕНЮ (image2.png) НИЖЧЕ ПОШУКУ */
+.main-menu { margin-top: 15px; }
 
 .main-menu a {
     text-decoration: none;
@@ -65,11 +72,9 @@ body {
     transition: 0.3s;
 }
 
-.main-menu a:hover {
-    color: #76923c;
-}
+.main-menu a:hover { color: #76923c; }
 
-/* 3. ГОЛОВНИЙ БАНЕР (HERO) */
+/* --- 3. HERO BANNER (ГОЛОВНИЙ ЕКРАН) --- */
 .hero-banner {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -77,16 +82,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    text-align: center;
 }
 
+/* ЗАГОЛОВОК (image2.png) В ОДИН РЯДОК */
 .hero-title {
     font-size: 48px;
     font-weight: bold;
     color: #645646;
-    text-align: center;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    width: 100%; /* Займає всю ширину */
+    max-width: 100%; /* Прибираємо обмеження */
 }
 
 .btn-hero-read {
@@ -100,26 +106,19 @@ body {
     transition: 0.3s;
 }
 
-.btn-hero-read:hover {
-    background: #5a712d;
-}
+.btn-hero-read:hover { background: #5a712d; }
 
-/* 4. РОЗДІЛЬНИК (PRODUCTS BAR) */
+/* --- 4. РОЗДІЛЬНИК (PRODUCTS BAR) --- */
 .products-divider-section {
     padding: 30px 0;
     background: #fff;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.products-divider-section img {
-    max-width: 100%;
-    height: auto;
-}
+.products-divider-section img { max-width: 100%; height: auto; }
 
-/* 5. СЕКЦІЇ VISION ТА MISSION (БЕЗ КРУГІВ) */
-.vision-section, .mission-section {
-    padding: 80px 0;
-}
+/* --- 5. СЕКЦІЇ VISION ТА MISSION (image2.png) ПРЯМОКУТНІ */
+.vision-section, .mission-section { padding: 80px 0; }
 
 .section-heading {
     font-size: 42px;
@@ -135,13 +134,9 @@ body {
     margin-bottom: 20px;
 }
 
-.section-description {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-}
+.section-description { font-size: 18px; color: #666; line-height: 1.8; }
 
-/* Налаштування картинок (ПРЯМОКУТНІ) */
+/* Фото (image2.png) - прямокутні, з тінню */
 .content-img {
     width: 100%;
     max-width: 500px;
@@ -150,46 +145,29 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* 6. MAIN ACTIVITIES (5 В РЯД) */
-.activities-section {
-    padding: 80px 0;
-    background: #fbfbfb;
-}
+/* --- 6. MAIN ACTIVITIES (image2.png) 5 В РЯД */
+.activities-section { padding: 80px 0; background: #fbfbfb; }
+.activities-main-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 
-.activities-main-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #3d525a;
-}
-
-.activity-item {
+/* image2.png */
+.col-md-2-custom {
+    flex: 0 0 20%;
+    max-width: 20%;
     text-align: center;
     padding: 15px;
 }
 
-.activity-item img {
+.col-md-2-custom img {
     height: 120px;
     width: auto;
     margin-bottom: 20px;
 }
 
-.act-title {
-    color: #76923c;
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+.act-title { color: #76923c; font-weight: bold; font-size: 20px; margin-bottom: 10px; }
+.act-text { font-size: 14px; color: #888; }
 
-.act-text {
-    font-size: 14px;
-    color: #888;
-}
-
-/* 7. ФУТЕР (FOOTER) */
-.footer-section {
-    background: #2b3339;
-    color: #fff;
-}
+/* --- 7. FOOTER (ПІДВАЛ) --- */
+.footer-section { background: #2b3339; color: #fff; }
 
 .footer-nav a {
     color: #fff;
@@ -207,9 +185,7 @@ body {
     transition: 0.3s;
 }
 
-.footer-socials a:hover {
-    color: #fff;
-}
+.footer-socials a:hover { color: #fff; }
 
 .footer-copyright {
     background: #1f2529;
@@ -223,18 +199,3 @@ body {
 .text-right { text-align: right !important; }
 .pr-5 { padding-right: 3rem !important; }
 .pl-5 { padding-left: 3rem !important; }
-
-/* Кастомна сітка для 5 іконок (якщо col-md-2 замало) */
-.col-md-2-custom {
-    flex: 0 0 20%;
-    max-width: 20%;
-}
-
-@media (max-width: 768px) {
-    .col-md-2-custom {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-    .hero-title { font-size: 32px; }
-    .text-right { text-align: center !important; }
-}
