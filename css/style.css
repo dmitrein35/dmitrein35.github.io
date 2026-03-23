@@ -1,11 +1,14 @@
-/* --- 1. ШРИФТЫ --- */
+/* --- 1. ПОДКЛЮЧЕНИЕ ШРИФТА --- */
 @font-face {
-    font-family: 'RobotoSlab';
+    font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Поддержка вариативного веса */
+    font-style: normal;
 }
 
-*:not(i):not([class*="fa-"]) {
-    font-family: 'RobotoSlab', serif !important;
+/* Применяем ко всем элементам без исключения */
+* {
+    font-family: 'Roboto Slab', serif !important;
 }
 
 /* --- 2. ОБЩИЕ СТИЛИ --- */
@@ -48,7 +51,7 @@ body {
     padding: 10px 30px; text-decoration: none !important; font-weight: bold; font-size: 14px;
 }
 
-/* --- 5. VISION & MISSION (ФИКСАЦИЯ РАЗМЕРОВ) --- */
+/* --- 5. VISION & MISSION (КВАДРАТНЫЕ ФОТО) --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain; padding: 80px 0;
@@ -64,13 +67,12 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-/* ЭТОТ БЛОК ДЕЛАЕТ КАРТИНКИ КВАДРАТНЫМИ И ОДИНАКОВЫМИ */
 .vm-img-square {
-    width: 400px;       /* Задаем фиксированную ширину */
-    height: 400px;      /* Задаем фиксированную высоту (такую же, как ширина) */
-    object-fit: cover;  /* Обрезает края, сохраняя пропорции содержимого */
+    width: 400px;       
+    height: 400px;      
+    object-fit: cover;  
     display: block;
-    border-radius: 4px; /* Легкое скругление для аккуратности */
+    border-radius: 4px; 
 }
 
 .vm-play-button {
@@ -81,9 +83,7 @@ body {
     width: 65px; 
     cursor: pointer;
     z-index: 10;
-    transition: 0.3s;
 }
-.vm-play-button:hover { transform: translate(-50%, -50%) scale(1.1); }
 
 /* --- 6. ACTIVITIES --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
@@ -104,7 +104,6 @@ body {
 
 /* --- 8. АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
-    .vm-img-square { width: 100%; height: auto; } /* На мобильных пусть тянутся по ширине */
+    .vm-img-square { width: 100%; height: auto; } 
     .text-right { text-align: left !important; }
-    .social-box { justify-content: flex-start; margin-top: 20px; }
 }
