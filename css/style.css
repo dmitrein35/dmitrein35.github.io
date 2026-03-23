@@ -155,10 +155,32 @@ body.pink-bg {
 /* --- MAIN ACTIVITIES --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
-.activity-icon-box { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.activity-icon { max-height: 100px; width: auto; }
-.activity-name { font-size: 18px; font-weight: bold; color: #6a8d32; margin-bottom: 10px; }
-.activity-desc { font-size: 14px; }
+
+/* Збільшено блоки іконок для image4, image5, image6 */
+.activity-icon-box { 
+    height: 160px; /* Збільшено з 120px */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 25px; 
+}
+
+.activity-icon { 
+    max-height: 140px; /* Збільшено з 100px */
+    width: auto; 
+}
+
+/* Збільшено тексти під іконками */
+.activity-name { 
+    font-size: 22px; /* Збільшено з 18px */
+    font-weight: bold; 
+    color: #6a8d32; 
+    margin-bottom: 12px; 
+}
+
+.activity-desc { 
+    font-size: 16px; /* Збільшено з 14px */
+}
 
 /* --- PRODUCTS & BREEDING --- */
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
@@ -228,6 +250,9 @@ body.pink-bg {
     .section-text { font-size: 18px; }
     .v-m-row { display: block; }
     .vm-image-wrapper, .vm-video-wrapper { height: auto; margin-top: 20px; }
+    .activity-icon-box { height: auto; }
+    .activity-name { font-size: 20px; }
+    .activity-desc { font-size: 15px; }
     .text-right { text-align: left !important; }
     .social-box { justify-content: flex-start; margin-top: 20px; }
     .footer-links { margin-bottom: 20px; display: block; }
