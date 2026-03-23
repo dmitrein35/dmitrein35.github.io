@@ -1,182 +1,200 @@
-/* --- ЗАГАЛЬНІ СТИЛІ --- */
+/* --- 1. ШРИФТИ ТА БАЗОВІ НАЛАШТУВАННЯ --- */
 @font-face {
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 
-body {
-    font-family: 'Roboto Slab', serif;
-    color: #555;
-    margin: 0;
+body { 
+    font-family: 'Roboto Slab', serif; 
+    color: #555555; 
+    margin: 0; 
+    line-height: 1.6;
 }
 
-.pink-bg {
-    background-color: #fdf2f2; /* Дуже світлий рожевий фон як на макеті */
+/* Рожевий фон для сторінки Tomato */
+.pink-bg { 
+    background-color: #fdf2f2 !important; 
 }
 
-/* --- HEADER --- */
-.header-section {
-    position: relative;
-    z-index: 10;
+/* --- 2. HEADER (СПІЛЬНИЙ) --- */
+.header-section { 
+    padding: 20px 0; 
+    background: #fff; 
 }
 
-.main-logo {
-    height: 80px;
+.main-logo { 
+    height: 80px; 
 }
 
-.search-field {
-    border-bottom: 2px solid #4b6352;
-    display: inline-flex;
-    align-items: center;
+.search-field { 
+    border-bottom: 2px solid #4b6352; 
+    display: inline-flex; 
+    align-items: center; 
+    padding-bottom: 2px;
 }
 
-.search-input-line {
-    border: none;
-    outline: none;
-    width: 150px;
-    background: transparent;
+.search-label { 
+    font-size: 16px; 
+    color: #4b6352; 
+    margin-right: 10px; 
 }
 
-.main-menu a {
-    color: #4b6352;
-    font-weight: bold;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
+.search-input-line { 
+    border: none; 
+    outline: none; 
+    width: 150px; 
+    background: transparent; 
 }
 
-/* --- Tomato Hero (БАЙНЕР, ЯКИЙ ПОВЕРНУЛИ) --- */
-.tomato-hero {
+.main-menu a { 
+    color: #4b6352; 
+    font-weight: bold; 
+    margin-left: 20px; 
+    text-decoration: none !important; 
+    font-size: 13px; 
+    text-transform: uppercase; 
+}
+
+/* --- 3. БАНЕРИ (HERO SECTIONS) --- */
+
+/* Банер 1-го сайту (bg.png) */
+.hero-wrapper { 
+    background: url('../images/bg.png') no-repeat center center; 
+    background-size: cover; 
+    min-height: 700px; 
+}
+.banner-title { 
+    font-size: 42px; 
+    font-weight: bold; 
+    color: #4b6352; 
+    padding-top: 200px; 
+}
+
+/* Банер 2-го сайту (image7.png) */
+.tomato-hero-section {
     width: 100%;
-    overflow: hidden;
-    line-height: 0; /* Щоб не було мікро-відступу знизу картинки */
+    line-height: 0; 
+    margin: 0;
+    padding: 0;
 }
 
-.tomato-banner-img {
+.tomato-hero-section img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* --- MAIN CONTENT --- */
-.tomato-main-content {
-    /* Прибираємо великий margin-top, який міг бути раніше */
-    margin-top: 0; 
+/* --- 4. КОНТЕНТ СТОРІНКИ ТОМАТІВ --- */
+.tomato-main-content .section-title { 
+    font-size: 48px; 
+    font-weight: bold; 
+    color: #3d525a; 
+    margin-top: 40px; 
 }
 
-.section-title {
-    font-size: 42px;
-    font-weight: bold;
-    color: #3d525a;
-    margin-bottom: 5px;
+.tomato-main-content .dots { 
+    color: #82a43a; 
+    font-size: 24px; 
+    letter-spacing: 3px; 
+    margin-bottom: 25px; 
 }
 
-.dots {
-    color: #82a43a;
-    font-size: 24px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.section-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
+/* Червона вертикальна лінія зліва */
 .red-accent-row {
-    background-color: #df4a4a;
-    color: white;
-    padding: 20px;
+    border-left: 5px solid #df4a4a;
+    padding: 10px 0 10px 30px;
     margin: 40px 0;
-    border-radius: 5px;
 }
 
-.accent-text {
-    margin-bottom: 0;
-    font-size: 18px;
+.accent-text { 
+    font-size: 19px; 
+    color: #3d525a; 
+    margin: 0; 
+    line-height: 1.5;
 }
 
-/* Breeding Section */
-.breeding-section {
-    padding: 40px 0;
-}
-
+/* Картки програм Breeding */
 .breeding-card {
     background: #fff;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-radius: 2px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
 }
 
-.program-card h3 {
-    color: #df4a4a;
-    font-size: 22px;
-    font-weight: bold;
+.program-card h3 { 
+    color: #3d525a; 
+    font-size: 22px; 
+    font-weight: bold; 
+    padding-bottom: 15px; 
+    border-bottom: 1.5px solid #eee; 
     margin-bottom: 15px;
 }
 
 .program-card p {
     font-size: 15px;
-    color: #666;
-    line-height: 1.5;
 }
 
-/* Grid Container */
-.tomato-grid-container img {
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.tomato-grid-container img:hover {
-    transform: scale(1.05);
-}
-
-/* --- FOOTER --- */
-.footer-dark {
+/* Сітка томатів (8 фото) */
+.tomato-grid-img { 
+    border-radius: 4px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease;
     width: 100%;
 }
 
-.footer-top-block {
-    background: #2b3339;
-    padding: 30px 0;
+.tomato-grid-img:hover { 
+    transform: translateY(-5px); 
 }
 
-.footer-links a {
-    color: #fff;
-    font-size: 12px;
-    margin-right: 20px;
-    font-weight: bold;
-    text-decoration: none;
+/* --- 5. FOOTER (5 іконок) --- */
+.footer-top-block { 
+    background: #2b3339; 
+    padding: 35px 0; 
 }
 
-.social-box {
-    text-align: right;
+.footer-links a { 
+    color: #fff; 
+    font-size: 12px; 
+    margin-right: 20px; 
+    font-weight: bold; 
+    text-decoration: none !important; 
 }
 
-.social-circle {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    border: 2px solid #7c945b;
-    border-radius: 50%;
-    color: #7c945b;
-    text-align: center;
-    line-height: 32px;
-    margin-left: 10px;
-    transition: 0.3s;
+.social-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
 }
 
-.social-circle:hover {
-    background: #7c945b;
-    color: #fff;
+.social-circle { 
+    display: inline-block; 
+    width: 38px; 
+    height: 38px; 
+    border: 2px solid #7c945b; 
+    border-radius: 50%; 
+    color: #7c945b; 
+    text-align: center; 
+    line-height: 34px; 
+    margin-left: 12px; 
+    transition: all 0.3s ease;
 }
 
-.footer-bottom-block {
-    background: #374147;
-    color: #8a9196;
-    padding: 15px 0;
-    font-size: 11px;
+.social-circle:hover { 
+    background: #7c945b; 
+    color: #fff; 
+}
+
+.footer-bottom-block { 
+    background: #374147; 
+    color: #8a9196; 
+    padding: 15px 0; 
+    font-size: 11px; 
+}
+
+/* --- 6. АДАПТИВНІСТЬ --- */
+@media (max-width: 768px) {
+    .tomato-main-content .section-title { font-size: 32px; }
+    .social-box { justify-content: center; margin-top: 20px; }
+    .footer-links { text-align: center; }
 }
