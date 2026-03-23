@@ -47,7 +47,7 @@ body {
 }
 .main-menu a:hover { color: #6a8d32; }
 
-/* --- 4. HERO SECTION (Баннер 700px) --- */
+/* --- 4. HERO SECTION --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -112,9 +112,19 @@ body {
 }
 .vm-play-button:hover { transform: translate(-50%, -50%) scale(1.1); }
 
-/* --- 6. ACTIVITIES (ИСПРАВЛЕНО ВЫРАВНИВАНИЕ) --- */
+/* --- 6. ACTIVITIES (З ВЕЛИКИМ СПІЛЬНИМ ФОНОМ) --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
+
+/* СТИЛЬ ВЕЛИКОЇ БІЛОЇ ПАНЕЛІ */
+.activities-white-panel {
+    background-color: #ffffff;
+    border-radius: 8px; /* Скруглені кути */
+    padding: 60px 40px; /* Внутрішні відступи для карток */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Тінь для ефекту підняття */
+    position: relative;
+    z-index: 5;
+}
 
 .activity-block {
     display: flex;
@@ -123,36 +133,23 @@ body {
 }
 
 .activity-icon-box {
-    height: 140px; /* Увеличили высоту для фона */
+    height: 120px; /* Повернули стандартну висоту */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
-    position: relative; /* Для позиционирования фона */
-}
-
-/* Белый квадрат за фото */
-.activity-icon-bg {
-    position: absolute;
-    width: 120px; /* Размер квадрата */
-    height: 120px;
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    z-index: 1; /* Фон сзади */
+    margin-bottom: 25px;
 }
 
 .activity-icon {
     max-height: 100px;
     width: auto;
-    position: relative;
-    z-index: 2; /* Фото спереди */
 }
 
-/* Обертки для выравнивания заголовков */
+/* Обертки для виравнивания заголовков */
 .activity-name-wrapper {
-    min-height: 60px; /* Фиксированная высота для всех заголовков */
+    min-height: 60px; 
     display: flex;
-    align-items: flex-start; /* Прижать к верху */
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 }
@@ -167,9 +164,9 @@ body {
 
 /* Обертки для выравнивания описаний */
 .activity-desc-wrapper {
-    min-height: 80px; /* Фиксированная высота для всех описаний */
+    min-height: 80px; 
     display: flex;
-    align-items: flex-start; /* Прижать к верху */
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 }
@@ -178,7 +175,7 @@ body {
     font-size: 14px;
     color: #666666;
     text-align: center;
-    max-width: 250px; /* Чтобы текст не растягивался */
+    max-width: 250px; 
 }
 
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
@@ -222,9 +219,14 @@ body {
 .social-circle:hover { background-color: #82a43a; color: #ffffff !important; }
 
 /* --- 8. АДАПТИВНОСТЬ --- */
+@media (max-width: 992px) {
+    .activities-white-panel padding: 40px 20px;
+}
+
 @media (max-width: 768px) {
     .main-activities padding: 40px 0;
-    .activity-block { margin-bottom: 40px; }
+    .activities-white-panel padding: 40px 15px;
+    .activity-block { margin-bottom: 50px; }
     .footer-dark .d-flex { flex-direction: column; text-align: center; }
     .footer-links { margin-bottom: 20px; flex-wrap: wrap; justify-content: center; }
     .social-box { justify-content: center; }
