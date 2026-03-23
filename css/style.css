@@ -1,13 +1,13 @@
+/* --- ШРИФТ (Назва файлу з твого скріншоту) --- */
 @font-face {
     font-family: 'RobotoSlab';
-    /* Назва файлу точно відповідає твоєму скріншоту з GitHub */
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/* Примусове застосування шрифту до всього контенту */
-*, html, body, h1, h2, h3, h4, h5, h6, p, a, span, div, input, button, li {
+/* Примусове застосування до всіх елементів сайту */
+*, html, body, h1, h2, h3, h4, h5, h6, p, a, span, div, input, button, li, i {
     font-family: 'RobotoSlab', serif !important;
 }
 
@@ -22,7 +22,7 @@ body.pink-bg {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1200px; /* Розширено для 5 іконок */
 }
 
 /* --- HEADER --- */
@@ -69,7 +69,7 @@ body.pink-bg {
 .banner { flex-grow: 1; display: flex; align-items: center; }
 
 .banner-title { 
-    font-size: 48px; /* Зменшено з 54px для Agridera Seeds... */
+    font-size: 44px; /* Agridera Seeds... трохи менше */
     font-weight: bold; 
     color: #645646; 
     line-height: 1.2;
@@ -87,11 +87,7 @@ body.pink-bg {
     transition: 0.3s;
 }
 
-.btn-read-more:hover {
-    background-color: #627a31;
-}
-
-/* --- VISION & MISSION --- */
+/* --- VISION & MISSION (image2, image3 великі) --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
@@ -125,14 +121,13 @@ body.pink-bg {
     color: #555555;
 }
 
-/* Збільшено висоту контейнерів для image2 та image3 до 450px */
-.vm-image-wrapper, .vm-video-wrapper {
+.vm-image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
-    height: 450px; 
+    height: 450px; /* Збільшено для великих фото */
 }
 
 .vm-main-img { 
@@ -143,46 +138,50 @@ body.pink-bg {
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.vm-play-button { 
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 65px; 
-    cursor: pointer; 
+.vm-play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; cursor: pointer; }
+
+/* --- MAIN ACTIVITIES (image4, 5, 6 великі + 5 в ряд) --- */
+.main-activities { background-color: #ebebeb; padding: 80px 0; }
+.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; margin-bottom: 40px; }
+
+.activities-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* --- MAIN ACTIVITIES --- */
-.main-activities { background-color: #ebebeb; padding: 80px 0; }
-.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
+/* Налаштування для 5 іконок в ряд */
+.activity-item {
+    flex: 0 0 18%; /* Приблизно 1/5 ширини */
+    min-width: 180px;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-/* Збільшено блоки іконок для image4, image5, image6 */
 .activity-icon-box { 
-    height: 160px; /* Збільшено з 120px */
+    height: 160px; /* Високий контейнер для великих іконок */
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    margin-bottom: 25px; 
+    margin-bottom: 20px; 
 }
 
 .activity-icon { 
-    max-height: 140px; /* Збільшено з 100px */
+    max-height: 140px; /* Самі іконки image4, 5, 6 великі */
     width: auto; 
 }
 
-/* Збільшено тексти під іконками */
 .activity-name { 
-    font-size: 22px; /* Збільшено з 18px */
+    font-size: 22px; /* Текст під іконками більший */
     font-weight: bold; 
     color: #6a8d32; 
-    margin-bottom: 12px; 
+    margin-bottom: 10px; 
 }
 
-.activity-desc { 
-    font-size: 16px; /* Збільшено з 14px */
-}
+.activity-desc { font-size: 16px; line-height: 1.4; }
 
-/* --- PRODUCTS & BREEDING --- */
+/* --- PRODUCTS & BREEDING (Tomato.html) --- */
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
@@ -198,20 +197,14 @@ body.pink-bg {
 .breeding-card { background-color: #ffffff; padding: 60px 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-radius: 4px; }
 
 .program-card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #3d525a;
-    border-bottom: 2px solid #3d525a;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
-    min-height: 70px;
-    display: flex;
-    align-items: flex-end;
+    font-size: 20px; font-weight: bold; color: #3d525a;
+    border-bottom: 2px solid #3d525a; padding-bottom: 15px;
+    margin-bottom: 25px; min-height: 70px; display: flex; align-items: flex-end;
 }
 .program-card p { font-size: 14px; line-height: 1.7; color: #555555; }
 
 .tomato-grid { margin-top: 60px; display: flex; flex-wrap: wrap; justify-content: flex-start; }
-.tomato-item { margin-bottom: 45px; transition: 0.3s; }
+.tomato-item { margin-bottom: 45px; transition: 0.3s; width: 100%; }
 .tomato-item:hover { transform: translateY(-8px); }
 .tomato-item img { border: 1px solid #f0f0f0; width: 100%; margin-bottom: 15px; }
 .tomato-name { color: #6a8d32; font-weight: bold; font-size: 17px; margin-bottom: 4px; }
@@ -221,40 +214,31 @@ body.pink-bg {
 .footer-dark { width: 100%; }
 .footer-top-block { background-color: #2b3339; padding: 25px 0; }
 .footer-bottom-block { 
-    background-color: #374147; 
-    padding: 15px 0; 
-    font-size: 11px; 
-    color: #8a9196; 
-    text-transform: uppercase; 
-    text-align: center;
+    background-color: #374147; padding: 15px 0; 
+    font-size: 11px; color: #8a9196; 
+    text-transform: uppercase; text-align: center;
 }
 .footer-links a { color: #fff; font-size: 11px; margin-right: 15px; text-decoration: none !important; text-transform: uppercase; font-weight: bold; }
+
 .social-box { display: flex; justify-content: flex-end; gap: 5px; }
 .social-circle { 
-    display: inline-block; 
-    width: 32px; 
-    height: 32px; 
-    border: 1.5px solid #7c945b; 
-    border-radius: 50%; 
-    color: #7c945b !important; 
-    text-align: center; 
-    line-height: 30px;
-    transition: 0.3s;
+    display: inline-block; width: 32px; height: 32px; 
+    border: 1.5px solid #7c945b; border-radius: 50%; 
+    color: #7c945b !important; text-align: center; line-height: 30px;
 }
 .social-circle:hover { background-color: #7c945b; color: #fff !important; }
 
-/* --- MEDIA QUERIES --- */
+/* --- АДАПТИВНІСТЬ --- */
+@media (max-width: 992px) {
+    .activity-item { flex: 0 0 45%; } /* По 2 іконки на планшеті */
+}
+
 @media (max-width: 768px) {
     .banner-title { font-size: 32px; }
     .section-title { font-size: 32px; }
     .section-text { font-size: 18px; }
     .v-m-row { display: block; }
-    .vm-image-wrapper, .vm-video-wrapper { height: auto; margin-top: 20px; }
-    .activity-icon-box { height: auto; }
-    .activity-name { font-size: 20px; }
-    .activity-desc { font-size: 15px; }
-    .text-right { text-align: left !important; }
+    .vm-image-wrapper { height: auto; margin-top: 20px; }
+    .activity-item { flex: 0 0 100%; } /* По 1 іконці на телефоні */
     .social-box { justify-content: flex-start; margin-top: 20px; }
-    .footer-links { margin-bottom: 20px; display: block; }
-    .footer-links a { display: block; margin-bottom: 10px; }
 }
