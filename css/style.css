@@ -1,9 +1,13 @@
 @font-face {
     font-family: 'RobotoSlab';
-    src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    /* Назва файлу точно відповідає твоєму скріншоту з GitHub */
+    src: url('../fonts/RobotoSlab.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-*:not(i):not([class*="fa-"]) {
+/* Примусове застосування шрифту до всього контенту */
+*, html, body, h1, h2, h3, h4, h5, h6, p, a, span, div, input, button, li {
     font-family: 'RobotoSlab', serif !important;
 }
 
@@ -21,7 +25,7 @@ body.pink-bg {
     max-width: 1140px;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 .header-section { 
     background: transparent !important; 
     position: relative; 
@@ -53,7 +57,7 @@ body.pink-bg {
 
 .main-menu a:hover { color: #6a8d32; }
 
-/* HERO & BANNER */
+/* --- HERO & BANNER --- */
 .hero-wrapper {
     background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -80,9 +84,14 @@ body.pink-bg {
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
-/* VISION & MISSION (ЗБІЛЬШЕНІ ТЕКСТИ ТА СИМЕТРІЯ) */
+.btn-read-more:hover {
+    background-color: #627a31;
+}
+
+/* --- VISION & MISSION (Тексти та Симетрія) --- */
 .vision-mission {
     background: #ebebeb url('../images/Union.png') no-repeat center center;
     background-size: contain;
@@ -97,7 +106,7 @@ body.pink-bg {
 
 .section-title { 
     font-weight: bold; 
-    font-size: 42px; /* Збільшено з 36px */
+    font-size: 42px; 
     color: #3d525a; 
     margin-bottom: 10px;
 }
@@ -111,11 +120,12 @@ body.pink-bg {
 }
 
 .section-text { 
-    font-size: 20px; /* Збільшено з 16px */
+    font-size: 20px; 
     line-height: 1.7; 
     color: #555555;
 }
 
+/* Контейнери однакової висоти для симетрії зображень */
 .vm-image-wrapper, .vm-video-wrapper {
     display: flex;
     justify-content: center;
@@ -133,9 +143,16 @@ body.pink-bg {
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.vm-play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 65px; cursor: pointer; }
+.vm-play-button { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 65px; 
+    cursor: pointer; 
+}
 
-/* MAIN ACTIVITIES */
+/* --- MAIN ACTIVITIES --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-icon-box { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
@@ -143,11 +160,17 @@ body.pink-bg {
 .activity-name { font-size: 18px; font-weight: bold; color: #6a8d32; margin-bottom: 10px; }
 .activity-desc { font-size: 14px; }
 
-/* PRODUCTS & BREEDING */
+/* --- PRODUCTS & BREEDING (tomato.html) --- */
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
-.red-accent-row { border-left: 6px solid #e34e4e; padding: 10px 25px; margin: 35px 0; }
+
+.red-accent-row { 
+    border-left: 6px solid #e34e4e; 
+    padding: 10px 25px; 
+    margin: 35px 0; 
+}
+
 .accent-text { font-size: 18px; line-height: 1.5; color: #3d525a; margin-bottom: 0; }
 .breeding-section { padding: 60px 0; margin: 40px 0; }
 .breeding-card { background-color: #ffffff; padding: 60px 45px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-radius: 4px; }
@@ -172,7 +195,7 @@ body.pink-bg {
 .tomato-name { color: #6a8d32; font-weight: bold; font-size: 17px; margin-bottom: 4px; }
 .tomato-type { font-size: 13px; color: #888; }
 
-/* FOOTER */
+/* --- FOOTER --- */
 .footer-dark { width: 100%; }
 .footer-top-block { background-color: #2b3339; padding: 25px 0; }
 .footer-bottom-block { 
@@ -194,12 +217,19 @@ body.pink-bg {
     color: #7c945b !important; 
     text-align: center; 
     line-height: 30px;
+    transition: 0.3s;
 }
+.social-circle:hover { background-color: #7c945b; color: #fff !important; }
 
-/* MEDIA QUERIES */
+/* --- MEDIA QUERIES --- */
 @media (max-width: 768px) {
+    .banner-title { font-size: 32px; }
     .section-title { font-size: 32px; }
     .section-text { font-size: 18px; }
     .v-m-row { display: block; }
     .vm-image-wrapper, .vm-video-wrapper { height: auto; margin-top: 20px; }
+    .text-right { text-align: left !important; }
+    .social-box { justify-content: flex-start; margin-top: 20px; }
+    .footer-links { margin-bottom: 20px; display: block; }
+    .footer-links a { display: block; margin-bottom: 10px; }
 }
