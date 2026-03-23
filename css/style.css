@@ -1,104 +1,80 @@
-/* --- 1. ЗАГАЛЬНІ СТИЛІ ТА ШРИФТИ --- */
+/* --- ЗАГАЛЬНІ СТИЛІ --- */
 @font-face {
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 
-body {
-    font-family: 'Roboto Slab', serif;
-    color: #555555;
-    margin: 0;
-}
+body { font-family: 'Roboto Slab', serif; color: #555; margin: 0; }
+.pink-bg { background-color: #fdf2f2 !important; }
 
-/* Спільний Header */
-.header-section { position: relative; z-index: 10; padding-top: 1rem; padding-bottom: 1rem; }
+/* Header & Footer (Спільні) */
+.header-section { padding: 15px 0; }
 .main-logo { height: 80px; }
 .search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
 .search-input-line { border: none; outline: none; width: 150px; background: transparent; }
 .main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; text-decoration: none; font-size: 13px; text-transform: uppercase; }
 
-/* Спільний Footer */
 .footer-top-block { background: #2b3339; padding: 30px 0; }
 .footer-links a { color: #fff; font-size: 12px; margin-right: 20px; font-weight: bold; text-decoration: none; }
-.social-circle { 
-    display: inline-block; width: 35px; height: 35px; border: 2px solid #7c945b; 
-    border-radius: 50%; color: #7c945b; text-align: center; line-height: 32px; margin-left: 10px; 
-}
+.social-circle { display: inline-block; width: 35px; height: 35px; border: 2px solid #7c945b; border-radius: 50%; color: #7c945b; text-align: center; line-height: 32px; margin-left: 10px; }
 .footer-bottom-block { background: #374147; color: #8a9196; padding: 15px 0; font-size: 11px; }
 
-/* --- 2. СТИЛІ ДЛЯ 1-ГО САЙТУ (INDEX.HTML) --- */
-.hero-wrapper {
-    background: url('../images/bg.png') no-repeat center center;
-    background-size: cover;
-    min-height: 700px;
-}
+/* --- СТИЛІ 1-ГО САЙТУ (НЕ ЗМІНЮЄМО) --- */
+.hero-wrapper { background: url('../images/bg.png') no-repeat center center; background-size: cover; min-height: 700px; }
 .banner-title { font-size: 42px; font-weight: bold; color: #4b6352; margin-top: 200px; }
 .btn-read-more { background: #6a8d32; color: #fff !important; padding: 12px 35px; font-weight: bold; text-decoration: none; }
 
-/* Vision & Mission блоки (Великі) */
 .vision-mission { background-color: #ebebeb; padding: 100px 0; background-image: url('../images/Union.png'); background-size: contain; background-repeat: no-repeat; background-position: center; }
-.v-m-row { margin-bottom: 100px; }
-
-/* Стилі заголовків для головної сторінки */
-.vision-mission .section-title { font-size: 58px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
+.vision-mission .section-title { font-size: 58px; font-weight: bold; color: #3d525a; }
 .vision-mission .dots-green { color: #82a43a; font-size: 26px; letter-spacing: 3px; margin-bottom: 20px; }
 .vision-mission .section-text { font-size: 19px; line-height: 1.6; max-width: 480px; }
 
-/* Дзеркальне вирівнювання Mission (Текст справа) */
 @media (min-width: 768px) {
     .mission-align-right { text-align: right; }
     .mission-align-right .section-text { margin-left: auto; }
 }
 
-.vm-img-square { width: 460px; height: 460px; object-fit: cover; border-radius: 4px; box-shadow: 0 15px 45px rgba(0,0,0,0.1); }
+.vm-img-square { width: 460px; height: 460px; object-fit: cover; border-radius: 4px; }
 .vm-video-wrapper { position: relative; display: inline-block; }
-.vm-play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; cursor: pointer; }
+.vm-play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; }
 
-/* Activities */
-.main-activities { background: #ebebeb; padding-bottom: 100px; }
-.activities-white-panel { background: #fff; padding: 60px 40px; border-radius: 5px; }
+/* --- СТИЛІ 2-ГО САЙТУ (ВИПРАВЛЕНО ЗА СКРІНШОТАМИ) --- */
+.tomato-main-content { padding-top: 50px; }
 
-/* --- 3. СТИЛІ ДЛЯ 2-ГО САЙТУ (TOMATO.HTML) --- */
-.pink-bg { background-color: #fdf2f2 !important; }
+/* Заголовок та зірочки */
+.tomato-main-content .section-title { font-size: 52px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
+.tomato-main-content .dots { color: #82a43a; font-size: 24px; letter-spacing: 3px; margin-bottom: 30px; }
+.tomato-main-content .section-text p { font-size: 17px; line-height: 1.6; color: #555; margin-bottom: 20px; }
 
-/* Виправлення розмірів тексту для Tomato Hybrids (за вашим скріншотом) */
-.tomato-main-content .section-title {
-    font-size: 44px; /* Менший за Vision, як на макеті */
-    font-weight: bold;
-    color: #3d525a;
-    margin-top: 50px;
-    margin-bottom: 10px;
+/* Червоні акценти (лінії зліва замість плашок) */
+.red-accent-row {
+    border-left: 4px solid #df4a4a;
+    padding-left: 20px;
+    margin: 60px 0;
 }
+.accent-text { font-size: 19px; line-height: 1.5; color: #444; margin: 0; }
 
-.tomato-main-content .dots {
-    color: #82a43a;
-    font-size: 22px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+/* Картки програм розведення */
+.breeding-card {
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
 }
+.program-card h3 { 
+    color: #3d525a; 
+    font-size: 22px; 
+    font-weight: bold; 
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Лінія під заголовком */
+}
+.program-card p { font-size: 16px; color: #555; line-height: 1.6; }
 
-.tomato-main-content .section-text p {
-    font-size: 16px; /* Стандартний розмір, не гігантський */
-    line-height: 1.6;
-    color: #555555;
+/* Сітка томатів */
+.tomato-grid-container img { 
+    border-radius: 4px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    margin-bottom: 30px; 
     max-width: 100%;
 }
-
-.tomato-hero .tomato-banner-img { width: 100%; height: auto; }
-
-.red-accent-row {
-    background-color: #df4a4a;
-    color: white;
-    padding: 25px;
-    margin: 40px 0;
-    border-radius: 5px;
-    text-align: center;
-}
-.accent-text { margin: 0; font-size: 18px; font-weight: 400; }
-
-.breeding-card { background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 50px; }
-.program-card h3 { color: #df4a4a; font-size: 20px; font-weight: bold; margin-bottom: 15px; }
-.program-card p { font-size: 14px; color: #666; }
-
-.tomato-grid-container img { border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; margin-bottom: 30px; }
-.tomato-grid-container img:hover { transform: scale(1.03); }
