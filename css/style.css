@@ -1,39 +1,58 @@
-/* --- БАЗОВІ НАЛАШТУВАННЯ --- */
+/* --- ОСНОВНІ СТИЛІ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 * { font-family: 'RobotoSlab', serif !important; }
 
-/* --- HERO WRAPPER (Колоски) --- */
+body { margin: 0; padding: 0; }
+
+/* --- HERO & ШАПКА --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
     min-height: 700px;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
-/* ПРОЗОРА ШАПКА */
 .header-section {
     background: transparent !important;
-    position: relative;
     z-index: 10;
 }
 
-/* ЦЕНТРУВАННЯ ТЕКСТУ ТА КНОПКИ */
+.main-logo { height: 75px; }
+
+.search-field { 
+    border-bottom: 2px solid #4b6352; 
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
+.search-input-line { border: none; outline: none; background: transparent; width: 150px; }
+
+.main-menu a { 
+    color: #4b6352; 
+    font-weight: bold; 
+    margin-left: 20px; 
+    font-size: 13px; 
+    text-decoration: none !important; 
+    text-transform: uppercase; 
+}
+
+/* ЦЕНТРУВАННЯ В HERO */
 .hero-content {
     flex-grow: 1;
     display: flex;
-    align-items: center; /* Центр по вертикалі */
-    justify-content: center; /* Центр по горизонталі */
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-title { 
     font-size: 48px; 
     font-weight: bold; 
-    color: #645646; /* Колір з макета */
+    color: #645646; /* Коричневий колір заголовка */
 }
 
 .btn-read-more { 
@@ -41,31 +60,41 @@
     color: white !important; 
     padding: 12px 35px; 
     font-weight: bold; 
-    text-decoration: none; 
+    text-decoration: none !important; 
     display: inline-block; 
 }
 
-/* ШАПКА: ПОШУК ТА МЕНЮ */
-.main-logo { height: 75px; }
-.search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
-.search-input-line { border: none; outline: none; background: transparent; width: 150px; }
-.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none; text-transform: uppercase; }
+/* --- PRODUCTS BAR --- */
+.products-image-bar { background: #fff; }
 
-/* БЛОК З PRODUCTS.PNG */
-.products-image-bar {
-    background: #fff;
-    border-bottom: 1px solid #eee;
+/* --- VISION & MISSION --- */
+.mb-100 { margin-bottom: 100px; }
+
+.vm-title { font-size: 42px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
+.vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; margin-bottom: 20px; }
+.vm-text { font-size: 18px; color: #555; line-height: 1.6; }
+
+.vm-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.products-image-bar img {
-    max-width: 100%;
-    height: auto;
+
+/* Кнопка Play на фото Mission */
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+.play-icon { width: 70px; cursor: pointer; }
 
-/* VISION & MISSION */
-.section-title { font-weight: bold; font-size: 38px; color: #3d525a; }
-.dots { color: #82a43a; letter-spacing: 5px; font-size: 20px; margin-bottom: 10px; }
-.img-fixed-size { width: 100%; height: 450px; object-fit: cover; }
-
-/* FOOTER */
+/* --- FOOTER --- */
 .footer-dark { background: #2b3339; color: white; }
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .banner-title { font-size: 32px; }
+    .vm-photo { height: 300px; }
+}
