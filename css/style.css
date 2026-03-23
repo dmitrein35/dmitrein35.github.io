@@ -6,7 +6,8 @@
     font-style: normal;
 }
 
-* {
+/* Применяем Roboto Slab ко всему, КРОМЕ иконок Font Awesome */
+*:not(i):not([class*="fa-"]) {
     font-family: 'Roboto Slab', serif !important;
 }
 
@@ -39,7 +40,6 @@ body {
     text-decoration: none; color: #4b6352; font-weight: bold;
     margin-left: 18px; font-size: 13px; text-transform: uppercase;
 }
-.main-menu a:hover { color: #6a8d32; }
 
 /* --- 4. HERO SECTION --- */
 .hero-wrapper {
@@ -98,9 +98,6 @@ body {
 /* --- 6. ACTIVITIES --- */
 .main-activities { background-color: #ebebeb; padding: 80px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
-.activity-icon-box { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-.activity-icon { max-height: 100px; width: auto; }
-.activity-name { font-size: 18px; font-weight: bold; color: #6a8d32; margin-bottom: 10px; }
 
 .products-bar { background-color: #ffffff; padding: 40px 0; border-bottom: 1px solid #eeeeee; }
 .products-line-img { height: 120px; width: auto; display: block; margin: 0 auto; }
@@ -126,7 +123,6 @@ body {
     text-decoration: none !important;
     font-weight: 500;
 }
-.footer-links a:hover { color: #82a43a !important; }
 
 .social-box { display: flex; gap: 12px; }
 
@@ -136,18 +132,14 @@ body {
     justify-content: center;
     width: 38px;
     height: 38px;
-    border: 2px solid #82a43a; /* Тот самый зеленый */
+    border: 2px solid #82a43a; 
     border-radius: 50%;
     color: #82a43a !important; 
     text-decoration: none !important;
     font-size: 18px;
     transition: 0.3s;
 }
-
-.social-circle:hover {
-    background-color: #82a43a;
-    color: #ffffff !important;
-}
+.social-circle:hover { background-color: #82a43a; color: #ffffff !important; }
 
 /* --- 8. АДАПТИВНОСТЬ --- */
 @media (max-width: 768px) {
