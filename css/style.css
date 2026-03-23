@@ -1,4 +1,4 @@
-/* --- 1. ШРИФТИ ТА БАЗА --- */
+/* --- 1. ШРИФТИ ТА БАЗОВІ НАЛАШТУВАННЯ --- */
 @font-face {
     font-family: 'Roboto Slab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
@@ -12,7 +12,9 @@ body {
 }
 
 /* Рожевий фон для сторінки Tomato */
-.pink-bg { background-color: #fdf2f2 !important; }
+.pink-bg { 
+    background-color: #fdf2f2 !important; 
+}
 
 /* --- 2. HEADER (БІЛА ЛІНІЯ ЗВЕРХУ) --- */
 .header-section { 
@@ -21,7 +23,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 10;
-    border-bottom: 1px solid #f0f0f0; /* Легка роздільна лінія */
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .main-logo { height: 80px; }
@@ -59,7 +61,6 @@ body {
     text-align: center;
 }
 
-/* Контейнер всередині банера для тексту та кнопки */
 .hero-content-box {
     display: flex;
     flex-direction: column;
@@ -98,10 +99,36 @@ body {
     transform: scale(1.05); 
 }
 
-/* --- 4. КОНТЕНТ (TOMATO & OTHERS) --- */
-.tomato-main-content .section-title { font-size: 48px; font-weight: bold; color: #3d525a; margin-top: 40px; }
-.tomato-main-content .dots { color: #82a43a; font-size: 24px; letter-spacing: 3px; margin-bottom: 25px; }
+/* --- 4. НОВА СЕКЦІЯ: PRODUCTS.PNG --- */
+.products-full-image {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.products-full-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- 5. КОНТЕНТ (VISION, MISSION & TOMATO) --- */
+.vision-mission { padding: 60px 0; }
+
+.section-title { font-size: 48px; font-weight: bold; color: #3d525a; }
+
+.dots-gray, .dots, .dotscentered { 
+    color: #82a43a; 
+    font-size: 24px; 
+    letter-spacing: 3px; 
+    margin-bottom: 20px; 
+}
+
+.section-text { font-size: 18px; color: #555; }
+
+.vm-img-square { width: 100%; max-width: 400px; border-radius: 5px; }
+
+/* Червона лінія для Tomato сторінки */
 .red-accent-row {
     border-left: 5px solid #df4a4a;
     padding: 10px 0 10px 30px;
@@ -110,7 +137,13 @@ body {
 
 .accent-text { font-size: 19px; color: #3d525a; margin: 0; line-height: 1.5; }
 
-/* --- 5. FOOTER (5 іконок) --- */
+/* --- 6. MAIN ACTIVITIES --- */
+.main-activities { padding: 80px 0; background: #fff; }
+.activities-title { font-size: 36px; font-weight: bold; color: #4b6352; }
+.activity-icon { height: 100px; margin-bottom: 20px; }
+.activity-name { font-weight: bold; color: #4b6352; margin-bottom: 15px; }
+
+/* --- 7. FOOTER (5 іконок) --- */
 .footer-top-block { background: #2b3339; padding: 35px 0; }
 .footer-links a { color: #fff; font-size: 12px; margin-right: 20px; font-weight: bold; text-decoration: none !important; }
 .social-box { display: flex; align-items: center; justify-content: flex-end; }
@@ -122,9 +155,10 @@ body {
 .social-circle:hover { background: #7c945b; color: #fff; }
 .footer-bottom-block { background: #374147; color: #8a9196; padding: 15px 0; font-size: 11px; }
 
-/* --- 6. АДАПТИВНІСТЬ --- */
+/* --- 8. АДАПТИВНІСТЬ --- */
 @media (max-width: 768px) {
     .banner-title { font-size: 32px; }
+    .section-title { font-size: 32px; }
     .social-box { justify-content: center; margin-top: 20px; }
     .footer-links { text-align: center; }
 }
