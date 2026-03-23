@@ -1,146 +1,127 @@
-/* --- 1. ШРИФТ РОБОТО --- */
+/* --- ОСНОВНІ НАЛАШТУВАННЯ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf') format('truetype');
 }
 
-/* --- 2. ГЛОБАЛЬНІ НАЛАШТУВАННЯ --- */
-/* Застосовуємо шрифт до всього тексту */
-body, html, p, h1, h2, h3, h4, span, a, input, div {
-    font-family: 'RobotoSlab', serif !important;
+/* Застосовуємо шрифт до всього, крім іконок */
+*:not(i) { font-family: 'RobotoSlab', serif !important; }
+
+/* Іконки використовують свій шрифт */
+.fab, .fas {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900;
 }
 
-/* ПРИМУСОВЕ ВИПРАВЛЕННЯ ДЛЯ ІКОНОК (FontAwesome) */
-/* Це правило блокує втручання Roboto в іконки */
-.fas, .fab, .fa, .far, 
-.fas::before, .fab::before, .fa::before, .far::before {
-    font-family: "Font Awesome 5 Free" !important; 
-    font-style: normal !important;
-    font-weight: 900 !important;
-    display: inline-block !important;
-    text-decoration: none !important;
-    text-transform: none !important;
+body { margin: 0; padding: 0; }
+
+/* --- ФОН ВСЬОГО САЙТУ (такий, як Union.png) --- */
+.site-body {
+    background-color: #f7f7f7; /* Світло-сірий фон, як на Union.png */
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-body { margin: 0; padding: 0; background: #fff; }
+/* ПРАВА БІЛА ЧАСТИНА ФОНУ (імітація Union.png) */
+.site-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%; /* Білий фон займає половину */
+    height: 100%;
+    background-color: #fff;
+    z-index: -2; /* Нижче за все */
+}
 
-/* --- 3. HERO WRAPPER ТА ФОН --- */
+/* Секція Vision & Mission, яка тепер на цьому фоні */
+.vision-mission-container {
+    background: transparent; /* Фон секції прозорий, щоб бачити фон сайту */
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* --- HERO ТА ШАПКА --- */
 .hero-wrapper {
-    /* Додано ../ щоб вийти з папки css до картинок */
-    background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), 
-                url('../images/bg.png') no-repeat center center;
+    background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
     min-height: 700px;
     display: flex;
     flex-direction: column;
 }
 
-.header-section { background: transparent !important; }
+.header-section { background: transparent !important; z-index: 10; }
 .main-logo { height: 75px; }
-
-/* Пошук */
-.search-field { 
-    border-bottom: 2px solid #4b6352; 
-    display: inline-flex; 
-    align-items: center; 
-    margin-bottom: 10px;
-}
+.search-field { border-bottom: 2px solid #4b6352; display: inline-flex; align-items: center; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 10px; }
 .search-input-line { border: none; outline: none; background: transparent; width: 150px; }
-
-.main-menu a { 
-    color: #4b6352; 
-    font-weight: bold; 
-    margin-left: 20px; 
-    font-size: 13px; 
-    text-decoration: none !important; 
-    text-transform: uppercase; 
-}
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; text-transform: uppercase; }
 
 .hero-content { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
 .banner-title { font-size: 48px; font-weight: bold; color: #645646; }
-.btn-read-more { 
-    background: #7c945b; 
-    color: white !important; 
-    padding: 12px 35px; 
-    font-weight: bold; 
-    text-decoration: none !important; 
-    display: inline-block; 
-}
+.btn-read-more { background: #7c945b; color: white !important; padding: 12px 35px; font-weight: bold; text-decoration: none !important; display: inline-block; }
 
-/* --- 4. ПРОДУКТОВИЙ БАР (ЗАФІКСОВАНО: Products.png тепер великий) --- */
-.products-image-bar { 
-    border-bottom: 1px solid #eee; 
-    padding: 25px 0; 
-}
-/* ВИПРАВЛЕННЯ: Прибрано max-height, щоб картинка була на всю ширину */
-.products-image-bar img { 
-    max-width: 100%; /* Гарантує, що вона впишеться в контейнер */
-    height: auto; /* Зберігає пропорції */
-}
+/* --- PRODUCTS BAR --- */
+.products-image-bar { background: #fff; position: relative; z-index: 2; }
 
-/* --- 5. VISION & MISSION --- */
+/* --- VISION & MISSION СТИЛІ --- */
 .mb-100 { margin-bottom: 100px; }
-.vm-title { font-size: 42px; font-weight: bold; color: #3d525a; }
-.vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; }
-.vm-text { font-size: 18px; color: #555; line-height: 1.6; }
-.vm-photo { 
-    width: 100%; 
-    height: 400px; 
-    object-fit: cover; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+.vm-title { font-size: 42px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
+.vm-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; margin-bottom: 20px; }
+.vm-text { font-size: 18px; color: #555; line-height: 1.6; max-width: 450px; }
+
+.vm-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 2px;
 }
 
-/* --- 6. ACTIVITIES (ВИРІВНЮВАННЯ ФОТО) --- */
-.img-fixed-height {
-    height: 180px; 
-    display: flex;
-    align-items: flex-end; 
-    justify-content: center;
-    margin-bottom: 20px;
+/* Play Icon поверх Mission */
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
-.img-fixed-height img {
-    max-height: 100%;
-    width: auto;
-}
-.activity-name { font-size: 22px; font-weight: bold; color: #6a8d32; text-transform: uppercase; }
+.play-icon-white { color: rgba(255, 255, 255, 0.8) !important; font-size: 70px; }
 
-/* --- 7. ФУТЕР ТА СОЦМЕРЕЖІ --- */
-.main-footer { 
-    background-color: #2b3339; 
-    color: #fff; 
-    padding: 50px 0 20px; 
-}
-.footer-links a { 
-    color: #fff; 
-    font-size: 12px; 
-    margin-right: 15px; 
-    text-decoration: none !important; 
-    font-weight: bold; 
-}
+/* Тінь для фото */
+.shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
+/* --- ФУТЕР --- */
+.main-footer { background: #2b3339; color: white; border-top: 1px solid #3d454b; }
+.footer-links a { color: #fff; font-size: 13px; margin-right: 15px; text-decoration: none !important; text-transform: uppercase; font-weight: bold; }
 .footer-socials { display: flex; gap: 10px; justify-content: center; }
 
-/* Кружечки */
-.social-circle {
-    display: flex !important;
+/* КРУЖЕЧКИ ЗЕЛЕНІ ДЛЯ СОЦМЕРЕЖ */
+.social-circle-link {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 38px;
     height: 38px;
-    border: 1px solid #7c945b; 
+    border: 1px solid #7c945b; /* Зелений контур кружечка */
     border-radius: 50%;
-    color: #7c945b !important;
-    transition: 0.3s;
+    color: #7c945b !important; /* Зелений колір іконки */
+    text-decoration: none !important;
+    font-size: 16px;
+    transition: 0.3s ease;
 }
-.social-circle:hover {
-    background-color: #7c945b;
-    color: #fff !important;
+.social-circle-link:hover {
+    background: #7c945b; /* Зелений фон при наведенні */
+    color: #fff !important; /* Біла іконка при наведенні */
 }
 
-.footer-copy { 
-    font-size: 11px; 
-    color: #666; 
-    border-top: 1px solid #333; 
-    padding-top: 20px; 
-    margin-top: 30px; 
+.footer-copy { font-size: 11px; color: #777; margin-top: 25px; border-top: 1px solid #333; padding-top: 20px; }
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .banner-title { font-size: 32px; }
+    .vm-title { font-size: 32px; text-align: center; }
+    .vm-photo { height: 300px; }
+    .footer-links { text-align: center; margin-bottom: 20px; }
+    .footer-socials { justify-content: center; }
 }
