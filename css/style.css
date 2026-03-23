@@ -57,34 +57,56 @@ body {
 
 /* --- 3. БАНЕРИ (HERO SECTIONS) --- */
 
-/* Банер 1-го сайту (bg.png) */
+/* Сайт 1: Банер з пшеницею */
 .hero-wrapper { 
     background: url('../images/bg.png') no-repeat center center; 
     background-size: cover; 
     min-height: 700px; 
-}
-.banner-title { 
-    font-size: 42px; 
-    font-weight: bold; 
-    color: #4b6352; 
-    padding-top: 200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-/* --- ОНОВЛЕНИЙ БАНЕР (image7.png) --- */
+.banner-title { 
+    font-size: 52px;          /* Розмір як на макеті */
+    font-weight: bold; 
+    color: #4b6352;           /* Темний колір тексту */
+    margin-bottom: 25px;
+}
+
+/* ЗЕЛЕНА КНОПКА READ MORE */
+.btn-read-more {
+    display: inline-block;
+    background-color: #65a15a; /* Зелений фон */
+    color: #ffffff !important; /* Білий текст */
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border-radius: 0;          /* Прямі кути */
+    transition: background-color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #548b4a; /* Трохи темніший при наведенні */
+}
+
+/* Сайт 2: Банер з томатами */
 .tomato-hero-section {
     width: 100%;
-    overflow: hidden; /* Щоб картинка не вилізала за краї при збільшенні */
+    overflow: hidden; 
     line-height: 0;
-    margin-bottom: 20px; /* Додав відступ знизу, щоб текст не прилипав */
+    margin-bottom: 20px; 
 }
 
 .tomato-hero-section img {
     width: 100%;
     height: auto;
     display: block;
-    /* Збільшуємо масштаб на 5% (1.05). 
-       Можеш поставити 1.1, якщо хочеш ще більше */
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Легке збільшення як ви просили */
     transition: transform 0.3s ease;
 }
 
@@ -103,9 +125,8 @@ body {
     margin-bottom: 25px; 
 }
 
-/* Червона вертикальна лінія зліва */
 .red-accent-row {
-    border-left: 5px solid #df4a4a;
+    border-left: 5px solid #df4a4a; /* Червона лінія зліва */
     padding: 10px 0 10px 30px;
     margin: 40px 0;
 }
@@ -117,7 +138,6 @@ body {
     line-height: 1.5;
 }
 
-/* Картки програм Breeding */
 .breeding-card {
     background: #fff;
     padding: 40px;
@@ -135,11 +155,6 @@ body {
     margin-bottom: 15px;
 }
 
-.program-card p {
-    font-size: 15px;
-}
-
-/* Сітка томатів (8 фото) */
 .tomato-grid-img { 
     border-radius: 4px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
@@ -198,6 +213,7 @@ body {
 
 /* --- 6. АДАПТИВНІСТЬ --- */
 @media (max-width: 768px) {
+    .banner-title { font-size: 36px; }
     .tomato-main-content .section-title { font-size: 32px; }
     .social-box { justify-content: center; margin-top: 20px; }
     .footer-links { text-align: center; }
