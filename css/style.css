@@ -1,4 +1,3 @@
-/* --- ГЛОБАЛЬНІ СТИЛІ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf');
@@ -11,7 +10,6 @@ body {
     background-color: #f2f2f2; 
 }
 
-/* --- HERO SECTION --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -53,7 +51,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* --- VISION & MISSION (ВИПРАВЛЕНО: КВАДРАТНИЙ РОЗМІР ДЛЯ image3.png) --- */
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 
@@ -61,33 +58,27 @@ body {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-/* Спільні стилі для обох зображень */
+/* ОДНАКОВІ КВАДРАТНІ ФОТО ДЛЯ ОБОХ БЛОКІВ */
 .vm-image-style { 
-    width: 100%; 
-    max-width: 480px; 
-    height: 320px;       /* Встановлюємо фіксовану висоту для обох фото */
-    object-fit: cover;   /* Це дозволяє підігнати фото під розмір без спотворення */
+    width: 400px; 
+    height: 400px;
+    object-fit: cover;
     border-radius: 4px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: block;
 }
 
-/* Специфічні стилі для image3.png (Vision) - робимо квадратним */
-img[src*="image3.png"] { 
-    width: 320px;        /* Встановлюємо ширину, рівну висоті */
-    height: 320px;       /* Встановлюємо висоту, рівну ширині */
-    object-fit: cover;   /* Зображение акуратно вписується в квадрат */
-    margin-left: 50px; 
+/* Вирівнювання відступів для симетрії */
+img[src*="image3.png"] { margin-left: auto; margin-right: auto; }
+.mission-img-container { 
+    position: relative; 
+    display: block; 
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Контейнер для фото Mission */
-.mission-img-container {
-    position: relative;
-    display: inline-block;
-    margin-right: 50px; /* Зсув ліворуч */
-}
-
-/* Іконка PLAY */
 .video-play-btn {
     position: absolute;
     top: 50%;
@@ -113,18 +104,16 @@ img[src*="image3.png"] {
     margin-left: 5px;
 }
 
-/* --- ACTIVITIES SECTION --- */
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-img { max-height: 180px; object-fit: contain; }
 .activity-name { font-size: 22px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 .activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; }
 
-/* --- FOOTER --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 
 .footer-links a { 
-    color: white !important; /* Робимо посилання білими замість синіх */
+    color: white !important; 
     font-size: 11px; 
     font-weight: bold; 
     margin-right: 15px; 
