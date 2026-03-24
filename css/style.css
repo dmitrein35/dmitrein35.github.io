@@ -104,7 +104,7 @@ header.container {
     transform: translate(-50%, -50%) scale(1.05);
 }
 
-/* --- СТИЛІ ДЛЯ ACTIVITIES (ВИРІВНЮВАННЯ ТРЬОХ ФОТО) --- */
+/* --- СТИЛІ ДЛЯ ACTIVITIES --- */
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 
 .activities-section .row {
@@ -155,11 +155,29 @@ header.container {
 .tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
 
-.bg-light-pink { background-color: #fef4f4; } /* Дуже світлий рожевий як на макеті */
+.bg-light-pink { background-color: #fef4f4; }
 
-.breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 10px 0; }
 .text-dark-blue { color: #3d525a; }
 .border-left-red { border-left: 4px solid #d9534f; }
+
+/* Виправлення нахилу тексту у червоній рамці */
+.border-left-red p { font-style: normal !important; color: #3d525a; }
+
+/* СПІЛЬНИЙ БІЛИЙ ПРЯМОКУТНИК ДЛЯ ПРОГРАМ СЕЛЕКЦІЇ */
+.breeding-programs-box {
+    background-color: white;
+    padding: 40px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
+
+.breeding-col h5 {
+    color: #3d525a;
+    font-size: 20px;
+    min-height: 50px; /* Тримає заголовки в один рівень */
+}
 
 /* Контейнер для карток з білим фоном */
 .tomato-cards-grid {
