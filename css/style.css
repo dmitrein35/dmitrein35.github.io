@@ -110,20 +110,19 @@ header.container {
 .activities-section .row {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch; /* Робить всі колонки в ряду однієї висоти */
+    align-items: stretch;
 }
 
 .activities-section .col-md-4 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрує контент по горизонталі */
+    align-items: center; 
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* Контейнер для фото, щоб вирівняти їх по центру */
 .activity-img-wrapper {
-    height: 180px; /* Фіксована висота для зони фото */
+    height: 180px; 
     display: flex;
     align-items: center; 
     justify-content: center;
@@ -134,7 +133,7 @@ header.container {
 .activity-img { 
     max-width: 100%; 
     max-height: 100%; 
-    object-fit: contain; /* Картинка не обрізається і не розтягується */
+    object-fit: contain; 
 }
 
 .activity-name { 
@@ -149,25 +148,40 @@ header.container {
     color: #777; 
     font-size: 15px; 
     line-height: 1.4;
-    max-width: 280px; /* Обмеження ширини тексту */
+    max-width: 280px; 
 }
 
 /* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
 .tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
-.bg-light-pink { background-color: #fdf5f5; }
+
+.bg-light-pink { background-color: #fef4f4; } /* Дуже світлий рожевий як на макеті */
+
 .breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 10px 0; }
 .text-dark-blue { color: #3d525a; }
 .border-left-red { border-left: 4px solid #d9534f; }
-.tomato-card { background: white; border: 1px solid #ddd; transition: 0.3s; height: 100%; }
+
+/* Контейнер для карток з білим фоном */
+.tomato-cards-grid {
+    background-color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.tomato-card { 
+    background: white; 
+    border: 1px solid #eee; 
+    transition: 0.3s; 
+    height: 100%; 
+}
 .tomato-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 .tomato-card img { width: 100%; height: auto; display: block; }
-.border-blue { border: 3px solid #31a7e0; }
+.border-blue { border: 3px solid #31a7e0 !important; }
 
 /* --- ЗАГАЛЬНІ СТИЛІ ТЕКСТУ --- */
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
-.section-desc { font-size: 18px; color: #555; line-height: 1.6; }
+.section-desc { font-size: 16px; color: #555; line-height: 1.6; }
 
 /* --- ФУТЕР --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
