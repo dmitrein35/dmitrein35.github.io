@@ -1,0 +1,48 @@
+/* --- СТИЛІ ДЛЯ HEADER (odin.html) --- */
+.header-main {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-logo {
+    height: 70px; /* Налаштуйте висоту під ваше лого */
+}
+
+/* Пошук зверху */
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+}
+
+.search-input-top {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 200px;
+    padding-right: 5px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Навігація */
+.main-nav a {
+    color: #4b6352;
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 20px;
+    text-decoration: none !important;
+    text-transform: none; /* Щоб було як на фото (не тільки великі) */
+    transition: 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: #82a43a; /* Зелений колір при наведенні */
+}
