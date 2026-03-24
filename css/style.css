@@ -69,14 +69,9 @@ body {
     display: block;
 }
 
-/* Зміщення фото асиметрично */
+/* Зміщення фото */
 img[src*="image3.png"] { margin-left: 50px; }
-
-.mission-img-container {
-    position: relative;
-    display: inline-block;
-    margin-right: 50px; /* Зсув ліворуч */
-}
+.mission-img-container { position: relative; display: inline-block; margin-right: 50px; }
 
 /* Іконка PLAY */
 .video-play-btn {
@@ -92,14 +87,11 @@ img[src*="image3.png"] { margin-left: 50px; }
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: 0.3s;
 }
-
 .video-play-btn::after {
     content: '';
     display: block;
-    width: 0;
-    height: 0;
+    width: 0; height: 0;
     border-style: solid;
     border-width: 12px 0 12px 20px;
     border-color: transparent transparent transparent #5c5044;
@@ -113,11 +105,27 @@ img[src*="image3.png"] { margin-left: 50px; }
 .activity-name { font-size: 22px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 .activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; }
 
-/* --- FOOTER --- */
+/* --- FOOTER (ВИПРАВЛЕНО КОЛІР ПОСИЛАНЬ) --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
+
+.footer-links a { 
+    color: white !important; /* Робимо посилання білими замість синіх */
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-right: 15px; 
+    text-decoration: none !important; 
+}
+
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
     color: #7c945b !important; margin-left: 10px;
 }
-.copyright-bar { color: #666; font-size: 11px; border-top: 1px solid #333; padding-top: 20px; margin-top: 20px; }
+
+.copyright-bar { 
+    color: #666; 
+    font-size: 11px; 
+    border-top: 1px solid #333; 
+    padding-top: 20px; 
+    margin-top: 20px; 
+}
