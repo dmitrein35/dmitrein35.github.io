@@ -100,35 +100,95 @@ header.container {
     margin-left: 5px;
 }
 
+.video-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
 /* --- СТИЛІ ДЛЯ ACTIVITIES --- */
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
-.activities-section .col-md-4 { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 40px; }
-.activity-img-wrapper { height: 180px; display: flex; align-items: center; justify-content: center; width: 100%; margin-bottom: 20px; }
-.activity-img { max-width: 100%; max-height: 100%; object-fit: contain; }
-.activity-name { font-size: 24px; font-weight: bold; color: #4b6352; margin-top: 10px; }
-.activity-text { color: #777; font-size: 15px; line-height: 1.4; max-width: 280px; }
+
+.activities-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.activities-section .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.activity-img-wrapper {
+    height: 180px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.activity-img { 
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+.activity-name { 
+    font-size: 24px;
+    font-weight: bold; 
+    color: #4b6352; 
+    margin-top: 10px;
+}
+
+.activity-text { 
+    color: #777; 
+    font-size: 15px; 
+    line-height: 1.4;
+    max-width: 280px; 
+}
 
 /* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
 .tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
+
 .bg-light-pink { background-color: #fef4f4; }
 
 .text-dark-blue { color: #3d525a; }
-.border-left-red { border-left: 4px solid #d9534f; }
-.border-left-red p { color: #3d525a; }
+.text-dark-blue strong { font-weight: bold; color: #3d525a; }
 
+.border-left-red { border-left: 4px solid #d9534f; }
+.border-left-red p { font-style: normal !important; color: #3d525a; }
+
+/* СПІЛЬНИЙ БІЛИЙ ПРЯМОКУТНИК ДЛЯ ПРОГРАМ СЕЛЕКЦІЇ */
 .breeding-programs-box {
     background-color: white;
     padding: 40px 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border-radius: 4px;
 }
-.breeding-col hr { border: 0; border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
-.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; font-weight: bold; }
+
+.breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
+.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; }
 
 /* ТАБЛИЦЯ ТОМАТІВ */
-.tomato-item { text-align: center; margin-bottom: 30px; }
-.tomato-img { width: 100%; height: auto; border-radius: 4px; transition: transform 0.3s ease; display: block; }
+.tomato-grid-no-bg { padding: 20px 0; }
+
+.tomato-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tomato-img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+    transition: transform 0.3s ease;
+    display: block;
+}
+
 .tomato-img:hover { transform: translateY(-5px); }
 
 /* --- ЗАГАЛЬНІ СТИЛІ ТЕКСТУ --- */
@@ -142,14 +202,19 @@ header.container {
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
-    color: #7c945b !important; margin-left: 10px; transition: 0.3s;
+    color: #7c945b !important; margin-left: 10px;
+    transition: 0.3s;
 }
 .social-dot:hover { background: #7c945b; color: white !important; }
-.copyright-bar { color: #666; font-size: 11px; border-top: 1px solid #333; padding-top: 20px; margin-top: 20px; text-align: center; }
+.copyright-bar { 
+    color: #666; font-size: 11px; border-top: 1px solid #333; 
+    padding-top: 20px; margin-top: 20px; text-align: center;
+}
 
 /* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 768px) {
     .hero-title { font-size: 32px; }
     .section-heading { font-size: 30px; }
     .main-logo { height: 60px; }
+    .search-input { width: 100px; }
 }
