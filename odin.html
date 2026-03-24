@@ -1,48 +1,43 @@
-/* --- СТИЛІ ДЛЯ HEADER (odin.html) --- */
-.header-main {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agridera - TAG 1002</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-.main-logo {
-    height: 70px; /* Налаштуйте висоту під ваше лого */
-}
+    <header class="bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center py-4">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
+            </a>
+            <div class="text-right">
+                <div class="search-field mb-2">
+                    <span class="search-label">SEARCH</span>
+                    <input type="text" class="search-input">
+                    <i class="fas fa-search"></i>
+                </div>
+                <nav class="main-menu">
+                    <a href="index.html">HOME</a>
+                    <a href="#">COMPANY PROFILE</a>
+                    <a href="tomato.html">PRODUCTS</a>
+                    <a href="#">SERVICES</a>
+                    <a href="#">R & D</a>
+                    <a href="#">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-/* Пошук зверху */
-.search-box {
-    display: inline-flex;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 2px;
-}
+    <div class="product-page-wrapper">
+        <div class="container">
+            <h1 class="product-title">Сторінка в розробці</h1>
+        </div>
+    </div>
 
-.search-input-top {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    width: 200px;
-    padding-right: 5px;
-}
-
-.search-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Навігація */
-.main-nav a {
-    color: #4b6352;
-    font-weight: bold;
-    font-size: 13px;
-    margin-left: 20px;
-    text-decoration: none !important;
-    text-transform: none; /* Щоб було як на фото (не тільки великі) */
-    transition: 0.3s;
-}
-
-.main-nav a:hover, .main-nav a.active {
-    color: #82a43a; /* Зелений колір при наведенні */
-}
+</body>
+</html>
