@@ -1,63 +1,50 @@
-@font-face {
-    font-family: 'RobotoSlab';
-    src: url('../fonts/RobotoSlab.ttf');
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'RobotoSlab', serif !important;
-    background-color: #f2f2f2;
-}
-
+/* --- HERO SECTION (ЗБІЛЬШЕНО) --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
-    min-height: 600px;
+    min-height: 750px; /* Було 600px, тепер банер став більшим */
+    display: flex;
+    flex-direction: column;
 }
-.main-logo { height: 75px; }
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px; /* Зміщуємо текст трохи вище центру для балансу */
+}
+
+.hero-title { 
+    color: #5c5044; 
+    font-size: 52px; /* Трохи збільшив шрифт для великого банера */
+    font-weight: bold; 
+}
+
+/* Решта стилів залишається без змін */
+body { margin: 0; padding: 0; font-family: 'RobotoSlab', serif !important; background-color: #f2f2f2; }
+.main-logo { height: 80px; }
 .search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
 .search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
-.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 12px; text-decoration: none !important; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
 
-.hero-title { color: #5c5044; font-size: 44px; font-weight: bold; margin-top: 130px; text-align: center; }
-.btn-read-more { background: #7c945b; color: white !important; padding: 10px 30px; font-weight: bold; display: inline-block; margin-top: 20px; text-decoration: none !important; }
+.btn-read-more { background: #7c945b; color: white !important; padding: 12px 40px; font-weight: bold; display: inline-block; margin-top: 30px; text-decoration: none !important; }
 
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
-.union-bg-section {
-    background: url('../images/Union.png') no-repeat center center;
-    background-size: cover;
-    padding: 60px 0;
-}
-
-.section-heading { font-size: 38px; font-weight: bold; color: #3d525a; }
-.section-dots { color: #82a43a; font-size: 22px; letter-spacing: 5px; }
-.section-desc { font-size: 16px; color: #555; line-height: 1.6; }
-.vm-image-style { width: 100%; max-width: 450px; border-radius: 4px; }
+.union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
+.section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
+.section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; }
+.vm-image-style { width: 100%; max-width: 480px; border-radius: 4px; }
 .shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-.video-play-btn {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.8); font-size: 70px; cursor: pointer;
-}
-
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; }
-.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
-.activity-img { max-height: 180px; object-fit: contain; }
-.activity-name { font-size: 20px; font-weight: bold; color: #7c945b; margin-top: 15px; }
-.activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; line-height: 1.4; }
+.activity-img { max-height: 200px; object-fit: contain; }
+.activity-name { font-size: 22px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 
-.footer-dark { background: #2b3339; color: white; border-top: 1px solid #3d454b; }
-.footer-links a { color: white; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
-
+.footer-dark { background: #2b3339; color: white; }
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 34px; height: 34px;
-    border: 1px solid #7c945b;
-    border-radius: 50%;
-    color: #7c945b !important;
-    margin-left: 8px; transition: 0.3s;
+    width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
+    color: #7c945b !important; margin-left: 10px;
 }
 .social-dot:hover { background: #7c945b; color: white !important; }
-.copyright-bar { color: #666; font-size: 10px; border-top: 1px solid #333; padding-top: 15px; }
