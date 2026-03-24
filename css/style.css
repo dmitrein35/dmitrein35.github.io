@@ -143,7 +143,7 @@ header.container {
 /* --- НОВІ СТИЛІ ДЛЯ ODIN.HTML (Сторінка продукту) --- */
 .product-page-wrapper {
     background: white url('../images/watermark-logo.png') no-repeat center center;
-    background-size: 600px; /* Велике лого на фоні */
+    background-size: 600px;
     min-height: 800px;
     padding: 40px 0;
 }
@@ -154,6 +154,7 @@ header.container {
     text-decoration: none !important;
     display: inline-block;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .product-title {
@@ -164,34 +165,47 @@ header.container {
 }
 
 .product-subtitle {
-    font-size: 32px;
+    font-size: 38px;
     color: #7c945b;
     font-weight: bold;
     margin-bottom: 20px;
+    line-height: 1.1;
 }
 
 .high-yield-box {
     color: #d9534f;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     margin: 30px 0;
+    line-height: 1.2;
 }
 
-.high-yield-box i {
-    font-size: 40px;
-    margin-right: 15px;
+.high-yield-box img {
+    width: 60px;
+    margin-right: 20px;
 }
 
 .char-title {
     color: #82a43a;
     font-size: 20px;
     font-weight: bold;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #82a43a;
     padding-bottom: 5px;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.char-sub-title {
+    color: #82a43a;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .char-list {
@@ -217,9 +231,9 @@ header.container {
 
 .btn-download-pdf {
     border: 2px solid #7c945b;
-    border-radius: 25px;
+    border-radius: 30px;
     color: #7c945b;
-    padding: 10px 25px;
+    padding: 12px 30px;
     font-weight: bold;
     display: inline-flex;
     align-items: center;
@@ -235,22 +249,60 @@ header.container {
 
 .product-main-img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* --- ФУТЕР --- */
-.footer-dark { background: #2b3339; color: white; padding: 40px 0; }
-.footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
-.footer-links a:last-child { margin-right: 0; }
+/* --- ФУТЕР (Оновлений) --- */
+.footer-dark { 
+    background: #2b3339; 
+    color: white; 
+    padding: 40px 0 20px 0; 
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.footer-links a { 
+    color: white !important; 
+    font-size: 13px; 
+    font-weight: bold; 
+    margin: 0 15px; 
+    text-decoration: none !important; 
+}
+
+.footer-links a:hover {
+    color: #82a43a !important;
+}
+
 .social-dot {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
-    color: #7c945b !important; margin-left: 10px;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 36px; 
+    height: 36px; 
+    border: 1px solid #7c945b; 
+    border-radius: 50%;
+    color: #7c945b !important; 
+    margin: 0 8px;
     transition: 0.3s;
 }
-.social-dot:hover { background: #7c945b; color: white !important; }
+
+.social-dot:hover { 
+    background: #7c945b; 
+    color: white !important; 
+}
+
 .copyright-bar { 
-    color: #666; font-size: 11px; border-top: 1px solid #333; 
-    padding-top: 20px; margin-top: 20px; text-align: center;
+    color: #888; 
+    font-size: 12px; 
+    border-top: 1px solid #3d464d; 
+    padding-top: 20px; 
+    margin-top: 30px; 
+    text-align: center;
+    text-transform: uppercase;
 }
