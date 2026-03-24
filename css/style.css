@@ -12,13 +12,7 @@ body {
 }
 
 /* --- ШАПКА ТА МЕНЮ (Спільні для всіх сторінок) --- */
-/* ДОДАНО: Клас для розтягування шапки на всю ширину */
-.header-full-width {
-    max-width: 100% !important;
-    padding-left: 4% !important;
-    padding-right: 4% !important;
-}
-
+/* Тепер логотип не буде прилипати до краю завдяки container у HTML */
 .main-logo { height: 80px; }
 .search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
 .search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
@@ -32,7 +26,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .hero-content {
     flex-grow: 1;
     display: flex;
@@ -42,14 +35,12 @@ body {
     text-align: center;
     padding-bottom: 100px;
 }
-
 .hero-title { 
     color: #5c5044; 
     font-size: 52px; 
     font-weight: bold; 
     margin-bottom: 25px;
 }
-
 .btn-read-more { 
     background: #7c945b; 
     color: white !important; 
@@ -61,12 +52,10 @@ body {
     letter-spacing: 1px;
 }
 
-/* Секції з Union фоном та діяльність */
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 
-/* Фото Vision/Mission та відео */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -93,8 +82,6 @@ body {
 }
 
 /* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
-
-/* Баннер image7.png */
 .tomato-banner-container {
     width: 100%;
     line-height: 0;
@@ -106,10 +93,8 @@ body {
     display: block;
 }
 
-/* Рожевий фон контенту */
 .bg-light-pink { background-color: #fdf5f5; }
 
-/* Колонки програм селекції */
 .breeding-col hr { 
     border-top: 2px solid #3d525a; 
     width: 100%; 
@@ -117,12 +102,11 @@ body {
 }
 .text-dark-blue { color: #3d525a; }
 
-/* ДОДАНО: Червона лінія зліва біля тексту */
+/* ДОДАНО: Червона лінія зліва */
 .border-left-red {
     border-left: 4px solid #d9534f;
 }
 
-/* Сітка товарів */
 .tomato-card { 
     background: white; 
     border: 1px solid #ddd; 
@@ -137,7 +121,7 @@ body {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-/* --- ФУТЕР (Спільний для всіх) --- */
+/* --- ФУТЕР --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 .footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
 .social-dot {
