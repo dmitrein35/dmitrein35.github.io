@@ -170,8 +170,8 @@ header.container {
     border-radius: 4px;
 }
 
-.breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
-.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; }
+.breeding-col hr { border: 0; border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
+.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; font-weight: bold; }
 
 /* ТАБЛИЦЯ ТОМАТІВ */
 .tomato-grid-no-bg { padding: 20px 0; }
@@ -198,23 +198,29 @@ header.container {
 
 /* --- ФУТЕР --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
-.footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
+
+.footer-links a { 
+    color: white !important; 
+    font-size: 11px; 
+    font-weight: bold; 
+    margin-right: 15px; 
+    text-decoration: none !important; 
+}
+
+.footer-links a:last-child {
+    margin-right: 0;
+}
+
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
     color: #7c945b !important; margin-left: 10px;
     transition: 0.3s;
 }
+
 .social-dot:hover { background: #7c945b; color: white !important; }
+
 .copyright-bar { 
     color: #666; font-size: 11px; border-top: 1px solid #333; 
     padding-top: 20px; margin-top: 20px; text-align: center;
-}
-
-/* --- АДАПТИВНІСТЬ --- */
-@media (max-width: 768px) {
-    .hero-title { font-size: 32px; }
-    .section-heading { font-size: 30px; }
-    .main-logo { height: 60px; }
-    .search-input { width: 100px; }
 }
