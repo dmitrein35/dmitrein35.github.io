@@ -1,4 +1,4 @@
-/* --- БАЗОВІ СТИЛІ ТА ШРИФТИ --- */
+/* --- ІСНУЮЧИЙ КСС ПЕРШОЇ СТОРІНКИ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf');
@@ -11,16 +11,6 @@ body {
     background-color: #f2f2f2; 
 }
 
-/* Клас для рожевого фону другої сторінки */
-.bg-light-pink { background-color: #fdf5f5; }
-
-/* --- ШАПКА ТА МЕНЮ (Спільні для обох сторінок) --- */
-.main-logo { height: 80px; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
-.search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
-.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
-
-/* --- ГОЛОВНА СТОРІНКА (index.html) --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -28,6 +18,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.main-logo { height: 80px; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
+.search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
 
 .hero-content {
     flex-grow: 1;
@@ -60,13 +55,10 @@ body {
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 
-/* Загальні заголовки та тексти */
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
-.text-dark-blue { color: #3d525a; } /* Для заголовка на tomato.html */
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-/* Квадратні фото Vision/Mission (Головна) */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -111,41 +103,12 @@ img[src*="image3.png"] { margin-left: auto; margin-right: auto; }
     margin-left: 5px;
 }
 
-/* Секція діяльності (Головна) */
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-img { max-height: 180px; object-fit: contain; }
 .activity-name { font-size: 22px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 .activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; }
 
-/* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
-
-/* Колонки програм селекції */
-.breeding-col hr { 
-    border-top: 2px solid #3d525a; 
-    width: 100%; 
-    margin: 10px 0; 
-}
-
-/* Картки товарів у сітці */
-.tomato-card { 
-    background: white; 
-    border: 1px solid #ddd; 
-    transition: 0.3s; 
-    height: 100%;
-}
-
-.tomato-card img { 
-    width: 100%; 
-    height: 250px; 
-    object-fit: cover; 
-    display: block; 
-}
-
-/* Синя рамка для TAG 1001 */
-.border-blue { border: 3px solid #007bff; }
-
-/* --- ФУТЕР (Спільний) --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 
 .footer-links a { 
@@ -168,4 +131,57 @@ img[src*="image3.png"] { margin-left: auto; margin-right: auto; }
     border-top: 1px solid #333; 
     padding-top: 20px; 
     margin-top: 20px; 
+}
+
+/* --- НОВІ ДОПОВНЕННЯ ДЛЯ TOMATO.HTML --- */
+
+/* Світло-рожевий фон сторінки */
+.bg-light-pink { background-color: #fdf5f5; }
+
+/* Колір заголовків для продуктів */
+.text-dark-blue { color: #3d525a; }
+
+/* Колонки програм селекції */
+.breeding-col hr { 
+    border-top: 2px solid #3d525a; 
+    width: 100%; 
+    margin: 10px 0; 
+}
+
+.breeding-col h5 {
+    font-size: 16px;
+    color: #3d525a;
+}
+
+/* Картки томатів у сітці */
+.tomato-card { 
+    background: white; 
+    border: 1px solid #ddd; 
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.tomato-card img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* Синя рамка для активного товару */
+.border-blue { 
+    border: 3px solid #31a7e0; 
+}
+
+.tomato-info h6 {
+    font-size: 14px;
+}
+
+.tomato-info p {
+    font-size: 12px;
+}
+
+/* Соціальні іконки в футері для другої сторінки */
+.social-icons .social-dot {
+    font-size: 16px;
+    text-decoration: none !important;
 }
