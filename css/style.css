@@ -175,13 +175,30 @@ header.container {
 
 /* ТАБЛИЦЯ ТОМАТІВ (БЕЗ БІЛОГО ФОНУ) */
 .tomato-grid-no-bg { padding: 20px 0; }
+
+.tomato-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .tomato-img { 
     width: 100%; 
     height: auto; 
     border-radius: 4px; 
     transition: transform 0.3s;
+    display: block;
 }
+
 .tomato-img:hover { transform: translateY(-5px); }
+
+/* Підписи під фото томатів */
+.tomato-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #3d525a;
+    font-size: 16px;
+    text-transform: uppercase;
+}
 
 /* --- ЗАГАЛЬНІ СТИЛІ ТЕКСТУ --- */
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
@@ -203,3 +220,10 @@ header.container {
     padding-top: 20px; margin-top: 20px; text-align: center;
 }
 
+/* --- АДАПТИВНІСТЬ (ДОДАТКОВО) --- */
+@media (max-width: 768px) {
+    .hero-title { font-size: 32px; }
+    .section-heading { font-size: 30px; }
+    .main-logo { height: 60px; }
+    .search-input { width: 100px; }
+}
