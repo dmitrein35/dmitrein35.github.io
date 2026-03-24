@@ -1,3 +1,4 @@
+/* --- БАЗОВІ НАЛАШТУВАННЯ ТА ШРИФТИ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf');
@@ -10,6 +11,7 @@ body {
     background-color: #f2f2f2; 
 }
 
+/* --- ШАПКА ТА МЕНЮ --- */
 header.container {
     background-color: transparent !important;
     max-width: 1140px !important; 
@@ -22,6 +24,7 @@ header.container {
 .search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
 .main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
 
+/* --- ГОЛОВНА СТОРІНКА ТА БАНЕРИ --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -62,6 +65,7 @@ header.container {
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 
+/* --- ВІДЕО ТА КОНТЕНТ --- */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -100,59 +104,21 @@ header.container {
     transform: translate(-50%, -50%) scale(1.05);
 }
 
+/* --- СТИЛІ ДЛЯ ACTIVITIES --- */
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
+.activities-section .row { display: flex; flex-wrap: wrap; align-items: stretch; }
+.activities-section .col-md-4 { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 40px; }
+.activity-img-wrapper { height: 180px; display: flex; align-items: center; justify-content: center; width: 100%; margin-bottom: 20px; }
+.activity-img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.activity-name { font-size: 24px; font-weight: bold; color: #4b6352; margin-top: 10px; }
+.activity-text { color: #777; font-size: 15px; line-height: 1.4; max-width: 280px; }
 
-.activities-section .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-
-.activities-section .col-md-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.activity-img-wrapper {
-    height: 180px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.activity-img { 
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; 
-}
-
-.activity-name { 
-    font-size: 24px;
-    font-weight: bold; 
-    color: #4b6352; 
-    margin-top: 10px;
-}
-
-.activity-text { 
-    color: #777; 
-    font-size: 15px; 
-    line-height: 1.4;
-    max-width: 280px; 
-}
-
+/* --- СТОРІНКА ТОМАТІВ ТА СЕЛЕКЦІЇ --- */
 .tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
-
 .bg-light-pink { background-color: #fef4f4; }
-
 .text-dark-blue { color: #3d525a; }
 .text-dark-blue strong { font-weight: bold; color: #3d525a; }
-
 .border-left-red { border-left: 4px solid #d9534f; }
 .border-left-red p { font-style: normal !important; color: #3d525a; }
 
@@ -162,54 +128,128 @@ header.container {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border-radius: 4px;
 }
-
 .breeding-col hr { border: 0; border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
 .breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; font-weight: bold; }
 
 .tomato-grid-no-bg { padding: 20px 0; }
-
-.tomato-item {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.tomato-img { 
-    width: 100%; 
-    height: auto; 
-    border-radius: 4px; 
-    transition: transform 0.3s ease;
-    display: block;
-}
-
+.tomato-item { text-align: center; margin-bottom: 30px; }
+.tomato-img { width: 100%; height: auto; border-radius: 4px; transition: transform 0.3s ease; display: block; }
 .tomato-img:hover { transform: translateY(-5px); }
 
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 16px; color: #555; line-height: 1.6; }
 
+/* --- НОВІ СТИЛІ ДЛЯ ODIN.HTML (Сторінка продукту) --- */
+.product-page-wrapper {
+    background: white url('../images/watermark-logo.png') no-repeat center center;
+    background-size: 600px; /* Велике лого на фоні */
+    min-height: 800px;
+    padding: 40px 0;
+}
+
+.back-link {
+    color: #82a43a;
+    font-weight: bold;
+    text-decoration: none !important;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3d525a;
+    margin-bottom: 5px;
+}
+
+.product-subtitle {
+    font-size: 32px;
+    color: #7c945b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.high-yield-box {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.high-yield-box i {
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.char-title {
+    color: #82a43a;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.char-list {
+    list-style: none;
+    padding: 0;
+}
+
+.char-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 15px;
+}
+
+.char-list li::before {
+    content: "•";
+    color: #82a43a;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.btn-download-pdf {
+    border: 2px solid #7c945b;
+    border-radius: 25px;
+    color: #7c945b;
+    padding: 10px 25px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-download-pdf:hover {
+    background: #7c945b;
+    color: white;
+}
+
+.product-main-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- ФУТЕР --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
-
-.footer-links a { 
-    color: white !important; 
-    font-size: 11px; 
-    font-weight: bold; 
-    margin-right: 15px; 
-    text-decoration: none !important; 
-}
-
-.footer-links a:last-child {
-    margin-right: 0;
-}
-
+.footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
+.footer-links a:last-child { margin-right: 0; }
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
     color: #7c945b !important; margin-left: 10px;
     transition: 0.3s;
 }
-
 .social-dot:hover { background: #7c945b; color: white !important; }
-
 .copyright-bar { 
     color: #666; font-size: 11px; border-top: 1px solid #333; 
     padding-top: 20px; margin-top: 20px; text-align: center;
