@@ -53,7 +53,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* --- VISION & MISSION (ЗМІЩЕННЯ ТА PLAY) --- */
+/* --- VISION & MISSION --- */
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 
@@ -69,19 +69,16 @@ body {
     display: block;
 }
 
-/* image3.png (Верхнє) — зміщуємо вправо */
-img[src*="image3.png"] {
-    margin-left: 50px; 
-}
+/* Зміщення фото асиметрично */
+img[src*="image3.png"] { margin-left: 50px; }
 
-/* Контейнер для фото Mission */
 .mission-img-container {
     position: relative;
     display: inline-block;
-    margin-right: 50px; /* Зміщуємо вліво */
+    margin-right: 50px; /* Зсув ліворуч */
 }
 
-/* КНОПКА PLAY (БІЛЕ КОЛО) */
+/* Іконка PLAY */
 .video-play-btn {
     position: absolute;
     top: 50%;
@@ -98,7 +95,6 @@ img[src*="image3.png"] {
     transition: 0.3s;
 }
 
-/* ТРИКУТНИК PLAY */
 .video-play-btn::after {
     content: '';
     display: block;
@@ -110,8 +106,6 @@ img[src*="image3.png"] {
     margin-left: 5px;
 }
 
-.video-play-btn:hover { background-color: rgba(255, 255, 255, 1); transform: translate(-50%, -50%) scale(1.1); }
-
 /* --- ACTIVITIES SECTION --- */
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
@@ -119,7 +113,7 @@ img[src*="image3.png"] {
 .activity-name { font-size: 22px; font-weight: bold; color: #7c945b; margin-top: 15px; }
 .activity-text { font-size: 14px; color: #666; max-width: 250px; margin: 0 auto; }
 
-/* --- ФУТЕР --- */
+/* --- FOOTER --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
