@@ -66,7 +66,7 @@ header.container {
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 
-/* Фото Vision/Mission та відео-кнопка (ВСЕ ЗБЕРЕЖЕНО) */
+/* Фото Vision/Mission та НОВА ВІДЕО-КНОПКА */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -74,22 +74,39 @@ header.container {
     border-radius: 4px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
+
+/* Контейнер для позиціонування кнопки */
+.mission-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Сама кнопка (біле коло) */
 .video-play-btn {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 80px; height: 80px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: #ffffff; /* Чистий білий колір */
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Легка тінь */
 }
+
+/* Зелений трикутник всередині */
 .video-play-btn::after {
     content: '';
     border-style: solid;
-    border-width: 12px 0 12px 20px;
-    border-color: transparent transparent transparent #5c5044;
-    margin-left: 5px;
+    border-width: 15px 0 15px 25px; /* Розмір трикутника */
+    border-color: transparent transparent transparent #7c945b; /* Зелений колір */
+    margin-left: 5px; /* Центрування трикутника */
+}
+
+/* Ефект при наведенні */
+.video-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Стилі для Activities */
