@@ -11,11 +11,11 @@ body {
     background-color: #f2f2f2; 
 }
 
-/* --- HERO SECTION (Виправлено кнопку та центрування) --- */
+/* --- HERO SECTION --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
-    min-height: 750px; /* Велика висота для bg.png */
+    min-height: 750px; 
     display: flex;
     flex-direction: column;
 }
@@ -39,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Центруємо вміст горизонтально, щоб кнопка не розтягувалася */
+    align-items: center; 
     text-align: center;
     padding-bottom: 100px;
 }
@@ -51,13 +51,12 @@ body {
     margin-bottom: 25px;
 }
 
-/* ЗЕЛЕНА КНОПКА (Компактна) */
 .btn-read-more { 
     background: #7c945b; 
     color: white !important; 
-    padding: 10px 45px; /* Внутрішні відступи задають розмір кнопки */
+    padding: 10px 45px; 
     font-weight: bold; 
-    display: inline-block; /* Кнопка займає лише необхідне місце */
+    display: inline-block; 
     text-decoration: none !important;
     font-size: 16px;
     letter-spacing: 1px;
@@ -81,11 +80,37 @@ body {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-.vm-image-style { width: 100%; max-width: 480px; border-radius: 4px; }
-.shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+/* --- ЗМІЩЕННЯ ФОТО (VISION & MISSION) --- */
+.vm-image-style { 
+    width: 100%; 
+    max-width: 480px; 
+    border-radius: 4px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Додано тінь для об'єму */
+}
+
+/* image3.png (Верхнє, Vision) — зміщуємо вправо */
+img[src*="image3.png"] {
+    margin-left: 50px; 
+}
+
+/* image2.png (Нижнє, Mission) — зміщуємо вліво */
+img[src*="image2.png"] {
+    margin-right: 50px;
+}
+
+/* Корекція іконки Play для зміщеного фото */
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 25px); 
+    transform: translate(-50%, -50%);
+    color: rgba(255,255,255,0.8);
+    font-size: 70px;
+    cursor: pointer;
+}
 
 /* --- ACTIVITIES SECTION --- */
-.activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; }
+.activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
 .activity-img { max-height: 200px; object-fit: contain; }
 .activity-name { font-size: 22px; font-weight: bold; color: #7c945b; margin-top: 15px; }
@@ -124,4 +149,5 @@ body {
     font-size: 11px; 
     border-top: 1px solid #333; 
     padding-top: 20px; 
+    margin-top: 20px;
 }
