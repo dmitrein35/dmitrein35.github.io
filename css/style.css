@@ -157,9 +157,9 @@ header.container {
 .bg-light-pink { background-color: #fef4f4; }
 
 .text-dark-blue { color: #3d525a; }
-.border-left-red { border-left: 4px solid #d9534f; }
+.text-dark-blue strong { font-weight: bold; color: #3d525a; }
 
-/* Виправлення нахилу тексту у червоній рамці */
+.border-left-red { border-left: 4px solid #d9534f; }
 .border-left-red p { font-style: normal !important; color: #3d525a; }
 
 /* СПІЛЬНИЙ БІЛИЙ ПРЯМОКУТНИК ДЛЯ ПРОГРАМ СЕЛЕКЦІЇ */
@@ -173,7 +173,7 @@ header.container {
 .breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
 .breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; }
 
-/* ТАБЛИЦЯ ТОМАТІВ (БЕЗ БІЛОГО ФОНУ) */
+/* ТАБЛИЦЯ ТОМАТІВ */
 .tomato-grid-no-bg { padding: 20px 0; }
 
 .tomato-item {
@@ -185,20 +185,11 @@ header.container {
     width: 100%; 
     height: auto; 
     border-radius: 4px; 
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
     display: block;
 }
 
 .tomato-img:hover { transform: translateY(-5px); }
-
-/* Підписи під фото томатів */
-.tomato-name {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #3d525a;
-    font-size: 16px;
-    text-transform: uppercase;
-}
 
 /* --- ЗАГАЛЬНІ СТИЛІ ТЕКСТУ --- */
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
@@ -220,7 +211,7 @@ header.container {
     padding-top: 20px; margin-top: 20px; text-align: center;
 }
 
-/* --- АДАПТИВНІСТЬ (ДОДАТКОВО) --- */
+/* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 768px) {
     .hero-title { font-size: 32px; }
     .section-heading { font-size: 30px; }
