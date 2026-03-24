@@ -22,7 +22,8 @@ header.container {
 .main-logo { height: 80px; }
 .search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
 .search-input { border: none; border-bottom: 2px solid #4b6352; background: transparent; outline: none; width: 150px; }
-.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; }
+.main-menu a { color: #4b6352; font-weight: bold; margin-left: 20px; font-size: 13px; text-decoration: none !important; transition: 0.3s; }
+.main-menu a:hover { color: #7c945b; }
 
 /* --- ГОЛОВНА СТОРІНКА (index.html) --- */
 .hero-wrapper {
@@ -59,103 +60,19 @@ header.container {
     text-decoration: none !important;
     font-size: 16px;
     letter-spacing: 1px;
+    transition: background 0.3s;
 }
+.btn-read-more:hover { background: #6a824d; }
 
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
-
-/* Фото Vision/Mission та ВІДЕО-КНОПКА */
-.vm-image-style { 
-    width: 400px; 
-    height: 400px;
-    object-fit: cover;
-    border-radius: 4px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.mission-img-container {
-    position: relative;
-    display: inline-block;
-}
-
-.video-play-btn {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px; height: 80px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 10;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.video-play-btn::after {
-    content: '';
-    border-style: solid;
-    border-width: 15px 0 15px 25px;
-    border-color: transparent transparent transparent #7c945b;
-    margin-left: 5px;
-}
-
-.video-play-btn:hover {
-    transform: translate(-50%, -50%) scale(1.05);
-}
-
-/* --- СТИЛІ ДЛЯ ACTIVITIES --- */
-.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
-
-.activities-section .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-
-.activities-section .col-md-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.activity-img-wrapper {
-    height: 180px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.activity-img { 
-    max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; 
-}
-
-.activity-name { 
-    font-size: 24px;
-    font-weight: bold; 
-    color: #4b6352; 
-    margin-top: 10px;
-}
-
-.activity-text { 
-    color: #777; 
-    font-size: 15px; 
-    line-height: 1.4;
-    max-width: 280px; 
-}
 
 /* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
 .tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
 .tomato-banner-img { width: 100%; height: auto; display: block; }
 
 .bg-light-pink { background-color: #fef4f4; }
-
 .text-dark-blue { color: #3d525a; }
 .text-dark-blue strong { font-weight: bold; color: #3d525a; }
 
@@ -170,17 +87,13 @@ header.container {
     border-radius: 4px;
 }
 
-.breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
-.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; }
+.breeding-col hr { border: 0; border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; opacity: 1; }
+.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; font-weight: bold; }
+.breeding-col p.small { font-size: 14px; color: #666; line-height: 1.6; }
 
 /* ТАБЛИЦЯ ТОМАТІВ */
 .tomato-grid-no-bg { padding: 20px 0; }
-
-.tomato-item {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
+.tomato-item { text-align: center; margin-bottom: 30px; }
 .tomato-img { 
     width: 100%; 
     height: auto; 
@@ -188,7 +101,6 @@ header.container {
     transition: transform 0.3s ease;
     display: block;
 }
-
 .tomato-img:hover { transform: translateY(-5px); }
 
 /* --- ЗАГАЛЬНІ СТИЛІ ТЕКСТУ --- */
@@ -196,9 +108,27 @@ header.container {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 16px; color: #555; line-height: 1.6; }
 
-/* --- ФУТЕР --- */
-.footer-dark { background: #2b3339; color: white; padding: 40px 0; }
-.footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
+/* --- ФУТЕР (ДВОРІВНЕВИЙ) --- */
+.site-footer { width: 100%; margin-top: auto; }
+
+/* Верхня частина футера */
+.footer-dark { 
+    background-color: #334147; 
+    color: white; 
+    padding: 40px 0; 
+}
+
+.footer-links { display: flex; flex-wrap: wrap; }
+.footer-links a { 
+    color: white !important; 
+    font-size: 12px; 
+    font-weight: bold; 
+    margin-right: 25px; 
+    text-decoration: none !important; 
+    transition: 0.3s;
+}
+.footer-links a:hover { color: #7c945b !important; }
+
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
@@ -206,15 +136,35 @@ header.container {
     transition: 0.3s;
 }
 .social-dot:hover { background: #7c945b; color: white !important; }
+
+/* Нижня смуга копірайту */
 .copyright-bar { 
-    color: #666; font-size: 11px; border-top: 1px solid #333; 
-    padding-top: 20px; margin-top: 20px; text-align: center;
+    background-color: #2a3439; 
+    color: #777; 
+    font-size: 11px; 
+    padding: 20px 0; 
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 /* --- АДАПТИВНІСТЬ --- */
+@media (max-width: 992px) {
+    .footer-links a { margin-right: 15px; font-size: 11px; }
+}
+
 @media (max-width: 768px) {
     .hero-title { font-size: 32px; }
     .section-heading { font-size: 30px; }
     .main-logo { height: 60px; }
     .search-input { width: 100px; }
+    
+    .footer-dark .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .social-icons-box { margin-left: 0; }
 }
