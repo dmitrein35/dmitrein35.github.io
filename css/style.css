@@ -58,7 +58,6 @@ body {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-/* ОДНАКОВІ КВАДРАТНІ ФОТО ДЛЯ ОБОХ БЛОКІВ */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -68,7 +67,6 @@ body {
     display: block;
 }
 
-/* Вирівнювання відступів для симетрії */
 img[src*="image3.png"] { margin-left: auto; margin-right: auto; }
 .mission-img-container { 
     position: relative; 
