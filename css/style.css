@@ -61,6 +61,8 @@ body {
 .vm-image-style { 
     width: 100%; 
     max-width: 480px; 
+    height: 320px;
+    object-fit: cover;
     border-radius: 4px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     display: block;
@@ -82,6 +84,7 @@ img[src*="image3.png"] { margin-left: 50px; }
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 10;
 }
 .video-play-btn::after {
     content: '';
@@ -102,7 +105,7 @@ img[src*="image3.png"] { margin-left: 50px; }
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 
 .footer-links a { 
-    color: white !important; /* Робимо посилання білими замість синіх */
+    color: white !important; 
     font-size: 11px; 
     font-weight: bold; 
     margin-right: 15px; 
