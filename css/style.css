@@ -11,13 +11,12 @@ body {
     background-color: #f2f2f2; 
 }
 
-/* --- ШАПКА ТА МЕНЮ (Виправлення логотипу) --- */
+/* --- ШАПКА ТА МЕНЮ (ПРОЗОРА, ПО СІТЦІ) --- */
 header.container {
-    background-color: white; /* Робимо фон білим */
-    max-width: 1140px !important; /* Обмежуємо ширину, щоб лого не прилипало до краю */
-    margin-top: 0;
+    background-color: transparent !important; /* Прозора на банері */
+    max-width: 1140px !important; 
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 
 .main-logo { height: 80px; }
@@ -58,14 +57,16 @@ header.container {
     font-weight: bold; 
     display: inline-block; 
     text-decoration: none !important;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
-/* Секції та діяльність */
+/* Секції з Union фоном та діяльність */
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 
-/* Фото Vision/Mission */
+/* Фото Vision/Mission та відео-кнопка (ВСЕ ЗБЕРЕЖЕНО) */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -73,19 +74,61 @@ header.container {
     border-radius: 4px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
+.video-play-btn {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+}
+.video-play-btn::after {
+    content: '';
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent #5c5044;
+    margin-left: 5px;
+}
+
+/* Стилі для Activities */
+.activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
+.activity-name { font-weight: bold; color: #4b6352; margin-top: 15px; }
+.activity-text { color: #777; font-size: 14px; }
 
 /* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
-.tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
-.tomato-banner-img { width: 100%; height: auto; display: block; }
-.bg-light-pink { background-color: #fdf5f5; }
-.border-left-red { border-left: 4px solid #d9534f; } /* Червона лінія зліва */
+.tomato-banner-container {
+    width: 100%;
+    line-height: 0;
+    background-color: white;
+}
+.tomato-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
+.bg-light-pink { background-color: #fdf5f5; }
+
+.breeding-col hr { 
+    border-top: 2px solid #3d525a; 
+    width: 100%; 
+    margin: 10px 0; 
+}
+.text-dark-blue { color: #3d525a; }
+
+/* Червона лінія зліва */
+.border-left-red { border-left: 4px solid #d9534f; }
+
+/* Картки товарів */
 .tomato-card { 
     background: white; 
     border: 1px solid #ddd; 
     transition: 0.3s;
     height: 100%;
 }
+.tomato-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 .tomato-card img { width: 100%; height: auto; display: block; }
 .border-blue { border: 3px solid #31a7e0; }
 
@@ -94,14 +137,16 @@ header.container {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-/* --- ФУТЕР --- */
+/* --- ФУТЕР (ПОВНИЙ) --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 .footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
 .social-dot {
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border: 1px solid #7c945b; border-radius: 50%;
     color: #7c945b !important; margin-left: 10px;
+    transition: 0.3s;
 }
+.social-dot:hover { background: #7c945b; color: white !important; }
 .copyright-bar { 
     color: #666; font-size: 11px; border-top: 1px solid #333; 
     padding-top: 20px; margin-top: 20px; text-align: center;
