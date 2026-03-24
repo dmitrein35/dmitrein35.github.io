@@ -140,12 +140,12 @@ header.container {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 16px; color: #555; line-height: 1.6; }
 
-/* --- НОВІ СТИЛІ ДЛЯ ODIN.HTML (Сторінка продукту) --- */
+/* --- НОВІ СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML) --- */
 .product-page-wrapper {
     background: white url('../images/watermark-logo.png') no-repeat center center;
-    background-size: 600px;
-    min-height: 800px;
-    padding: 40px 0;
+    background-size: 650px;
+    min-height: 850px;
+    padding: 50px 0;
 }
 
 .back-link {
@@ -153,59 +153,70 @@ header.container {
     font-weight: bold;
     text-decoration: none !important;
     display: inline-block;
-    margin-bottom: 20px;
-    font-size: 14px;
+    margin-bottom: 25px;
+    font-size: 16px;
 }
 
 .product-title {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: bold;
     color: #3d525a;
     margin-bottom: 5px;
 }
 
 .product-subtitle {
-    font-size: 38px;
+    font-size: 42px;
     color: #7c945b;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.1;
 }
 
 .high-yield-box {
     color: #d9534f;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
     display: flex;
     align-items: center;
-    margin: 30px 0;
+    margin: 40px 0;
     line-height: 1.2;
 }
 
 .high-yield-box img {
-    width: 60px;
-    margin-right: 20px;
+    width: 70px;
+    margin-right: 25px;
 }
 
 .char-title {
     color: #82a43a;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    border-bottom: 2px solid #82a43a;
+    border-bottom: 3px solid #82a43a;
     padding-bottom: 5px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 25px;
     display: inline-block;
+    text-transform: uppercase;
+}
+
+.resistance-block {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.resistance-block strong {
+    color: #3d525a;
+    font-size: 20px;
 }
 
 .char-sub-title {
     color: #82a43a;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 25px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .char-list {
@@ -214,11 +225,12 @@ header.container {
 }
 
 .char-list li {
-    padding-left: 20px;
+    padding-left: 25px;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     color: #555;
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 1.5;
 }
 
 .char-list li::before {
@@ -227,19 +239,21 @@ header.container {
     position: absolute;
     left: 0;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .btn-download-pdf {
     border: 2px solid #7c945b;
-    border-radius: 30px;
+    border-radius: 35px;
     color: #7c945b;
-    padding: 12px 30px;
+    padding: 15px 40px;
     font-weight: bold;
     display: inline-flex;
     align-items: center;
     text-decoration: none !important;
-    margin-top: 20px;
+    margin-top: 30px;
     transition: 0.3s;
+    font-size: 18px;
 }
 
 .btn-download-pdf:hover {
@@ -249,30 +263,31 @@ header.container {
 
 .product-main-img {
     width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
 }
 
 /* --- ФУТЕР (Оновлений) --- */
 .footer-dark { 
     background: #2b3339; 
     color: white; 
-    padding: 40px 0 20px 0; 
+    padding: 50px 0 30px 0; 
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .footer-links a { 
     color: white !important; 
-    font-size: 13px; 
+    font-size: 14px; 
     font-weight: bold; 
-    margin: 0 15px; 
+    margin: 0 20px; 
     text-decoration: none !important; 
+    text-transform: uppercase;
 }
 
 .footer-links a:hover {
@@ -283,13 +298,14 @@ header.container {
     display: inline-flex; 
     align-items: center; 
     justify-content: center;
-    width: 36px; 
-    height: 36px; 
+    width: 40px; 
+    height: 40px; 
     border: 1px solid #7c945b; 
     border-radius: 50%;
     color: #7c945b !important; 
-    margin: 0 8px;
+    margin: 0 10px;
     transition: 0.3s;
+    font-size: 18px;
 }
 
 .social-dot:hover { 
@@ -301,8 +317,9 @@ header.container {
     color: #888; 
     font-size: 12px; 
     border-top: 1px solid #3d464d; 
-    padding-top: 20px; 
-    margin-top: 30px; 
+    padding-top: 25px; 
+    margin-top: 40px; 
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
