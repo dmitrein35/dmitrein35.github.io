@@ -141,7 +141,6 @@ header.container {
     font-weight: bold; 
     color: #4b6352; 
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .activity-text { 
@@ -172,29 +171,17 @@ header.container {
 }
 
 .breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 15px 0; }
+.breeding-col h5 { color: #3d525a; font-size: 20px; min-height: 50px; }
 
-.breeding-col h5 {
-    color: #3d525a;
-    font-size: 20px;
-    min-height: 50px; /* Тримає заголовки в один рівень */
+/* ТАБЛИЦЯ ТОМАТІВ (БЕЗ БІЛОГО ФОНУ) */
+.tomato-grid-no-bg { padding: 20px 0; }
+.tomato-img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+    transition: transform 0.3s;
 }
-
-/* Контейнер для карток з білим фоном */
-.tomato-cards-grid {
-    background-color: white;
-    padding: 40px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.tomato-card { 
-    background: white; 
-    border: 1px solid #eee; 
-    transition: 0.3s; 
-    height: 100%; 
-}
-.tomato-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-.tomato-card img { width: 100%; height: auto; display: block; }
-.border-blue { border: 3px solid #31a7e0 !important; }
+.tomato-img:hover { transform: translateY(-5px); }
 
 /* --- ЗАГАЛЬНІ СТИЛІ ТЕКСТУ --- */
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
