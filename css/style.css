@@ -11,9 +11,9 @@ body {
     background-color: #f2f2f2; 
 }
 
-/* --- ШАПКА ТА МЕНЮ (ПРОЗОРА, ПО СІТЦІ) --- */
+/* --- ШАПКА ТА МЕНЮ --- */
 header.container {
-    background-color: transparent !important; /* Прозора на банері */
+    background-color: transparent !important;
     max-width: 1140px !important; 
     position: relative;
     z-index: 100;
@@ -61,12 +61,11 @@ header.container {
     letter-spacing: 1px;
 }
 
-/* Секції з Union фоном та діяльність */
 .products-strip { background: white; border-bottom: 1px solid #ddd; }
 .union-bg-section { background: url('../images/Union.png') no-repeat center center; background-size: cover; padding: 80px 0; }
 .activities-section { background-color: #f2f2f2; border-top: 1px solid #e0e0e0; padding: 60px 0; }
 
-/* Фото Vision/Mission та НОВА ВІДЕО-КНОПКА */
+/* Фото Vision/Mission та ВІДЕО-КНОПКА */
 .vm-image-style { 
     width: 400px; 
     height: 400px;
@@ -75,76 +74,92 @@ header.container {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Контейнер для позиціонування кнопки */
 .mission-img-container {
     position: relative;
     display: inline-block;
 }
 
-/* Сама кнопка (біле коло) */
 .video-play-btn {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 80px; height: 80px;
-    background-color: #ffffff; /* Чистий білий колір */
+    background-color: #ffffff;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     z-index: 10;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Легка тінь */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Зелений трикутник всередині */
 .video-play-btn::after {
     content: '';
     border-style: solid;
-    border-width: 15px 0 15px 25px; /* Розмір трикутника */
-    border-color: transparent transparent transparent #7c945b; /* Зелений колір */
-    margin-left: 5px; /* Центрування трикутника */
+    border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent #7c945b;
+    margin-left: 5px;
 }
 
-/* Ефект при наведенні */
 .video-play-btn:hover {
     transform: translate(-50%, -50%) scale(1.05);
 }
 
-/* Стилі для Activities */
+/* --- СТИЛІ ДЛЯ ACTIVITIES (ВИРІВНЮВАННЯ ТРЬОХ ФОТО) --- */
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; }
-.activity-name { font-weight: bold; color: #4b6352; margin-top: 15px; }
-.activity-text { color: #777; font-size: 14px; }
+
+.activities-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Робить всі колонки в ряду однієї висоти */
+}
+
+.activities-section .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрує контент по горизонталі */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Контейнер для фото, щоб вирівняти їх по центру */
+.activity-img-wrapper {
+    height: 180px; /* Фіксована висота для зони фото */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.activity-img { 
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; /* Картинка не обрізається і не розтягується */
+}
+
+.activity-name { 
+    font-size: 24px;
+    font-weight: bold; 
+    color: #4b6352; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.activity-text { 
+    color: #777; 
+    font-size: 15px; 
+    line-height: 1.4;
+    max-width: 280px; /* Обмеження ширини тексту */
+}
 
 /* --- СТОРІНКА ТОМАТІВ (tomato.html) --- */
-.tomato-banner-container {
-    width: 100%;
-    line-height: 0;
-    background-color: white;
-}
-.tomato-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
+.tomato-banner-container { width: 100%; line-height: 0; background-color: white; }
+.tomato-banner-img { width: 100%; height: auto; display: block; }
 .bg-light-pink { background-color: #fdf5f5; }
-
-.breeding-col hr { 
-    border-top: 2px solid #3d525a; 
-    width: 100%; 
-    margin: 10px 0; 
-}
+.breeding-col hr { border-top: 2px solid #3d525a; width: 100%; margin: 10px 0; }
 .text-dark-blue { color: #3d525a; }
-
-/* Червона лінія зліва */
 .border-left-red { border-left: 4px solid #d9534f; }
-
-/* Картки товарів */
-.tomato-card { 
-    background: white; 
-    border: 1px solid #ddd; 
-    transition: 0.3s;
-    height: 100%;
-}
+.tomato-card { background: white; border: 1px solid #ddd; transition: 0.3s; height: 100%; }
 .tomato-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 .tomato-card img { width: 100%; height: auto; display: block; }
 .border-blue { border: 3px solid #31a7e0; }
@@ -154,7 +169,7 @@ header.container {
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 .section-desc { font-size: 18px; color: #555; line-height: 1.6; }
 
-/* --- ФУТЕР (ПОВНИЙ) --- */
+/* --- ФУТЕР --- */
 .footer-dark { background: #2b3339; color: white; padding: 40px 0; }
 .footer-links a { color: white !important; font-size: 11px; font-weight: bold; margin-right: 15px; text-decoration: none !important; }
 .social-dot {
