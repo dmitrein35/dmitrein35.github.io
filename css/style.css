@@ -92,7 +92,7 @@ header .container {
 }
 .btn-read-more:hover { background: #6b824a; transform: scale(1.05); }
 
-/* Vision, Mission & Products (розмір заголовків) */
+/* Vision, Mission & Products */
 .activities-title { 
     font-size: 42px !important; 
     font-weight: bold; 
@@ -102,10 +102,9 @@ header .container {
     text-align: center;
 }
 
-/* ВИПРАВЛЕНО: Прибрано відступ зверху для Products.png */
+/* Products.png banner */
 .products-banner-wrapper {
     width: 100%;
-    /* 0 зверху, 0 по боках, 20px знизу */
     padding: 0 0 20px 0; 
     display: flex;
     justify-content: center;
@@ -122,7 +121,45 @@ header .container {
 
 .products-strip {
     background-color: white;
-    padding: 0; /* Гарантуємо відсутність внутрішніх відступів секції */
+    padding: 0;
+}
+
+/* --- НОВЕ: ВИРІВНЮВАННЯ КАРТОК (image4, image5, image6) --- */
+.activities-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.activities-section .col-md-4 {
+    display: flex; /* Робимо всі колонки однієї висоти */
+    flex-direction: column;
+}
+
+.activity-img-wrapper {
+    height: 200px; /* Фіксована висота для фото, щоб вони були в лінію */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.activity-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.activity-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b6352;
+    margin-bottom: 10px;
+}
+
+.activity-text {
+    flex-grow: 1; /* Змушує текст займати весь доступний простір */
+    margin-bottom: 20px;
+    color: #666;
 }
 
 /* --- 4. СТОРІНКА ПРОДУКТУ (САЙТ 3) --- */
