@@ -1,4 +1,4 @@
-/* --- БАЗОВІ НАЛАШТУВАННЯ ТА ШРИФТИ --- */
+/* --- 1. БАЗОВІ НАЛАШТУВАННЯ ТА ШРИФТИ --- */
 @font-face {
     font-family: 'RobotoSlab';
     src: url('../fonts/RobotoSlab.ttf');
@@ -13,7 +13,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* --- ШАПКА ТА МЕНЮ --- */
+/* --- 2. ШАПКА ТА МЕНЮ (СПІЛЬНЕ) --- */
 header.container-fluid {
     background-color: #ffffff !important; 
     position: relative;
@@ -24,6 +24,7 @@ header.container-fluid {
 
 header .container {
     max-width: 1140px !important;
+    background-color: transparent !important;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
@@ -51,7 +52,7 @@ header .container {
 }
 .main-menu a:hover { color: #82a43a; }
 
-/* --- ГОЛОВНА СТОРІНКА (САЙТ 1) --- */
+/* --- 3. ГОЛОВНА СТОРІНКА (САЙТ 1) --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
     background-size: cover;
@@ -91,40 +92,33 @@ header .container {
 }
 .btn-read-more:hover { background: #6b824a; transform: scale(1.05); }
 
-/* ВИПРАВЛЕННЯ: Vision & Mission (збільшуємо розмір назад) */
+/* ВИПРАВЛЕННЯ: Vision, Mission & Products (розмір заголовків) */
 .activities-title { 
-    font-size: 42px; /* Повернуто більший розмір */
+    font-size: 42px !important; 
     font-weight: bold; 
     color: #3d525a; 
-    margin-bottom: 45px; 
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-/* ВИПРАВЛЕННЯ: Іконки продуктів (щоб не обрізалися) */
-.activity-img-wrapper { 
-    height: 120px; /* Зменшена висота контейнера для кращого вигляду в ряд */
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 100%; 
-    margin-bottom: 20px; 
+/* ВИПРАВЛЕННЯ: Щоб Products.png не обрізалося */
+.products-banner-wrapper {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.activity-img { 
+.products-full-img {
     max-width: 100%; 
-    max-height: 100%; 
-    object-fit: contain; /* Тепер картинка завжди вписується повністю */
+    height: auto; 
     display: block;
+    object-fit: contain;
 }
 
-.activity-name { 
-    font-size: 16px; /* Оптимальний розмір для підписів під іконками */
-    font-weight: bold; 
-    color: #4b6352; 
-    margin-top: 10px; 
-    line-height: 1.2;
-}
-
-/* --- СТОРІНКА ПРОДУКТУ (САЙТ 3) --- */
+/* --- 4. СТОРІНКА ПРОДУКТУ (САЙТ 3) --- */
 .product-page-wrapper {
     background-color: #f2f2f2;
     min-height: 850px;
@@ -133,20 +127,20 @@ header .container {
     overflow: hidden;
 }
 
-/* pomi.png на весь задній фон */
+/* ВИПРАВЛЕННЯ: pomi.png на весь задній фон */
 .product-page-wrapper::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: url('../images/pomi.png') no-repeat center center;
-    background-size: cover; 
-    opacity: 0.35; /* Оптимальна прозорість для читабельності */
+    background-size: cover; /* Розтягує на весь сірий фон */
+    opacity: 0.4; /* Прозорість для читабельності тексту */
     z-index: 1;
 }
 
 .product-page-wrapper .container {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Контент вище за фон */
 }
 
 .back-link {
@@ -158,12 +152,14 @@ header .container {
     font-size: 16px;
     transition: 0.3s;
 }
+.back-link:hover { transform: translateX(-5px); }
 
 .product-title { 
     font-size: 56px; 
     font-weight: bold; 
     color: #3d525a; 
-    line-height: 1.2; 
+    margin: 0; 
+    line-height: 1.25; 
     margin-bottom: 15px; 
 }
 
@@ -171,41 +167,56 @@ header .container {
     font-size: 42px; 
     color: #7c945b; 
     font-weight: bold; 
+    margin: 0; 
+    line-height: 1.45; 
     margin-bottom: 30px; 
 }
 
-/* --- ТАБЛИЦЯ ТА ХАРАКТЕРИСТИКИ --- */
+.section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
+
+.high-yield-box {
+    margin: 35px 0;
+    display: block;
+    line-height: 0;
+}
+.high-yield-box img { max-width: 450px; height: auto; display: block; }
+
+.char-title {
+    color: #82a43a; font-size: 22px; font-weight: bold;
+    border-bottom: 3px solid #82a43a; padding-bottom: 5px;
+    margin-top: 35px; margin-bottom: 25px;
+    display: inline-block; text-transform: uppercase;
+}
+
+/* ТАБЛИЦЯ ХАРАКТЕРИСТИК (САЙТ 3) */
 .char-table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
-.char-cell {
-    vertical-align: top;
-    padding-bottom: 25px;
-}
+.char-cell { vertical-align: top; padding-bottom: 25px; }
 
-.cell-spacing {
-    padding-left: 60px !important; 
-}
+.cell-spacing { padding-left: 380px !important; }
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
     border-bottom: 1px solid #ccc;
     padding-bottom: 8px; margin-bottom: 15px;
-    display: block;
+    display: block; width: 100%;
 }
 
-.char-list { list-style: none; padding: 0; }
+.char-list { list-style: none; padding: 0; margin: 0; }
 .char-list li {
     padding-left: 25px; position: relative;
-    margin-bottom: 12px; color: #555; font-size: 18px;
+    margin-bottom: 12px; color: #555; font-size: 18px; line-height: 1.5;
 }
 .char-list li::before {
-    content: "•"; color: #82a43a; position: absolute; left: 0; font-size: 22px;
+    content: "•"; color: #82a43a; position: absolute;
+    left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* --- ФОТО ТА КНОПКА PDF --- */
+/* ФОТО ТА КНОПКА PDF (ПРАВА ЧАСТИНА) */
 .download-container-fix {
     display: flex;
     flex-direction: column;
@@ -221,12 +232,13 @@ header .container {
     background-color: white;
     border: 2px solid #7c945b; border-radius: 35px;
     color: #7c945b; padding: 12px 35px; font-weight: bold;
-    margin-top: 30px; text-decoration: none !important;
-    transition: 0.3s;
+    display: inline-flex; align-items: center;
+    text-decoration: none !important; margin-top: 30px;
+    transition: 0.3s; font-size: 18px;
 }
 .btn-download-pdf:hover { background: #7c945b; color: white; }
 
-/* --- ФУТЕР --- */
+/* --- 5. ФУТЕР (СПІЛЬНИЙ) --- */
 .footer-dark { 
     background: #2b3339; 
     color: white; 
@@ -235,14 +247,16 @@ header .container {
 
 .footer-main-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
+    width: 100%;
 }
 
 .footer-links a { 
     color: white !important; 
     margin-right: 25px; 
     font-size: 14px; 
+    text-decoration: none !important; 
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -252,23 +266,32 @@ header .container {
     border: 1px solid #7c945b; border-radius: 50%; 
     color: #7c945b !important; align-items: center; 
     justify-content: center; margin-left: 12px;
+    transition: 0.3s;
 }
+.social-dot:hover { background-color: #7c945b; color: #2b3339 !important; }
 
 .copyright-bar { 
-    color: #888; font-size: 11px; text-align: center;
-    border-top: 1px solid #3d464d; padding-top: 25px; margin-top: 40px;
+    color: #888; font-size: 11px; 
+    border-top: 1px solid #3d464d; padding-top: 25px; 
+    margin-top: 40px; text-align: center;
+    letter-spacing: 2px;
 }
 
-/* --- АДАПТИВНІСТЬ --- */
+/* --- 6. АДАПТИВНІСТЬ --- */
 @media (max-width: 991px) {
-    .cell-spacing { padding-left: 30px !important; }
+    .cell-spacing { padding-left: 40px !important; }
     .footer-main-row { flex-direction: column; text-align: center; }
-    .footer-links { margin-bottom: 20px; }
-    .activities-title { font-size: 32px; }
+    .footer-links { justify-content: center; margin-bottom: 20px; }
+    .social-icons { justify-content: center; }
 }
 
 @media (max-width: 767px) {
-    .char-table tr, .char-table td { display: block; width: 100%; }
-    .cell-spacing { padding-left: 0 !important; }
+    .activities-title { font-size: 32px !important; }
+    .char-table, .char-table tr, .char-table td { display: block; width: 100%; }
+    .cell-spacing { padding-left: 0 !important; margin-top: 20px; }
     .download-container-fix { align-items: center; }
+    
+    /* Скрол для Products.png на телефонах, щоб не було дрібним */
+    .products-banner-wrapper { overflow-x: auto; justify-content: flex-start; }
+    .products-full-img { min-width: 600px; }
 }
