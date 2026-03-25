@@ -204,9 +204,9 @@ header.container {
     padding-bottom: 25px;
 }
 
-/* ПАРАМЕТР ВІДДАЛЕННЯ: Регулюй це значення, щоб збільшити/зменшити розрив */
+/* ПАРАМЕТР ВІДДАЛЕННЯ: Це значення (280px) зміщує Cycle та Color до твоєї червоної лінії */
 .cell-spacing {
-    padding-left: 120px !important; 
+    padding-left: 280px !important; 
 }
 
 .char-sub-title {
