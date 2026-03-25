@@ -12,21 +12,21 @@ body {
     color: #333;
 }
 
-/* --- УНІФІКОВАНА БІЛА ШАПКА ДЛЯ ВСІХ САЙТІВ --- */
-/* Цей блок робить шапку білою і на 2-му (header), і на 3-му (container-fluid) сайтах */
+/* --- ШАПКА ТА МЕНЮ (УНІВЕРСАЛЬНА БІЛА ШАПКА) --- */
+/* Цей селектор спрацює і на header, і на header.container-fluid */
 header, 
 header.container-fluid {
     background-color: #ffffff !important; 
     position: relative;
-    z-index: 100;
+    z-index: 1000;
     border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0 !important;
+    padding: 10px 0 !important; /* Робимо фон на всю ширину */
     margin: 0 !important;
     width: 100% !important;
     display: block;
 }
 
-/* Обмежувач ширини всередині (щоб контент не розповзався) */
+/* Внутрішній обмежувач — він тримає лого і меню по центру, як на фото */
 header .container, 
 header.container-fluid .container {
     max-width: 1140px !important;
@@ -36,8 +36,7 @@ header.container-fluid .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px; /* Невеликі відступи всередині, щоб контент не лип до країв */
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
