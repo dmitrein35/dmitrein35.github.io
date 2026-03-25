@@ -8,16 +8,23 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: 'RobotoSlab', serif !important; 
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2; /* Світло-сірий фон для всієї сторінки */
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ --- */
-header.container {
-    background-color: transparent !important;
-    max-width: 1140px !important; 
+/* --- ШАПКА ТА МЕНЮ (ТЕПЕР БІЛА) --- */
+header.container-fluid {
+    background-color: #ffffff !important; /* Чисто білий фон для шапки */
     position: relative;
     z-index: 100;
+    border-bottom: 1px solid #e0e0e0; /* Легка лінія знизу для розділення */
+    padding: 10px 0;
+}
+
+/* Обмежувач ширини всередині білої шапки */
+header .container {
+    max-width: 1140px !important;
+    background-color: transparent !important;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
@@ -154,7 +161,7 @@ header.container {
 
 /* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
 .product-page-wrapper {
-    background: white url('../images/watermark-logo.png') no-repeat center center;
+    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center; /* Сірий фон тут */
     background-size: 650px;
     min-height: 850px;
     padding: 50px 0;
@@ -204,14 +211,13 @@ header.container {
     padding-bottom: 25px;
 }
 
-/* ПАРАМЕТР ВІДДАЛЕННЯ: Це значення (380px) зміщує Cycle та Color точно до лівого краю картинки */
 .cell-spacing {
     padding-left: 380px !important; 
 }
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid #ccc; /* Трохи темніша лінія на сірому фоні */
     padding-bottom: 8px; margin-bottom: 15px;
     display: block;
     width: 100%;
@@ -240,6 +246,7 @@ header.container {
 }
 
 .btn-download-pdf {
+    background-color: white; /* Білий фон для кнопки на сірому фоні */
     border: 2px solid #7c945b; border-radius: 35px;
     color: #7c945b; padding: 12px 35px; font-weight: bold;
     display: inline-flex; align-items: center;
