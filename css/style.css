@@ -10,6 +10,7 @@ body {
     font-family: 'RobotoSlab', serif !important; 
     background-color: #f2f2f2; /* Світло-сірий фон для всієї сторінки */
     color: #333;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* --- ШАПКА ТА МЕНЮ (БІЛА) --- */
@@ -158,7 +159,7 @@ header .container {
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 
-/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
+/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) - ВИПРАВЛЕНО ПРОМІЖКИ --- */
 .product-page-wrapper {
     background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center;
     background-size: 650px;
@@ -177,8 +178,23 @@ header .container {
 }
 .back-link:hover { transform: translateX(-5px); }
 
-.product-title { font-size: 56px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
-.product-subtitle { font-size: 42px; color: #7c945b; font-weight: bold; margin-bottom: 25px; line-height: 1.1; }
+/* Заголовки: margin: 0 та line-height: 1.1 прибирають зайву відстань між рядами */
+.product-title { 
+    font-size: 56px; 
+    font-weight: bold; 
+    color: #3d525a; 
+    margin: 0; 
+    line-height: 1.1; 
+}
+
+.product-subtitle { 
+    font-size: 42px; 
+    color: #7c945b; 
+    font-weight: bold; 
+    margin: 0; 
+    line-height: 1.1; 
+    margin-bottom: 20px; 
+}
 
 /* --- ЗАМІНА ТЕКСТУ ТА ІКОНКИ НА ФОТО pomidori.png --- */
 .high-yield-box {
@@ -234,27 +250,53 @@ header .container {
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF */
+/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF (ОНОВЛЕНО ЯК НА ФОТО 2) */
 .download-container-fix {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center; /* Центруємо фото та кнопку відносно колонки */
+    margin-top: -40px; /* Трохи піднімаємо до рівня заголовку */
 }
 
 .product-main-img {
-    width: 100%; border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    width: 100%; 
+    height: auto;
+    border-radius: 4px;
+    /* Ефект розмиття країв як на зразку */
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
 }
 
 .btn-download-pdf {
     background-color: white;
-    border: 2px solid #7c945b; border-radius: 35px;
-    color: #7c945b; padding: 12px 35px; font-weight: bold;
-    display: inline-flex; align-items: center;
-    text-decoration: none !important; margin-top: 30px;
-    transition: 0.3s; font-size: 18px;
+    border: 1px solid #7c945b; 
+    border-radius: 4px; /* Робимо прямокутною, як на фото 2 */
+    color: #7c945b !important; 
+    padding: 10px 30px; 
+    font-weight: bold;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important; 
+    margin-top: 30px;
+    transition: 0.3s; 
+    font-size: 16px;
+    min-width: 200px;
 }
-.btn-download-pdf:hover { background: #7c945b; color: white; }
+
+.btn-download-pdf:hover { 
+    background-color: #f8f9f5;
+    border-color: #6b824a;
+}
+
+/* Додаємо іконку PDF всередину кнопки через CSS (якщо немає в HTML) */
+.btn-download-pdf::before {
+    content: '\f1c1'; /* Код іконки FontAwesome */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 18px;
+}
 
 /* --- ФУТЕР (ВИПРАВЛЕНО: ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА) --- */
 .footer-dark { 
@@ -263,7 +305,6 @@ header .container {
     padding: 60px 0 30px 0; 
 }
 
-/* Контейнер для обмеження ширини та Flex-позиціювання */
 .footer-container {
     max-width: 1140px;
     margin: 0 auto;
@@ -338,5 +379,5 @@ header .container {
 @media (max-width: 767px) {
     .char-table, .char-table tr, .char-table td { display: block; width: 100%; }
     .cell-spacing { padding-left: 0 !important; margin-top: 20px; }
-    .download-container-fix { align-items: center; }
+    .download-container-fix { align-items: center; margin-top: 20px; }
 }
