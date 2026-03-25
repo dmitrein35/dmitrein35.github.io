@@ -12,26 +12,32 @@ body {
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ТЕПЕР БІЛА) --- */
+/* --- ШАПКА ТА МЕНЮ (ВИПРАВЛЕНО ДЛЯ 100% ШИРИНИ НА 3-МУ САЙТІ) --- */
 header.container-fluid {
-    background-color: #ffffff !important; /* Чисто білий фон для шапки */
+    background-color: #ffffff !important; /* Чисто білий фон */
     position: relative;
     z-index: 100;
-    border-bottom: 1px solid #e0e0e0; /* Легка лінія знизу для розділення */
-    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0 !important; /* Прибираємо бокові паддінги, щоб розтягнути фон до країв */
+    margin: 0 !important;
+    width: 100% !important;
 }
 
-/* Обмежувач ширини всередині білої шапки */
+/* Обмежувач ширини всередині білої шапки — тримає лого та меню по центру */
 header .container {
     max-width: 1140px !important;
     background-color: transparent !important;
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
 .main-logo:hover { opacity: 0.8; }
 
-.search-field { position: relative; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
+.search-field { position: relative; display: flex; align-items: center; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 8px; }
 .search-input { 
     border: none; 
     border-bottom: 2px solid #4b6352; 
@@ -42,6 +48,7 @@ header .container {
 }
 .search-input:focus { width: 200px; }
 
+.main-menu { display: flex; align-items: center; }
 .main-menu a { 
     color: #4b6352; 
     font-weight: bold; 
@@ -161,7 +168,7 @@ header .container {
 
 /* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
 .product-page-wrapper {
-    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center; /* Сірий фон тут */
+    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center;
     background-size: 650px;
     min-height: 850px;
     padding: 50px 0;
@@ -217,7 +224,7 @@ header .container {
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #ccc; /* Трохи темніша лінія на сірому фоні */
+    border-bottom: 1px solid #ccc;
     padding-bottom: 8px; margin-bottom: 15px;
     display: block;
     width: 100%;
@@ -246,7 +253,7 @@ header .container {
 }
 
 .btn-download-pdf {
-    background-color: white; /* Білий фон для кнопки на сірому фоні */
+    background-color: white;
     border: 2px solid #7c945b; border-radius: 35px;
     color: #7c945b; padding: 12px 35px; font-weight: bold;
     display: inline-flex; align-items: center;
