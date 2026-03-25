@@ -8,23 +8,29 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: 'RobotoSlab', serif !important; 
-    background-color: #f2f2f2; /* Світло-сірий фон для всієї сторінки */
+    background-color: #f2f2f2; /* Основний фон сторінки — сірий */
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ТЕПЕР БІЛА) --- */
-header.container-fluid {
-    background-color: #ffffff !important; /* Чисто білий фон для шапки */
+/* --- ШАПКА ТА МЕНЮ (ЧИСТО БІЛА) --- */
+/* Використовуємо селектор header, щоб зафарбувати всю верхню смугу на 100% ширини */
+header {
+    background-color: #ffffff !important; /* Чисто білий фон для лого та меню */
+    width: 100%;
     position: relative;
     z-index: 100;
-    border-bottom: 1px solid #e0e0e0; /* Легка лінія знизу для розділення */
+    border-bottom: 1px solid #e0e0e0; /* Тонка лінія для розділення з сірим фоном */
     padding: 10px 0;
 }
 
-/* Обмежувач ширини всередині білої шапки */
+/* Обмежувач ширини всередині білої шапки, щоб контент не розповзався */
 header .container {
     max-width: 1140px !important;
     background-color: transparent !important;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
@@ -159,9 +165,9 @@ header .container {
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 
-/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
+/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ОСНОВНИЙ СІРИЙ ФОН) --- */
 .product-page-wrapper {
-    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center; /* Сірий фон тут */
+    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center;
     background-size: 650px;
     min-height: 850px;
     padding: 50px 0;
@@ -199,7 +205,7 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ДЛЯ ВІДДАЛЕННЯ КОЛОНОК --- */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ТА ВИРІВНЮВАННЯ КОЛОНОК --- */
 .char-table {
     width: 100%;
     border-collapse: collapse;
@@ -211,13 +217,14 @@ header .container {
     padding-bottom: 25px;
 }
 
+/* ПАРАМЕТР ВІДДАЛЕННЯ: Це значення зміщує Cycle та Color точно до лівого краю картки з картинкою */
 .cell-spacing {
     padding-left: 380px !important; 
 }
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #ccc; /* Трохи темніша лінія на сірому фоні */
+    border-bottom: 1px solid #ccc; /* Трохи темніша лінія для кращої видимості на сірому */
     padding-bottom: 8px; margin-bottom: 15px;
     display: block;
     width: 100%;
@@ -246,7 +253,7 @@ header .container {
 }
 
 .btn-download-pdf {
-    background-color: white; /* Білий фон для кнопки на сірому фоні */
+    background-color: white; /* Біла кнопка, щоб виділялася на сірому фоні */
     border: 2px solid #7c945b; border-radius: 35px;
     color: #7c945b; padding: 12px 35px; font-weight: bold;
     display: inline-flex; align-items: center;
