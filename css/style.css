@@ -5,11 +5,18 @@
 }
 
 body { 
-    margin: 0; 
-    padding: 0; 
+    margin: 0; padding: 0; 
     font-family: 'RobotoSlab', serif !important; 
     background-color: #f2f2f2; /* Світло-сірий фон для всієї сторінки */
     color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Обмежувач ширини для всього контенту посередині, крім шапки та футера */
+.page-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* --- ШАПКА ТА МЕНЮ (БІЛА) --- */
@@ -21,9 +28,15 @@ header.container-fluid {
     padding: 10px 0;
 }
 
-header .container {
-    max-width: 1140px !important;
-    background-color: transparent !important;
+/* Обмежувач всередині білої шапки */
+header .header-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
@@ -32,21 +45,15 @@ header .container {
 .search-field { position: relative; }
 .search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
 .search-input { 
-    border: none; 
-    border-bottom: 2px solid #4b6352; 
-    background: transparent; 
-    outline: none; 
-    width: 150px; 
+    border: none; border-bottom: 2px solid #4b6352; 
+    background: transparent; outline: none; width: 150px; 
     transition: width 0.4s;
 }
 .search-input:focus { width: 200px; }
 
 .main-menu a { 
-    color: #4b6352; 
-    font-weight: bold; 
-    margin-left: 20px; 
-    font-size: 13px; 
-    text-decoration: none !important; 
+    color: #4b6352; font-weight: bold; margin-left: 20px; 
+    font-size: 13px; text-decoration: none !important; 
     transition: 0.3s;
 }
 .main-menu a:hover { color: #82a43a; }
@@ -54,40 +61,25 @@ header .container {
 /* --- ГОЛОВНА СТОРІНКА ТА БАНЕРИ --- */
 .hero-wrapper {
     background: url('../images/bg.png') no-repeat center center;
-    background-size: cover;
-    min-height: 750px; 
-    display: flex;
-    flex-direction: column;
+    background-size: cover; min-height: 750px; 
+    display: flex; flex-direction: column;
 }
 
 .hero-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-    padding-bottom: 100px;
+    flex-grow: 1; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; 
+    text-align: center; padding-bottom: 100px;
 }
 
 .hero-title { 
-    color: #5c5044; 
-    font-size: 52px; 
-    font-weight: bold; 
-    margin-bottom: 25px;
+    color: #5c5044; font-size: 52px; font-weight: bold; margin-bottom: 25px;
 }
 
 .btn-read-more { 
-    background: #7c945b; 
-    color: white !important; 
-    padding: 10px 45px; 
-    font-weight: bold; 
-    display: inline-block; 
-    text-decoration: none !important;
-    font-size: 16px;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    transition: 0.3s;
+    background: #7c945b; color: white !important; padding: 10px 45px; 
+    font-weight: bold; display: inline-block; 
+    text-decoration: none !important; font-size: 16px;
+    letter-spacing: 1px; border-radius: 2px; transition: 0.3s;
 }
 .btn-read-more:hover { background: #6b824a; transform: scale(1.05); }
 
@@ -97,39 +89,25 @@ header .container {
 
 /* --- ВІДЕО ТА КОНТЕНТ --- */
 .vm-image-style { 
-    width: 100%;
-    max-width: 400px; 
-    height: auto;
-    object-fit: cover;
-    border-radius: 4px; 
+    width: 100%; max-width: 400px; height: auto;
+    object-fit: cover; border-radius: 4px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.mission-img-container {
-    position: relative;
-    display: inline-block;
-}
+.mission-img-container { position: relative; display: inline-block; }
 
 .video-play-btn {
-    position: absolute;
-    top: 50%; left: 50%;
+    position: absolute; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 80px; height: 80px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 10;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
+    width: 80px; height: 80px; background-color: #ffffff;
+    border-radius: 50%; display: flex; align-items: center; 
+    justify-content: center; z-index: 10; cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s;
 }
 
 .video-play-btn::after {
-    content: '';
-    border-style: solid;
-    border-width: 15px 0 15px 25px;
-    border-color: transparent transparent transparent #7c945b;
-    margin-left: 5px;
+    content: ''; border-style: solid; border-width: 15px 0 15px 25px;
+    border-color: transparent transparent transparent #7c945b; margin-left: 5px;
 }
 .video-play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
 
@@ -145,10 +123,8 @@ header .container {
 .tomato-banner-img { width: 100%; height: auto; display: block; }
 
 .breeding-programs-box {
-    background-color: white;
-    padding: 40px 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-radius: 4px;
+    background-color: white; padding: 40px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 4px;
 }
 
 .tomato-item { text-align: center; margin-bottom: 30px; }
@@ -161,18 +137,12 @@ header .container {
 /* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
 .product-page-wrapper {
     background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center;
-    background-size: 650px;
-    min-height: 850px;
-    padding: 50px 0;
+    background-size: 650px; min-height: 850px; padding: 50px 0;
 }
 
 .back-link {
-    color: #82a43a;
-    font-weight: bold;
-    text-decoration: none !important;
-    display: inline-block;
-    margin-bottom: 25px;
-    font-size: 16px;
+    color: #82a43a; font-weight: bold; text-decoration: none !important;
+    display: inline-block; margin-bottom: 25px; font-size: 16px;
     transition: 0.3s;
 }
 .back-link:hover { transform: translateX(-5px); }
@@ -182,15 +152,11 @@ header .container {
 
 /* --- ЗАМІНА ТЕКСТУ ТА ІКОНКИ НА ФОТО pomidori.png --- */
 .high-yield-box {
-    margin: 35px 0;
-    display: block;
-    line-height: 0; /* Прибирає зайві відступи під картинкою */
+    margin: 35px 0; display: block; line-height: 0;
 }
 
 .high-yield-box img { 
-    max-width: 450px; /* Ширина фото pomidori.png */
-    height: auto; 
-    display: block;
+    max-width: 450px; height: auto; display: block;
 }
 
 .char-title {
@@ -200,16 +166,13 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ДЛЯ ВІДДАЛЕННЯ КОЛОНОК --- */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК (ФІКС СЛІТА ВЕРСТКИ) --- */
 .char-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+    width: 100%; border-collapse: collapse; table-layout: fixed;
 }
 
 .char-cell {
-    vertical-align: top;
-    padding-bottom: 25px;
+    vertical-align: top; padding-bottom: 25px;
 }
 
 .cell-spacing {
@@ -218,130 +181,92 @@ header .container {
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px; margin-bottom: 15px;
-    display: block;
-    width: 100%;
+    border-bottom: 1px solid #ccc; padding-bottom: 8px; 
+    margin-bottom: 15px; display: block; width: 100%;
 }
 
 .char-list { list-style: none; padding: 0; margin: 0; }
 .char-list li {
-    padding-left: 25px; position: relative;
-    margin-bottom: 12px; color: #555; font-size: 18px; line-height: 1.5;
+    padding-left: 25px; position: relative; margin-bottom: 12px; 
+    color: #555; font-size: 18px; line-height: 1.5;
 }
 .char-list li::before {
     content: "•"; color: #82a43a; position: absolute;
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF */
+/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF (У ПРАВІЙ КОЛОНЦІ) */
 .download-container-fix {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: flex; flex-direction: column; align-items: flex-end;
 }
 
 .product-main-img {
-    width: 100%; border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    width: 100%; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.12);
 }
 
 .btn-download-pdf {
-    background-color: white;
-    border: 2px solid #7c945b; border-radius: 35px;
-    color: #7c945b; padding: 12px 35px; font-weight: bold;
-    display: inline-flex; align-items: center;
+    background-color: white; border: 2px solid #7c945b; 
+    border-radius: 35px; color: #7c945b; padding: 12px 35px; 
+    font-weight: bold; display: inline-flex; align-items: center; 
     text-decoration: none !important; margin-top: 30px;
     transition: 0.3s; font-size: 18px;
 }
 .btn-download-pdf:hover { background: #7c945b; color: white; }
 
-/* --- ФУТЕР (ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА В ОДИН РЯДОК) --- */
+/* --- ФУТЕР (ВИПРАВЛЕНО: ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА) --- */
 .footer-dark { 
-    background: #2b3339; 
-    color: white; 
-    padding: 60px 0 30px 0; 
+    background: #2b3339; color: white; padding: 60px 0 30px 0; 
 }
 
+/* Контейнер для обмеження ширини та Flex-позиціювання */
 .footer-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 1140px; margin: 0 auto; padding: 0 15px;
 }
 
 .footer-main-row {
-    display: flex !important;
-    justify-content: space-between !important; /* Текст вліво, іконки вправо */
-    align-items: center !important;
-    flex-wrap: nowrap !important; /* Забороняє перенос на новий рядок */
+    display: flex;
+    justify-content: space-between; /* Розносить текст вліво, іконки вправо */
+    align-items: center;
     width: 100%;
 }
 
 .footer-links {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    display: flex; flex-wrap: wrap;
 }
 
 .footer-links a { 
-    color: white !important; 
-    margin-right: 20px; 
-    font-size: 14px; 
-    text-decoration: none !important; 
-    font-weight: bold;
-    text-transform: uppercase;
-    white-space: nowrap; /* Забороняє розрив слів у посиланнях */
+    color: white !important; margin-right: 25px; 
+    font-size: 14px; text-decoration: none !important; 
+    font-weight: bold; text-transform: uppercase;
 }
 
 .social-icons {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Додатковий штовхач вправо */
+    display: flex; align-items: center;
 }
 
 .social-dot {
-    display: inline-flex; 
-    width: 38px; 
-    height: 38px; 
-    border: 1px solid #7c945b;
-    border-radius: 50%; 
-    color: #7c945b !important; 
-    align-items: center; 
-    justify-content: center; 
-    margin-left: 10px;
-    transition: 0.3s;
+    display: inline-flex; width: 40px; height: 40px; border: 1px solid #7c945b;
+    border-radius: 50%; color: #7c945b !important; align-items: center; 
+    justify-content: center; margin-left: 12px; transition: 0.3s;
 }
 
 .social-dot:hover {
-    background-color: #7c945b;
-    color: #2b3339 !important;
+    background-color: #7c945b; color: #2b3339 !important;
 }
 
 .copyright-bar { 
-    color: #888; 
-    font-size: 11px; 
-    border-top: 1px solid #3d464d; 
-    padding-top: 25px; 
-    margin-top: 40px; 
-    text-align: center;
-    text-transform: uppercase; 
-    letter-spacing: 2px;
+    color: #888; font-size: 11px; border-top: 1px solid #3d464d; 
+    padding-top: 25px; margin-top: 40px; text-align: center;
+    text-transform: uppercase; letter-spacing: 2px;
 }
 
 /* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 991px) {
     .cell-spacing { padding-left: 40px !important; }
-    .footer-main-row { 
-        flex-direction: column !important; 
-        text-align: center !important; 
-    }
-    .footer-links { 
-        justify-content: center; 
-        margin-bottom: 20px; 
-        flex-wrap: wrap; 
-    }
+    .footer-main-row { flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; margin-bottom: 20px; }
     .footer-links a { margin: 5px 10px; }
-    .social-icons { margin-left: 0; justify-content: center; }
+    .social-icons { justify-content: center; }
     .social-dot { margin: 0 8px; }
 }
 
