@@ -8,29 +8,36 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: 'RobotoSlab', serif !important; 
-    background-color: #f2f2f2; /* Світло-сірий фон для всієї сторінки */
+    background-color: #f2f2f2; 
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ВИПРАВЛЕНО ДЛЯ 100% ШИРИНИ НА 3-МУ САЙТІ) --- */
+/* --- УНІФІКОВАНА БІЛА ШАПКА ДЛЯ ВСІХ САЙТІВ --- */
+/* Цей блок робить шапку білою і на 2-му (header), і на 3-му (container-fluid) сайтах */
+header, 
 header.container-fluid {
-    background-color: #ffffff !important; /* Чисто білий фон */
+    background-color: #ffffff !important; 
     position: relative;
     z-index: 100;
     border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0 !important; /* Прибираємо бокові паддінги, щоб розтягнути фон до країв */
+    padding: 10px 0 !important;
     margin: 0 !important;
     width: 100% !important;
+    display: block;
 }
 
-/* Обмежувач ширини всередині білої шапки — тримає лого та меню по центру */
-header .container {
+/* Обмежувач ширини всередині (щоб контент не розповзався) */
+header .container, 
+header.container-fluid .container {
     max-width: 1140px !important;
-    background-color: transparent !important;
+    width: 100%;
     margin: 0 auto !important;
+    background-color: transparent !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
