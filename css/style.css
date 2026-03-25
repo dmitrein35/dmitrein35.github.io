@@ -125,7 +125,6 @@ header.container {
     border-color: transparent transparent transparent #7c945b;
     margin-left: 5px;
 }
-
 .video-play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
 
 /* --- СТИЛІ ДЛЯ ACTIVITIES --- */
@@ -153,7 +152,7 @@ header.container {
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 
-/* --- НОВІ СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ --- */
+/* --- НОВІ СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML) --- */
 .product-page-wrapper {
     background: white url('../images/watermark-logo.png') no-repeat center center;
     background-size: 650px;
@@ -196,18 +195,14 @@ header.container {
 /* ЗАГОЛОВКИ З БІЛОЮ/СВІТЛОЮ ЛІНІЄЮ */
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #eee; /* Світла лінія */
+    border-bottom: 1px solid #eee; /* Світла лінія (як ти просив раніше) */
     padding-bottom: 8px; margin-bottom: 15px;
     display: block;
 }
 
 /* ФОРСОВАНЕ ЗМІЩЕННЯ ТА ВИРІВНЮВАННЯ */
-.fruit-header, .color-header { 
-    margin-top: 60px !important; 
-}
-
-.cycle-column, .color-column { 
-    padding-left: 140px !important; /* Використовуємо !important для перекриття Bootstrap */
+.cycle-column { 
+    padding-left: 140px !important; /* Зміщення вправо для контенту */
 }
 
 .char-list { list-style: none; padding: 0; }
@@ -262,10 +257,10 @@ header.container {
 
 /* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 991px) {
-    .cycle-column, .color-column { padding-left: 40px !important; }
+    .cycle-column { padding-left: 40px !important; }
 }
 
 @media (max-width: 767px) {
     .col-6 { width: 100% !important; flex: 0 0 100%; max-width: 100%; }
-    .cycle-column, .color-column { padding-left: 15px !important; } 
+    .cycle-column { padding-left: 15px !important; } 
 }
