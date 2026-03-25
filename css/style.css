@@ -124,7 +124,7 @@ header .container {
     color: #3d525a; 
     margin: 0; 
     line-height: 1.25; 
-    margin-bottom: 15px; /* Збільшено відступ до підзаголовка */
+    margin-bottom: 15px; 
 }
 
 .product-subtitle { 
@@ -132,7 +132,7 @@ header .container {
     color: #7c945b; 
     font-weight: bold; 
     margin: 0; 
-    line-height: 1.45; /* Збільшено для гарної відстані між Tomato та Red після <br> */
+    line-height: 1.45; /* Відстань між рядками Tomato та Red */
     margin-bottom: 30px; 
 }
 
@@ -169,8 +169,9 @@ header .container {
     padding-bottom: 25px;
 }
 
+/* Виправлено: відступ для другої колонки */
 .cell-spacing {
-    padding-left: 380px !important; 
+    padding-left: 60px !important; 
 }
 
 .char-sub-title {
