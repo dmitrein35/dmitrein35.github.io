@@ -12,16 +12,15 @@ body {
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ТЕПЕР БІЛА) --- */
+/* --- ШАПКА ТА МЕНЮ (БІЛА) --- */
 header.container-fluid {
-    background-color: #ffffff !important; /* Чисто білий фон для шапки */
+    background-color: #ffffff !important; 
     position: relative;
     z-index: 100;
-    border-bottom: 1px solid #e0e0e0; /* Легка лінія знизу для розділення */
+    border-bottom: 1px solid #e0e0e0; 
     padding: 10px 0;
 }
 
-/* Обмежувач ширини всередині білої шапки */
 header .container {
     max-width: 1140px !important;
     background-color: transparent !important;
@@ -181,13 +180,15 @@ header .container {
 .product-title { font-size: 56px; font-weight: bold; color: #3d525a; margin-bottom: 5px; }
 .product-subtitle { font-size: 42px; color: #7c945b; font-weight: bold; margin-bottom: 25px; line-height: 1.1; }
 
-/* ЗАМІНА ТЕКСТУ НА ФОТО pomidori.png */
+/* --- ЗАМІНА ТЕКСТУ ТА ІКОНКИ НА ФОТО pomidori.png --- */
 .high-yield-box {
-    margin: 30px 0;
+    margin: 35px 0;
     display: block;
+    line-height: 0; /* Прибирає зайві відступи під картинкою */
 }
+
 .high-yield-box img { 
-    max-width: 450px; /* Регулюйте ширину картинки тут */
+    max-width: 450px; /* Ширина фото pomidori.png */
     height: auto; 
     display: block;
 }
