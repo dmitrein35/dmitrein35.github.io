@@ -106,34 +106,6 @@ header .container {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.mission-img-container {
-    position: relative;
-    display: inline-block;
-}
-
-.video-play-btn {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px; height: 80px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 10;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-.video-play-btn::after {
-    content: '';
-    border-style: solid;
-    border-width: 15px 0 15px 25px;
-    border-color: transparent transparent transparent #7c945b;
-    margin-left: 5px;
-}
-.video-play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
-
 /* --- СТИЛІ ДЛЯ ACTIVITIES --- */
 .activities-title { font-size: 36px; font-weight: bold; color: #3d525a; margin-bottom: 40px; }
 .activity-img-wrapper { height: 180px; display: flex; align-items: center; justify-content: center; width: 100%; margin-bottom: 20px; }
@@ -159,7 +131,7 @@ header .container {
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 
-/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) - ВИПРАВЛЕНО ПРОМІЖКИ --- */
+/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
 .product-page-wrapper {
     background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center;
     background-size: 650px;
@@ -178,7 +150,6 @@ header .container {
 }
 .back-link:hover { transform: translateX(-5px); }
 
-/* Заголовки: margin: 0 та line-height: 1.1 прибирають зайву відстань між рядами */
 .product-title { 
     font-size: 56px; 
     font-weight: bold; 
@@ -196,15 +167,14 @@ header .container {
     margin-bottom: 20px; 
 }
 
-/* --- ЗАМІНА ТЕКСТУ ТА ІКОНКИ НА ФОТО pomidori.png --- */
 .high-yield-box {
     margin: 35px 0;
     display: block;
-    line-height: 0; /* Прибирає зайві відступи під картинкою */
+    line-height: 0;
 }
 
 .high-yield-box img { 
-    max-width: 450px; /* Ширина фото pomidori.png */
+    max-width: 450px; 
     height: auto; 
     display: block;
 }
@@ -216,7 +186,7 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ДЛЯ ВІДДАЛЕННЯ КОЛОНОК --- */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК --- */
 .char-table {
     width: 100%;
     border-collapse: collapse;
@@ -250,55 +220,29 @@ header .container {
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF (ОНОВЛЕНО ЯК НА ФОТО 2) */
+/* --- ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF (ПОВЕРНУТО ДО ОРИГІНАЛУ) --- */
 .download-container-fix {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центруємо фото та кнопку відносно колонки */
-    margin-top: -40px; /* Трохи піднімаємо до рівня заголовку */
+    align-items: flex-end;
 }
 
 .product-main-img {
-    width: 100%; 
-    height: auto;
-    border-radius: 4px;
-    /* Ефект розмиття країв як на зразку */
-    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    width: 100%; border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
 }
 
 .btn-download-pdf {
     background-color: white;
-    border: 1px solid #7c945b; 
-    border-radius: 4px; /* Робимо прямокутною, як на фото 2 */
-    color: #7c945b !important; 
-    padding: 10px 30px; 
-    font-weight: bold;
-    display: inline-flex; 
-    align-items: center;
-    justify-content: center;
-    text-decoration: none !important; 
-    margin-top: 30px;
-    transition: 0.3s; 
-    font-size: 16px;
-    min-width: 200px;
+    border: 2px solid #7c945b; border-radius: 35px;
+    color: #7c945b; padding: 12px 35px; font-weight: bold;
+    display: inline-flex; align-items: center;
+    text-decoration: none !important; margin-top: 30px;
+    transition: 0.3s; font-size: 18px;
 }
+.btn-download-pdf:hover { background: #7c945b; color: white; }
 
-.btn-download-pdf:hover { 
-    background-color: #f8f9f5;
-    border-color: #6b824a;
-}
-
-/* Додаємо іконку PDF всередину кнопки через CSS (якщо немає в HTML) */
-.btn-download-pdf::before {
-    content: '\f1c1'; /* Код іконки FontAwesome */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-/* --- ФУТЕР (ВИПРАВЛЕНО: ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА) --- */
+/* --- ФУТЕР --- */
 .footer-dark { 
     background: #2b3339; 
     color: white; 
@@ -313,7 +257,7 @@ header .container {
 
 .footer-main-row {
     display: flex;
-    justify-content: space-between; /* Розносить текст вліво, іконки вправо */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -379,5 +323,5 @@ header .container {
 @media (max-width: 767px) {
     .char-table, .char-table tr, .char-table td { display: block; width: 100%; }
     .cell-spacing { padding-left: 0 !important; margin-top: 20px; }
-    .download-container-fix { align-items: center; margin-top: 20px; }
+    .download-container-fix { align-items: center; }
 }
