@@ -92,7 +92,7 @@ header .container {
 }
 .btn-read-more:hover { background: #6b824a; transform: scale(1.05); }
 
-/* ВИПРАВЛЕННЯ: Vision, Mission & Products (розмір заголовків) */
+/* Vision, Mission & Products (розмір заголовків) */
 .activities-title { 
     font-size: 42px !important; 
     font-weight: bold; 
@@ -102,12 +102,14 @@ header .container {
     text-align: center;
 }
 
-/* ВИПРАВЛЕННЯ: Щоб Products.png не обрізалося */
+/* ВИПРАВЛЕНО: Прибрано відступ зверху для Products.png */
 .products-banner-wrapper {
     width: 100%;
-    padding: 20px 0;
+    /* 0 зверху, 0 по боках, 20px знизу */
+    padding: 0 0 20px 0; 
     display: flex;
     justify-content: center;
+    background-color: #ffffff;
     overflow: hidden;
 }
 
@@ -116,6 +118,11 @@ header .container {
     height: auto; 
     display: block;
     object-fit: contain;
+}
+
+.products-strip {
+    background-color: white;
+    padding: 0; /* Гарантуємо відсутність внутрішніх відступів секції */
 }
 
 /* --- 4. СТОРІНКА ПРОДУКТУ (САЙТ 3) --- */
@@ -127,20 +134,19 @@ header .container {
     overflow: hidden;
 }
 
-/* ВИПРАВЛЕННЯ: pomi.png на весь задній фон */
 .product-page-wrapper::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: url('../images/pomi.png') no-repeat center center;
-    background-size: cover; /* Розтягує на весь сірий фон */
-    opacity: 0.4; /* Прозорість для читабельності тексту */
+    background-size: cover; 
+    opacity: 0.4; 
     z-index: 1;
 }
 
 .product-page-wrapper .container {
     position: relative;
-    z-index: 2; /* Контент вище за фон */
+    z-index: 2; 
 }
 
 .back-link {
@@ -188,7 +194,7 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* ТАБЛИЦЯ ХАРАКТЕРИСТИК (САЙТ 3) */
+/* ТАБЛИЦЯ ХАРАКТЕРИСТИК */
 .char-table {
     width: 100%;
     border-collapse: collapse;
@@ -196,7 +202,6 @@ header .container {
 }
 
 .char-cell { vertical-align: top; padding-bottom: 25px; }
-
 .cell-spacing { padding-left: 380px !important; }
 
 .char-sub-title {
@@ -216,7 +221,7 @@ header .container {
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* ФОТО ТА КНОПКА PDF (ПРАВА ЧАСТИНА) */
+/* ФОТО ТА КНОПКА PDF */
 .download-container-fix {
     display: flex;
     flex-direction: column;
@@ -238,7 +243,7 @@ header .container {
 }
 .btn-download-pdf:hover { background: #7c945b; color: white; }
 
-/* --- 5. ФУТЕР (СПІЛЬНИЙ) --- */
+/* --- 5. ФУТЕР --- */
 .footer-dark { 
     background: #2b3339; 
     color: white; 
@@ -291,7 +296,6 @@ header .container {
     .cell-spacing { padding-left: 0 !important; margin-top: 20px; }
     .download-container-fix { align-items: center; }
     
-    /* Скрол для Products.png на телефонах, щоб не було дрібним */
     .products-banner-wrapper { overflow-x: auto; justify-content: flex-start; }
     .products-full-img { min-width: 600px; }
 }
