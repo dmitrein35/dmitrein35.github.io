@@ -12,15 +12,15 @@ body {
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ЯК НА ГОЛОВНІЙ: БІЛА НА 100% ШИРИНИ) --- */
+/* --- ШАПКА ТА МЕНЮ (ЧИСТО БІЛА НА 100% ШИРИНИ) --- */
 header {
-    background-color: #ffffff !important; /* Чисто білий фон від краю до краю */
+    background-color: #ffffff !important; /* Білий фон на всю ширину */
     width: 100% !important;
     display: block;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     border-bottom: 1px solid #e0e0e0; /* Лінія розділення з сірим фоном */
-    padding: 15px 0; /* Збільшений відступ для ідентичності з головною */
+    padding: 10px 0;
 }
 
 /* Обмежувач ширини всередині білої шапки для центрування контенту */
@@ -34,24 +34,11 @@ header .container {
     justify-content: space-between;
 }
 
-.main-logo { 
-    height: 80px; 
-    transition: 0.3s; 
-}
+.main-logo { height: 80px; transition: 0.3s; }
 .main-logo:hover { opacity: 0.8; }
 
-.search-field { 
-    position: relative; 
-    display: flex; 
-    align-items: center; 
-}
-.search-label { 
-    font-size: 13px; 
-    font-weight: bold; 
-    color: #4b6352; 
-    margin-right: 8px; 
-    text-transform: uppercase; /* Великі літери, як на макеті */
-}
+.search-field { position: relative; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
 .search-input { 
     border: none; 
     border-bottom: 2px solid #4b6352; 
@@ -62,17 +49,12 @@ header .container {
 }
 .search-input:focus { width: 200px; }
 
-.main-menu { 
-    display: flex; 
-    align-items: center; 
-}
 .main-menu a { 
     color: #4b6352; 
     font-weight: bold; 
-    margin-left: 25px; 
+    margin-left: 20px; 
     font-size: 13px; 
     text-decoration: none !important; 
-    text-transform: uppercase; /* Великі літери для меню */
     transition: 0.3s;
 }
 .main-menu a:hover { color: #82a43a; }
@@ -236,7 +218,7 @@ header .container {
     padding-bottom: 25px;
 }
 
-/* Cycle та Color тепер вирівняні по лівому краю картки товару */
+/* ПАРАМЕТР ВІДДАЛЕННЯ: Cycle та Color тепер вирівняні по лівому краю картки товару */
 .cell-spacing {
     padding-left: 380px !important; 
 }
