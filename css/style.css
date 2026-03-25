@@ -99,20 +99,35 @@ header .container {
 .activity-name { font-size: 24px; font-weight: bold; color: #4b6352; margin-top: 10px; }
 .activity-text { color: #777; font-size: 15px; line-height: 1.4; max-width: 280px; }
 
-/* --- СТОРІНКА ПРОДУКТУ (ODIN.HTML) --- */
+/* --- СТОРІНКА ПРОДУКТУ (ODIN.HTML / TAG 1002) - ФОН НА ВЕСЬ ЕКРАН --- */
 .product-page-wrapper {
-    /* Додано pomi.png на задній фон */
-    background: #f2f2f2 url('../images/pomi.png') no-repeat center center;
-    background-size: 800px auto; 
+    background-color: #f2f2f2;
     min-height: 850px;
     padding: 50px 0;
     position: relative;
+    overflow: hidden; /* Щоб фон не вилазив за межі */
 }
 
-/* Контейнер поверх фону */
+/* Створюємо псевдоелемент для фону з pomi.png */
+.product-page-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    
+    /* НАЛАШТУВАННЯ ФОНУ НА ВЕСЬ ЕКРАН */
+    background: url('../images/pomi.png') no-repeat center center;
+    background-size: cover; /* Розтягує на весь сірий фон */
+    
+    /* Опціонально: додаємо легку прозорість, щоб текст читався краще */
+    opacity: 0.4; 
+    
+    z-index: 1; /* Фон знизу */
+}
+
+/* Контейнер з контентом поверх фону */
 .product-page-wrapper .container {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Контент зверху */
 }
 
 .back-link {
@@ -165,7 +180,7 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК --- */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ДЛЯ ВІДДАЛЕННЯ КОЛОНОК --- */
 .char-table {
     width: 100%;
     border-collapse: collapse;
@@ -177,9 +192,8 @@ header .container {
     padding-bottom: 25px;
 }
 
-/* Оптимальний відступ для другої колонки */
 .cell-spacing {
-    padding-left: 80px !important; 
+    padding-left: 380px !important; 
 }
 
 .char-sub-title {
@@ -200,7 +214,7 @@ header .container {
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* --- ФОТО ТА КНОПКА PDF --- */
+/* --- ФОТО ТА КНОПКА PDF (ОРИГІНАЛЬНЕ ПОЗИЦІОНУВАННЯ) --- */
 .download-container-fix {
     display: flex;
     flex-direction: column;
@@ -222,18 +236,29 @@ header .container {
 }
 .btn-download-pdf:hover { background: #7c945b; color: white; }
 
-/* --- ФУТЕР --- */
+/* --- ФУТЕР (ВИПРАВЛЕНО: ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА) --- */
 .footer-dark { 
     background: #2b3339; 
     color: white; 
     padding: 60px 0 30px 0; 
 }
 
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .footer-main-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer-links a { 
@@ -243,6 +268,11 @@ header .container {
     text-decoration: none !important; 
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
 }
 
 .social-dot {
@@ -257,6 +287,7 @@ header .container {
     margin-left: 12px;
     transition: 0.3s;
 }
+
 .social-dot:hover { background-color: #7c945b; color: #2b3339 !important; }
 
 .copyright-bar { 
@@ -266,6 +297,7 @@ header .container {
     padding-top: 25px; 
     margin-top: 40px; 
     text-align: center;
+    text-transform: uppercase; 
     letter-spacing: 2px;
 }
 
@@ -274,14 +306,13 @@ header .container {
     .cell-spacing { padding-left: 40px !important; }
     .footer-main-row { flex-direction: column; text-align: center; }
     .footer-links { justify-content: center; margin-bottom: 20px; }
-    .social-icons { justify-content: center; margin-top: 10px; }
+    .footer-links a { margin: 5px 10px; }
+    .social-icons { justify-content: center; }
+    .social-dot { margin: 0 8px; }
 }
 
 @media (max-width: 767px) {
-    .product-title { font-size: 42px; }
-    .product-subtitle { font-size: 32px; }
     .char-table, .char-table tr, .char-table td { display: block; width: 100%; }
     .cell-spacing { padding-left: 0 !important; margin-top: 20px; }
-    .download-container-fix { align-items: center; margin-top: 30px; }
-    .product-page-wrapper { background-size: 400px auto; } /* Зменшення фону на мобілках */
+    .download-container-fix { align-items: center; }
 }
