@@ -12,32 +12,40 @@ body {
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ЧИСТО БІЛА) --- */
-/* Використовуємо селектор header, щоб зафарбувати всю верхню смугу на 100% ширини */
+/* --- ШАПКА ТА МЕНЮ (ВИПРАВЛЕНО: ГАРАНТОВАНО 100% ШИРИНИ) --- */
 header {
-    background-color: #ffffff !important; /* Чисто білий фон для лого та меню */
-    width: 100%;
+    background-color: #ffffff !important; /* Чисто білий фон */
+    width: 100% !important;
+    min-width: 100vw; /* Розтягуємо на всю ширину вікна перегляду */
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+    padding: 15px 0;
+    display: block;
     position: relative;
-    z-index: 100;
-    border-bottom: 1px solid #e0e0e0; /* Тонка лінія для розділення з сірим фоном */
-    padding: 10px 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-/* Обмежувач ширини всередині білої шапки, щоб контент не розповзався */
+/* Контейнер всередині, який тримає контент по центру */
 header .container {
     max-width: 1140px !important;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
     background-color: transparent !important;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
 .main-logo:hover { opacity: 0.8; }
 
-.search-field { position: relative; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
+.search-field { position: relative; display: flex; align-items: center; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 8px; text-transform: uppercase; }
 .search-input { 
     border: none; 
     border-bottom: 2px solid #4b6352; 
@@ -48,12 +56,14 @@ header .container {
 }
 .search-input:focus { width: 200px; }
 
+.main-menu { display: flex; align-items: center; }
 .main-menu a { 
     color: #4b6352; 
     font-weight: bold; 
-    margin-left: 20px; 
+    margin-left: 25px; 
     font-size: 13px; 
     text-decoration: none !important; 
+    text-transform: uppercase;
     transition: 0.3s;
 }
 .main-menu a:hover { color: #82a43a; }
@@ -205,7 +215,7 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ТА ВИРІВНЮВАННЯ КОЛОНОК --- */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК --- */
 .char-table {
     width: 100%;
     border-collapse: collapse;
@@ -217,14 +227,13 @@ header .container {
     padding-bottom: 25px;
 }
 
-/* ПАРАМЕТР ВІДДАЛЕННЯ: Це значення зміщує Cycle та Color точно до лівого краю картки з картинкою */
 .cell-spacing {
     padding-left: 380px !important; 
 }
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #ccc; /* Трохи темніша лінія для кращої видимості на сірому */
+    border-bottom: 1px solid #ccc;
     padding-bottom: 8px; margin-bottom: 15px;
     display: block;
     width: 100%;
@@ -240,7 +249,7 @@ header .container {
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF */
+/* ФОТО ТА КНОПКА PDF */
 .download-container-fix {
     display: flex;
     flex-direction: column;
@@ -253,7 +262,7 @@ header .container {
 }
 
 .btn-download-pdf {
-    background-color: white; /* Біла кнопка, щоб виділялася на сірому фоні */
+    background-color: white;
     border: 2px solid #7c945b; border-radius: 35px;
     color: #7c945b; padding: 12px 35px; font-weight: bold;
     display: inline-flex; align-items: center;
