@@ -152,7 +152,7 @@ header.container {
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 
-/* --- НОВІ СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML) --- */
+/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
 .product-page-wrapper {
     background: white url('../images/watermark-logo.png') no-repeat center center;
     background-size: 650px;
@@ -192,7 +192,23 @@ header.container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* ЗАГОЛОВКИ З БІЛОЮ/СВІТЛОЮ ЛІНІЄЮ */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ДЛЯ ВІДДАЛЕННЯ КОЛОНОК --- */
+.char-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.char-cell {
+    vertical-align: top;
+    padding-bottom: 25px;
+}
+
+/* ПАРАМЕТР ВІДДАЛЕННЯ: Регулюй це значення, щоб збільшити/зменшити розрив */
+.cell-spacing {
+    padding-left: 120px !important; 
+}
+
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
     border-bottom: 1px solid #eee; 
@@ -200,12 +216,7 @@ header.container {
     display: block;
 }
 
-/* ФОРСОВАНЕ ЗМІЩЕННЯ ТА ВИРІВНЮВАННЯ ДЛЯ ПРАВОЇ КОЛОНКИ */
-.cycle-column, .color-column { 
-    padding-left: 140px !important; 
-}
-
-.char-list { list-style: none; padding: 0; }
+.char-list { list-style: none; padding: 0; margin: 0; }
 .char-list li {
     padding-left: 25px; position: relative;
     margin-bottom: 12px; color: #555; font-size: 18px; line-height: 1.5;
@@ -216,10 +227,10 @@ header.container {
 }
 
 /* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF */
-.product-sidebar {
+.download-container-fix {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Кнопка буде під фото з правого боку */
+    align-items: flex-end;
 }
 
 .product-main-img {
@@ -242,6 +253,11 @@ header.container {
     color: white; 
     padding: 60px 0 30px 0; 
 }
+.footer-links a { color: white !important; margin: 0 15px; font-size: 14px; text-decoration: none !important; }
+.social-dot {
+    display: inline-flex; width: 40px; height: 40px; border: 1px solid #7c945b;
+    border-radius: 50%; color: #7c945b !important; align-items: center; justify-content: center; margin: 0 8px;
+}
 .copyright-bar { 
     color: #888; font-size: 11px; border-top: 1px solid #3d464d; 
     padding-top: 25px; margin-top: 40px; text-align: center;
@@ -250,11 +266,11 @@ header.container {
 
 /* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 991px) {
-    .cycle-column, .color-column { padding-left: 40px !important; }
+    .cell-spacing { padding-left: 40px !important; }
 }
 
 @media (max-width: 767px) {
-    .col-6 { width: 100% !important; flex: 0 0 100%; max-width: 100%; }
-    .cycle-column, .color-column { padding-left: 15px !important; } 
-    .product-sidebar { align-items: center; }
+    .char-table, .char-table tr, .char-table td { display: block; width: 100%; }
+    .cell-spacing { padding-left: 0 !important; margin-top: 20px; }
+    .download-container-fix { align-items: center; }
 }
