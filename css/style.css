@@ -8,44 +8,30 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: 'RobotoSlab', serif !important; 
-    background-color: #f2f2f2; /* Основний фон сторінки — сірий */
+    background-color: #f2f2f2; /* Світло-сірий фон для всієї сторінки */
     color: #333;
 }
 
-/* --- ШАПКА ТА МЕНЮ (ВИПРАВЛЕНО: ГАРАНТОВАНО 100% ШИРИНИ) --- */
-header {
-    background-color: #ffffff !important; /* Чисто білий фон */
-    width: 100% !important;
-    min-width: 100vw; /* Розтягуємо на всю ширину вікна перегляду */
-    left: 0;
-    right: 0;
-    margin: 0 !important;
-    padding: 15px 0;
-    display: block;
+/* --- ШАПКА ТА МЕНЮ (ТЕПЕР БІЛА) --- */
+header.container-fluid {
+    background-color: #ffffff !important; /* Чисто білий фон для шапки */
     position: relative;
-    z-index: 1000;
-    border-bottom: 1px solid #e0e0e0;
+    z-index: 100;
+    border-bottom: 1px solid #e0e0e0; /* Легка лінія знизу для розділення */
+    padding: 10px 0;
 }
 
-/* Контейнер всередині, який тримає контент по центру */
+/* Обмежувач ширини всередині білої шапки */
 header .container {
     max-width: 1140px !important;
-    width: 100%;
-    margin-left: auto !important;
-    margin-right: auto !important;
     background-color: transparent !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .main-logo { height: 80px; transition: 0.3s; }
 .main-logo:hover { opacity: 0.8; }
 
-.search-field { position: relative; display: flex; align-items: center; }
-.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 8px; text-transform: uppercase; }
+.search-field { position: relative; }
+.search-label { font-size: 13px; font-weight: bold; color: #4b6352; margin-right: 5px; }
 .search-input { 
     border: none; 
     border-bottom: 2px solid #4b6352; 
@@ -56,14 +42,12 @@ header .container {
 }
 .search-input:focus { width: 200px; }
 
-.main-menu { display: flex; align-items: center; }
 .main-menu a { 
     color: #4b6352; 
     font-weight: bold; 
-    margin-left: 25px; 
+    margin-left: 20px; 
     font-size: 13px; 
     text-decoration: none !important; 
-    text-transform: uppercase;
     transition: 0.3s;
 }
 .main-menu a:hover { color: #82a43a; }
@@ -175,9 +159,9 @@ header .container {
 .section-heading { font-size: 42px; font-weight: bold; color: #3d525a; }
 .section-dots { color: #82a43a; font-size: 24px; letter-spacing: 5px; margin-bottom: 15px; }
 
-/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ОСНОВНИЙ СІРИЙ ФОН) --- */
+/* --- СТИЛІ ДЛЯ СТОРІНКИ ПРОДУКТУ (ODIN.HTML / TAG 1002) --- */
 .product-page-wrapper {
-    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center;
+    background: #f2f2f2 url('../images/watermark-logo.png') no-repeat center center; /* Сірий фон тут */
     background-size: 650px;
     min-height: 850px;
     padding: 50px 0;
@@ -215,7 +199,7 @@ header .container {
     display: inline-block; text-transform: uppercase;
 }
 
-/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК --- */
+/* --- ТАБЛИЦЯ ХАРАКТЕРИСТИК ДЛЯ ВІДДАЛЕННЯ КОЛОНОК --- */
 .char-table {
     width: 100%;
     border-collapse: collapse;
@@ -233,7 +217,7 @@ header .container {
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; /* Трохи темніша лінія на сірому фоні */
     padding-bottom: 8px; margin-bottom: 15px;
     display: block;
     width: 100%;
@@ -249,7 +233,7 @@ header .container {
     left: 0; font-weight: bold; font-size: 22px;
 }
 
-/* ФОТО ТА КНОПКА PDF */
+/* ВИРІВНЮВАННЯ ФОТО ТА КНОПКИ PDF */
 .download-container-fix {
     display: flex;
     flex-direction: column;
@@ -262,7 +246,7 @@ header .container {
 }
 
 .btn-download-pdf {
-    background-color: white;
+    background-color: white; /* Білий фон для кнопки на сірому фоні */
     border: 2px solid #7c945b; border-radius: 35px;
     color: #7c945b; padding: 12px 35px; font-weight: bold;
     display: inline-flex; align-items: center;
