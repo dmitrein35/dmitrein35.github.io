@@ -256,14 +256,13 @@ header .container {
 }
 .btn-download-pdf:hover { background: #7c945b; color: white; }
 
-/* --- ФУТЕР (ВИПРАВЛЕНО: ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА) --- */
+/* --- ФУТЕР (ТЕКСТ ЗЛІВА, ІКОНКИ СПРАВА В ОДИН РЯДОК) --- */
 .footer-dark { 
     background: #2b3339; 
     color: white; 
     padding: 60px 0 30px 0; 
 }
 
-/* Контейнер для обмеження ширини та Flex-позиціювання */
 .footer-container {
     max-width: 1140px;
     margin: 0 auto;
@@ -271,41 +270,45 @@ header .container {
 }
 
 .footer-main-row {
-    display: flex;
-    justify-content: space-between; /* Розносить текст вліво, іконки вправо */
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important; /* Текст вліво, іконки вправо */
+    align-items: center !important;
+    flex-wrap: nowrap !important; /* Забороняє перенос на новий рядок */
     width: 100%;
 }
 
 .footer-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .footer-links a { 
     color: white !important; 
-    margin-right: 25px; 
+    margin-right: 20px; 
     font-size: 14px; 
     text-decoration: none !important; 
     font-weight: bold;
     text-transform: uppercase;
+    white-space: nowrap; /* Забороняє розрив слів у посиланнях */
 }
 
 .social-icons {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Додатковий штовхач вправо */
 }
 
 .social-dot {
     display: inline-flex; 
-    width: 40px; 
-    height: 40px; 
+    width: 38px; 
+    height: 38px; 
     border: 1px solid #7c945b;
     border-radius: 50%; 
     color: #7c945b !important; 
     align-items: center; 
     justify-content: center; 
-    margin-left: 12px;
+    margin-left: 10px;
     transition: 0.3s;
 }
 
@@ -328,10 +331,17 @@ header .container {
 /* --- АДАПТИВНІСТЬ --- */
 @media (max-width: 991px) {
     .cell-spacing { padding-left: 40px !important; }
-    .footer-main-row { flex-direction: column; text-align: center; }
-    .footer-links { justify-content: center; margin-bottom: 20px; }
+    .footer-main-row { 
+        flex-direction: column !important; 
+        text-align: center !important; 
+    }
+    .footer-links { 
+        justify-content: center; 
+        margin-bottom: 20px; 
+        flex-wrap: wrap; 
+    }
     .footer-links a { margin: 5px 10px; }
-    .social-icons { justify-content: center; }
+    .social-icons { margin-left: 0; justify-content: center; }
     .social-dot { margin: 0 8px; }
 }
 
