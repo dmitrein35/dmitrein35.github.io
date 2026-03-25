@@ -118,14 +118,13 @@ header .container {
 }
 .back-link:hover { transform: translateX(-5px); }
 
-/* Збільшена відстань між заголовками назви та опису */
 .product-title { 
     font-size: 56px; 
     font-weight: bold; 
     color: #3d525a; 
     margin: 0; 
-    line-height: 1.25; /* Збільшено інтервал */
-    margin-bottom: 12px; /* Відступ від підзаголовка */
+    line-height: 1.25; 
+    margin-bottom: 15px; /* Збільшено відступ до підзаголовка */
 }
 
 .product-subtitle { 
@@ -133,7 +132,7 @@ header .container {
     color: #7c945b; 
     font-weight: bold; 
     margin: 0; 
-    line-height: 1.35; /* Збільшено інтервал між Tomato... та Red... */
+    line-height: 1.45; /* Збільшено для гарної відстані між Tomato та Red після <br> */
     margin-bottom: 30px; 
 }
 
