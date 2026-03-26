@@ -119,7 +119,33 @@ header .container {
     padding: 0;
 }
 
-/* СТИЛІ ДЛЯ СІТКИ ТОМАТІВ ТА КЛІКАБЕЛЬНОСТІ */
+/* === ACTIVITIES SECTION - FIX LINES === */
+.breeding-programs-box .row {
+    display: flex;
+    align-items: flex-start; /* Вирівнюємо колонки по верхньому краю, а не по висоті */
+}
+
+.breeding-col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.breeding-col h5 {
+    font-size: 20px;
+    margin-bottom: 0; /* Прибираємо стандартний відступ, щоб лінія була ближче */
+    line-height: 1.2;
+}
+
+.breeding-col hr {
+    border: none;
+    border-top: 1px solid #ddd; /* Створюємо лінію через CSS для жорсткого позиціонування */
+    margin-top: 15px; /* Точний відступ від заголовка */
+    margin-bottom: 25px; /* Точний відступ до тексту */
+    width: 100%;
+}
+
+/* === TOMATO GRID AND CLICKABILITY === */
 .tomato-item {
     overflow: hidden;
     border-radius: 8px;
@@ -138,11 +164,11 @@ header .container {
 }
 
 .clickable-product:hover {
-    transform: scale(1.08); /* Картинка трохи збільшується */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Додаємо тінь */
+    transform: scale(1.08); 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* РЕШТА ТВОЇХ СТИЛІВ */
+/* Rest of your styles */
 .activities-section .row {
     display: flex;
     flex-wrap: wrap;
