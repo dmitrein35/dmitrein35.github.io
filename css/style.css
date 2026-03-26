@@ -93,8 +93,8 @@ header .container {
     font-size: 42px !important; 
     font-weight: bold; 
     color: #3d525a; 
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 60px; 
+    margin-bottom: 40px; 
     text-align: center;
 }
 
@@ -119,6 +119,30 @@ header .container {
     padding: 0;
 }
 
+/* СТИЛІ ДЛЯ СІТКИ ТОМАТІВ ТА КЛІКАБЕЛЬНОСТІ */
+.tomato-item {
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.tomato-item a {
+    display: block;
+    line-height: 0;
+}
+
+.clickable-product {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.clickable-product:hover {
+    transform: scale(1.08); /* Картинка трохи збільшується */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Додаємо тінь */
+}
+
+/* РЕШТА ТВОЇХ СТИЛІВ */
 .activities-section .row {
     display: flex;
     flex-wrap: wrap;
