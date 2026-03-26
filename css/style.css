@@ -117,7 +117,7 @@ header .container {
 /* === ACTIVITIES SECTION - FIX LINES === */
 .breeding-programs-box .row {
     display: flex;
-    align-items: stretch; /* Дозволяє колонкам бути однакової висоти */
+    align-items: stretch; 
 }
 
 .breeding-col {
@@ -130,9 +130,9 @@ header .container {
     font-size: 20px;
     margin-bottom: 0; 
     line-height: 1.2;
-    min-height: 50px; /* ФІКСОВАНА МІНІМАЛЬНА ВИСОТА ДЛЯ ВИРІВНЮВАННЯ */
+    min-height: 50px; 
     display: flex;
-    align-items: flex-end; /* Текст "притискається" до лінії знизу */
+    align-items: flex-end; 
     padding-bottom: 10px;
 }
 
@@ -357,6 +357,75 @@ header .container {
     margin-top: 40px; text-align: center;
     letter-spacing: 2px;
 }
+
+/* === НОВІ СТИЛІ ДЛЯ CONTACT.HTML === */
+
+.contact-form-wrapper { 
+    padding: 60px 0; 
+    background-color: #f9f9f9; 
+}
+
+.form-label { 
+    font-weight: bold; 
+    color: #4b6352; 
+    font-size: 14px; 
+    margin-bottom: 5px; 
+    display: block;
+}
+
+.form-control { 
+    border-radius: 4px; 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    height: auto; 
+    font-size: 14px;
+}
+
+.captcha-img { 
+    background: #eee; 
+    padding: 10px; 
+    font-style: italic; 
+    letter-spacing: 5px; 
+    border-radius: 4px; 
+    border: 1px solid #ddd; 
+    font-family: serif; 
+    display: inline-block;
+}
+
+.btn-send { 
+    background-color: #7c945b; 
+    color: white !important; 
+    border-radius: 25px; 
+    padding: 10px 40px; 
+    border: none; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: 0.3s; 
+}
+.btn-send:hover { background-color: #6b824a; }
+
+.address-section { 
+    text-align: center; 
+    padding: 40px 0; 
+    background: white; 
+}
+
+.address-title { 
+    color: #82a43a; 
+    font-weight: bold; 
+    border-bottom: 2px solid #82a43a; 
+    display: inline-block; 
+    padding-bottom: 5px; 
+    margin-bottom: 20px; 
+}
+
+.address-text { 
+    color: #666; 
+    font-size: 14px; 
+    line-height: 1.6; 
+}
+
+/* === МЕДІА ЗАПИТИ (ЗАЛИШЕНО ЯК БУЛО) === */
 
 @media (max-width: 991px) {
     .cell-spacing { padding-left: 40px !important; }
