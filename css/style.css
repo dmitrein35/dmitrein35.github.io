@@ -114,15 +114,10 @@ header .container {
     object-fit: contain;
 }
 
-.products-strip {
-    background-color: white;
-    padding: 0;
-}
-
 /* === ACTIVITIES SECTION - FIX LINES === */
 .breeding-programs-box .row {
     display: flex;
-    align-items: flex-start; /* Вирівнюємо колонки по верхньому краю, а не по висоті */
+    align-items: stretch; /* Дозволяє колонкам бути однакової висоти */
 }
 
 .breeding-col {
@@ -133,15 +128,19 @@ header .container {
 
 .breeding-col h5 {
     font-size: 20px;
-    margin-bottom: 0; /* Прибираємо стандартний відступ, щоб лінія була ближче */
+    margin-bottom: 0; 
     line-height: 1.2;
+    min-height: 50px; /* ФІКСОВАНА МІНІМАЛЬНА ВИСОТА ДЛЯ ВИРІВНЮВАННЯ */
+    display: flex;
+    align-items: flex-end; /* Текст "притискається" до лінії знизу */
+    padding-bottom: 10px;
 }
 
 .breeding-col hr {
     border: none;
-    border-top: 1px solid #ddd; /* Створюємо лінію через CSS для жорсткого позиціонування */
-    margin-top: 15px; /* Точний відступ від заголовка */
-    margin-bottom: 25px; /* Точний відступ до тексту */
+    border-top: 1px solid #ddd; 
+    margin-top: 0; 
+    margin-bottom: 25px; 
     width: 100%;
 }
 
