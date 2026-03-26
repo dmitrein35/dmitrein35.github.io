@@ -10,6 +10,8 @@ body {
     background-color: #f2f2f2; 
     color: #333;
     -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 header.container-fluid {
@@ -114,7 +116,6 @@ header .container {
     object-fit: contain;
 }
 
-/* === ACTIVITIES SECTION - FIX LINES === */
 .breeding-programs-box .row {
     display: flex;
     align-items: stretch; 
@@ -144,7 +145,6 @@ header .container {
     width: 100%;
 }
 
-/* === TOMATO GRID AND CLICKABILITY === */
 .tomato-item {
     overflow: hidden;
     border-radius: 8px;
@@ -167,7 +167,6 @@ header .container {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Rest of your styles */
 .activities-section .row {
     display: flex;
     flex-wrap: wrap;
@@ -280,7 +279,7 @@ header .container {
 }
 
 .char-cell { vertical-align: top; padding-bottom: 25px; }
-.cell-spacing { padding-left: 380px !important; }
+.cell-spacing { padding-left: 50px !important; }
 
 .char-sub-title {
     color: #82a43a; font-size: 24px; font-weight: bold;
@@ -358,7 +357,6 @@ header .container {
     letter-spacing: 2px;
 }
 
-/* === НОВІ СТИЛІ ДЛЯ CONTACT.HTML === */
 
 .contact-form-wrapper { 
     padding: 60px 0; 
@@ -425,7 +423,6 @@ header .container {
     line-height: 1.6; 
 }
 
-/* === МЕДІА ЗАПИТИ (ЗАЛИШЕНО ЯК БУЛО) === */
 
 @media (max-width: 991px) {
     .cell-spacing { padding-left: 40px !important; }
