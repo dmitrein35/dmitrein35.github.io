@@ -2,7 +2,7 @@
    RESPONSIVE STYLES (Desktop First)
    ============================================================ */
 
-/* 1. Планшети та малі ноутбуки (1024px) */
+/* 1. Планшеты и малые ноутбуки (1024px и меньше) */
 @media (max-width: 1024px) {
     header .container {
         flex-direction: column;
@@ -15,9 +15,9 @@
         margin-top: 20px;
     }
 
-    /* Мобільне меню "Бургер" */
+    /* Мобильное меню "Бургер" */
     .menu-toggle {
-        display: inline-block;
+        display: inline-block; /* Показываем кнопку */
         background: #7c945b;
         color: white;
         border: none;
@@ -25,41 +25,41 @@
         font-size: 24px;
         cursor: pointer;
         margin-bottom: 15px;
+        border-radius: 4px;
     }
 
     .main-menu {
-        display: none; /* Ховаємо звичайне меню */
+        display: none; /* Прячем обычное горизонтальное меню */
         flex-direction: column;
-        background: #f8f9fa;
+        background: #ffffff;
         width: 100%;
+        border: 1px solid #ddd;
+        position: relative;
+        z-index: 1000;
     }
 
     .main-menu.active {
-        display: flex; /* Показуємо при кліку */
+        display: flex; /* Показываем меню при клике (через JS) */
     }
 
     .main-menu a {
         display: block;
         padding: 15px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #eee;
+        text-align: center;
     }
 
     .hero-title { font-size: 32px; }
 }
 
-/* 2. Планшети (768px) */
+/* 2. Планшеты (768px и меньше) */
 @media (max-width: 768px) {
-    .col-md-6, .col-md-4 {
+    /* Делаем колонки на весь экран */
+    .col-md-6, .col-md-4, .col-md-7, .col-md-5 {
         width: 100% !important;
         flex: 0 0 100%;
         max-width: 100%;
         text-align: center !important;
-    }
-
-    .vm-image-style {
-        margin-top: 20px;
-        width: 100%;
-        height: auto;
     }
 
     .footer-main-row {
@@ -67,35 +67,45 @@
         gap: 20px;
     }
 
-    /* Таблиця характеристик у картці товару */
+    /* Таблица характеристик (в один столбик) */
     .char-table, .char-table tr, .char-table td {
         display: block;
-        width: 100%;
+        width: 100% !important;
+        padding: 10px 0 !important;
     }
 }
 
-/* 3. Великі смартфони (640px) */
+/* 3. Большие смартфоны (640px) */
 @media (max-width: 640px) {
-    .hero-wrapper { height: auto; padding: 100px 0; }
     .activities-title { font-size: 24px; }
     .product-title { font-size: 28px; }
 }
 
-/* 4. Смартфони (480px) */
+/* 4. Смартфоны (480px - iPhone 6, 7, 8) */
 @media (max-width: 480px) {
-    .search-input { width: 150px; }
+    .search-input { width: 120px; }
+    .search-label { display: none; } /* Скроем слово SEARCH чтобы сэкономить место */
     .btn-send { width: 100%; margin-top: 10px; }
+    
+    /* Для страницы контактов */
     .d-flex.align-items-center { flex-direction: column; }
     .captcha-img { margin-bottom: 10px; margin-right: 0 !important; }
 }
 
-/* 5. iPhone 4 та найменші екрани (320px) */
+/* 5. iPhone 4 и самые маленькие экраны (320px) */
 @media (max-width: 320px) {
     body { font-size: 13px; }
-    .main-logo { width: 180px; }
-    .hero-title { font-size: 22px; }
+    .main-logo { width: 150px; }
+    .hero-title { font-size: 20px; }
     .section-dots { font-size: 18px; }
 }
 
-/* Додаткові стилі для функціоналу */
-.menu-toggle { display: none; } /* Ховаємо кнопку на десктопі */
+/* Скрываем кнопку бургер на компьютерах (больше 1024px) */
+@media (min-width: 1025px) {
+    .menu-toggle {
+        display: none !important;
+    }
+    .main-menu {
+        display: flex !important;
+    }
+}
