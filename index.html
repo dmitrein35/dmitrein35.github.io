@@ -8,6 +8,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Стили для превращения горизонтальной ленты в вертикальную */
+        .products-list {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            background: #fff;
+        }
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+            margin: 10px;
+        }
+        .product-item img {
+            max-width: 60px;
+            margin-bottom: 10px;
+        }
+        .product-item p {
+            font-size: 14px;
+            color: #4b6352;
+            font-weight: bold;
+        }
+
+        /* Адаптив: на экранах меньше 768px выстраиваем вертикально [cite: 11, 13] */
+        @media (max-width: 768px) {
+            .products-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-item {
+                margin-bottom: 30px;
+                width: 100%;
+            }
+            .product-item p {
+                font-size: 18px; /* Немного крупнее для читаемости на мобилках */
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -43,9 +87,36 @@
     </div>
 
     <div class="products-strip">
-        <div class="container-fluid text-center p-0">
-            <div class="products-banner-wrapper">
-                <img src="images/Products.png" alt="Products" class="products-full-img">
+        <div class="container">
+            <div class="products-list">
+                <div class="product-item">
+                    <img src="images/wheat_icon.png" alt="Wheat">
+                    <p>Wheat</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/watermelon_icon.png" alt="Watermelon">
+                    <p>Confection Watermelon</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/clover_icon.png" alt="Clover">
+                    <p>Clover</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/sunflower_icon.png" alt="Sunflower">
+                    <p>Confection Sunflower</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/tomato_icon.png" alt="Tomato">
+                    <p>Tomato</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/eggplant_icon.png" alt="Eggplant">
+                    <p>Eggplant P/O</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/ornamental_icon.png" alt="Ornamental">
+                    <p>Ornamental Sunflower</p>
+                </div>
             </div>
         </div>
     </div>
