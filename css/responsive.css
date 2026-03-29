@@ -6,12 +6,14 @@
 img, 
 .tomato-banner-img, 
 .product-main-img, 
-.img-fluid {
+.img-fluid,
+.contact-hero-img,
+.products-full-img {
     max-width: 100% !important;
     height: auto !important;
 }
 
-/* Убирает горизонтальную прокрутку, если что-то вылезет */
+/* Убирает горизонтальную прокрутку */
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -71,7 +73,7 @@ html, body {
     .hero-title { font-size: 32px; }
 }
 
-/* 2. Планшеты (768px и меньше) */
+/* 2. Планшеты и смартфоны (768px и меньше) */
 @media (max-width: 768px) {
     /* Делаем все колонки на весь экран */
     .col-md-6, .col-md-4, .col-md-7, .col-md-5, .col-12 {
@@ -81,12 +83,33 @@ html, body {
         text-align: center !important;
     }
 
+    /* Центрируем блоки Vision/Mission и картинки */
+    .union-bg-section .row {
+        flex-direction: column;
+    }
+    .vm-image-style {
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Настройка вертикального фото продуктов (vertikal.png) */
+    .products-full-img {
+        max-width: 80% !important; /* Чтобы вертикалка не была на весь экран */
+        margin: 0 auto;
+    }
+
     .footer-main-row {
         flex-direction: column;
         gap: 20px;
+        text-align: center;
     }
 
-    /* Таблица характеристик в карточке товара */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Таблица характеристик */
     .char-table, .char-table tr, .char-table td {
         display: block;
         width: 100% !important;
@@ -94,37 +117,36 @@ html, body {
     }
 }
 
-/* 3. Большие смартфоны (640px) */
-@media (max-width: 640px) {
-    .activities-title { font-size: 24px; }
-    .product-title { font-size: 28px; }
-    .section-heading { font-size: 22px; }
-}
-
-/* 4. Смартфоны (480px - iPhone 6, 7, 8) */
+/* 3. Смартфоны (480px и меньше) */
 @media (max-width: 480px) {
     .search-input { width: 120px; }
     .search-label { display: none; } 
     .btn-send { width: 100%; margin-top: 10px; }
     
     .d-flex.align-items-center { flex-direction: column; }
-    .captcha-img { margin-bottom: 10px; margin-right: 0 !important; }
+    .captcha-img { margin-bottom: 15px; margin-right: 0 !important; }
+
+    /* Исправляем высоту баннеров, чтобы они не были "ниточкой" */
+    .hero-banner img, .contact-hero-img {
+        min-height: 200px !important;
+        object-fit: cover;
+    }
 }
 
-/* 5. iPhone 4 и самые маленькие экраны (320px) */
+/* 4. iPhone 4 и экраны 320px */
 @media (max-width: 320px) {
     body { font-size: 13px; }
     .main-logo { width: 150px !important; }
     .hero-title { font-size: 20px; }
     .section-dots { font-size: 18px; }
     
-    /* Дополнительно сжимаем банер для совсем крошечных экранов */
+    /* Дополнительно сжимаем лого и баннеры */
     .tomato-banner-container {
         height: auto !important;
     }
 }
 
-/* Скрываем кнопку бургер на компьютерах */
+/* Прячем кнопку бургер на десктопах */
 @media (min-width: 1025px) {
     .menu-toggle {
         display: none !important;
