@@ -12,15 +12,13 @@
         /* Стили для корректного отображения цельной картинки */
         .products-banner-wrapper {
             width: 100%;
-            overflow-x: auto; /* Добавляет прокрутку, если картинка шире экрана */
             background-color: #fff;
             padding: 20px 0;
-            -webkit-overflow-scrolling: touch; /* Плавный скролл на iPhone */
         }
         .products-full-img {
             display: block;
             margin: 0 auto;
-            max-width: 100%; /* Картинка будет сжиматься под ширину экрана */
+            max-width: 100%;
             height: auto;
         }
     </style>
@@ -61,7 +59,10 @@
     <div class="products-strip">
         <div class="container-fluid text-center p-0">
             <div class="products-banner-wrapper">
-                <img src="images/Products.png" alt="Products" class="products-full-img">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/vertikal.png">
+                    <img src="images/Products.png" alt="Products" class="products-full-img">
+                </picture>
             </div>
         </div>
     </div>
