@@ -1,4 +1,23 @@
 /* ============================================================
+   ОБЩИЕ АДАПТИВНЫЕ ПРАВИЛА (Для всех экранов)
+   ============================================================ */
+
+/* Исправляет баг с огромными картинками и банерами */
+img, 
+.tomato-banner-img, 
+.product-main-img, 
+.img-fluid {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Убирает горизонтальную прокрутку, если что-то вылезет */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ============================================================
    RESPONSIVE STYLES (Desktop First)
    ============================================================ */
 
@@ -17,7 +36,7 @@
 
     /* Мобильное меню "Бургер" */
     .menu-toggle {
-        display: inline-block; /* Показываем кнопку */
+        display: inline-block; 
         background: #7c945b;
         color: white;
         border: none;
@@ -29,7 +48,7 @@
     }
 
     .main-menu {
-        display: none; /* Прячем обычное горизонтальное меню */
+        display: none; 
         flex-direction: column;
         background: #ffffff;
         width: 100%;
@@ -39,7 +58,7 @@
     }
 
     .main-menu.active {
-        display: flex; /* Показываем меню при клике (через JS) */
+        display: flex; 
     }
 
     .main-menu a {
@@ -54,11 +73,11 @@
 
 /* 2. Планшеты (768px и меньше) */
 @media (max-width: 768px) {
-    /* Делаем колонки на весь экран */
-    .col-md-6, .col-md-4, .col-md-7, .col-md-5 {
+    /* Делаем все колонки на весь экран */
+    .col-md-6, .col-md-4, .col-md-7, .col-md-5, .col-12 {
         width: 100% !important;
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
         text-align: center !important;
     }
 
@@ -67,7 +86,7 @@
         gap: 20px;
     }
 
-    /* Таблица характеристик (в один столбик) */
+    /* Таблица характеристик в карточке товара */
     .char-table, .char-table tr, .char-table td {
         display: block;
         width: 100% !important;
@@ -79,15 +98,15 @@
 @media (max-width: 640px) {
     .activities-title { font-size: 24px; }
     .product-title { font-size: 28px; }
+    .section-heading { font-size: 22px; }
 }
 
 /* 4. Смартфоны (480px - iPhone 6, 7, 8) */
 @media (max-width: 480px) {
     .search-input { width: 120px; }
-    .search-label { display: none; } /* Скроем слово SEARCH чтобы сэкономить место */
+    .search-label { display: none; } 
     .btn-send { width: 100%; margin-top: 10px; }
     
-    /* Для страницы контактов */
     .d-flex.align-items-center { flex-direction: column; }
     .captcha-img { margin-bottom: 10px; margin-right: 0 !important; }
 }
@@ -95,12 +114,17 @@
 /* 5. iPhone 4 и самые маленькие экраны (320px) */
 @media (max-width: 320px) {
     body { font-size: 13px; }
-    .main-logo { width: 150px; }
+    .main-logo { width: 150px !important; }
     .hero-title { font-size: 20px; }
     .section-dots { font-size: 18px; }
+    
+    /* Дополнительно сжимаем банер для совсем крошечных экранов */
+    .tomato-banner-container {
+        height: auto !important;
+    }
 }
 
-/* Скрываем кнопку бургер на компьютерах (больше 1024px) */
+/* Скрываем кнопку бургер на компьютерах */
 @media (min-width: 1025px) {
     .menu-toggle {
         display: none !important;
