@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
     <title>Agridera - Contact Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         .contact-form-wrapper { padding: 60px 0; background-color: #f9f9f9; }
         .form-label { font-weight: bold; color: #4b6352; font-size: 14px; margin-bottom: 5px; display: block; }
@@ -33,6 +34,9 @@
                     <input type="text" class="search-input">
                     <i class="fas fa-search"></i>
                 </div>
+                <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <nav class="main-menu">
                     <a href="index.html">HOME</a>
                     <a href="#">COMPANY PROFILE</a>
@@ -107,10 +111,10 @@
                         
                         <div class="form-group mt-4">
                             <label class="form-label d-block">Please type this code</label>
-                            <div class="d-flex align-items-center">
-                                <div class="captcha-img mr-3">7 c j 3</div>
-                                <input type="text" class="form-control mr-3" style="width: 150px;">
-                                <button type="submit" class="btn-send">Send Message</button>
+                            <div class="d-flex align-items-center flex-wrap">
+                                <div class="captcha-img mr-3 mb-2">7 c j 3</div>
+                                <input type="text" class="form-control mr-3 mb-2" style="width: 150px;">
+                                <button type="submit" class="btn-send mb-2">Send Message</button>
                             </div>
                         </div>
                     </div>
@@ -142,7 +146,7 @@
                 <a href="#">SITEMAP</a>
                 <a href="contact.html">CONTACT</a>
             </nav>
-            <div class="social-icons-box">
+            <div class="social-icons">
                 <a href="#" class="social-dot"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-dot"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="social-dot"><i class="fab fa-youtube"></i></a>
