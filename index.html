@@ -2,11 +2,12 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
     <title>Agridera Seeds - Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -16,19 +17,25 @@
                 <img src="images/logo.png" alt="Logo" class="main-logo">
             </a>
             
-            <div class="text-right">
+            <div class="text-right header-actions">
                 <div class="search-field mb-2">
                     <span class="search-label">SEARCH</span>
                     <input type="text" class="search-input">
                     <i class="fas fa-search"></i>
                 </div>
+                
+                <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+
                 <nav class="main-menu">
                     <a href="index.html">HOME</a>
                     <a href="#">COMPANY PROFILE</a>
                     <a href="tomato.html">PRODUCTS</a>
                     <a href="#">SERVICES</a>
                     <a href="#">R & D</a>
-                    <a href="contact.html">CONTACT</a> </nav>
+                    <a href="contact.html">CONTACT</a> 
+                </nav>
             </div>
         </header>
         <div class="hero-content container text-center">
@@ -56,19 +63,19 @@
                         We also support the global need of feeding the growing population.
                     </p>
                 </div>
-                <div class="col-md-6 d-flex justify-content-end">
+                <div class="col-md-6 d-flex justify-content-end vision-img-col">
                     <img src="images/image3.png" alt="Vision" class="vm-image-style">
                 </div>
             </div>
 
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 order-2 order-md-1">
                     <div class="mission-img-container">
                         <img src="images/image2.png" alt="Mission" class="vm-image-style">
                         <div class="video-play-btn"></div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 order-1 order-md-2">
                     <h2 class="activities-title" style="text-align: left; margin-top: 0;">Mission</h2>
                     <div class="section-dots" style="text-align: left;">*****</div>
                     <p class="section-desc">
@@ -112,7 +119,7 @@
 
     <footer class="footer-dark py-4">
         <div class="container">
-            <div class="footer-main-row">
+            <div class="footer-main-row d-flex justify-content-between align-items-center flex-wrap">
                 <nav class="footer-links">
                     <a href="#">PROFILE</a> 
                     <a href="#">MANAGEMENT</a> 
