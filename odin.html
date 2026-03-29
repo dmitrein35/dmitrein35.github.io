@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <header class="container-fluid">
-        <div class="container d-flex justify-content-between align-items-center">
+    <header class="bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center py-4">
             <a href="index.html">
                <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
             </a>
@@ -22,7 +22,7 @@
                    <input type="text" class="search-input">
                    <i class="fas fa-search ml-2" style="color: #4b6352;"></i>
                </div>
-               <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')">
+               <button class="menu-toggle">
                    <i class="fas fa-bars"></i>
                </button>
                <nav class="main-menu">
@@ -39,7 +39,7 @@
 
     <div class="product-page-wrapper">
         <div class="container">
-            <a href="tomato.html" class="back-link">
+            <a href="tomato.html" class="back-link mt-3 d-inline-block">
                 <i class="fas fa-long-arrow-alt-left"></i> Return to all tomatoes
             </a>
 
@@ -52,9 +52,9 @@
                        Red Standard Round
                    </h2>
                    
-                   <div class="section-dots text-left">*****</div>
+                   <div class="section-dots text-left mb-4">*****</div>
 
-                   <div class="high-yield-box">
+                   <div class="high-yield-box mb-4">
                        <img src="images/pomidori.png" alt="High Yield Quality" class="img-fluid">
                    </div>
 
@@ -65,57 +65,57 @@
                        <span class="text-muted">HR: ToMV:0-2; Fol: 1,2; Ve/Vd; <br> IR: TYLCV</span>
                    </div>
 
-                   <table class="char-table">
+                   <table class="char-table w-100">
                        <tr>
-                           <td class="char-cell">
+                           <td class="char-cell align-top">
                                 <h4 class="char-sub-title">Plant</h4>
                                 <ul class="char-list">
-                                   <li>Strong vigor that provides good leaf coverage.</li>
+                                    <li>Strong vigor that provides good leaf coverage.</li>
                                     <li>Very high productivity with good fruit setting.</li>
-                                   <li>Early matured variety.</li>
+                                    <li>Early matured variety.</li>
                                 </ul>
                            </td>
-                           <td class="char-cell cell-spacing">
+                           <td class="char-cell cell-spacing align-top">
                                 <h4 class="char-sub-title">Cycle</h4>
                                 <ul class="char-list">
-                                   <li>Spring</li>
-                                   <li>Fall</li>
-                                   <li>Winter</li>
+                                    <li>Spring</li>
+                                    <li>Fall</li>
+                                    <li>Winter</li>
                                 </ul>
                            </td>
                        </tr>
                        <tr>
-                           <td class="char-cell pt-4">
+                           <td class="char-cell pt-4 align-top">
                                 <h4 class="char-sub-title">Fruit</h4>
                                 <ul class="char-list">
-                                   <li>Long shelf life on plant and post harvest.</li>
-                                   <li>Nice shiny attractive deep red color.</li>
-                                   <li>Average fruit size: 140 – 160 grams.</li>
+                                    <li>Long shelf life on plant and post harvest.</li>
+                                    <li>Nice shiny attractive deep red color.</li>
+                                    <li>Average fruit size: 140 – 160 grams.</li>
                                 </ul>
                            </td>
-                           <td class="char-cell cell-spacing pt-4">
+                           <td class="char-cell cell-spacing pt-4 align-top">
                                 <h4 class="char-sub-title">Color</h4>
                                 <ul class="char-list">
-                                   <li>Red</li>
+                                    <li>Red</li>
                                 </ul>
                            </td>
                        </tr>
                    </table>
                </div>
 
-               <div class="col-md-5 download-container-fix">
-                   <img src="images/Tomato3.png" alt="TAG 1002" class="product-main-img img-fluid">
-                   <div class="text-right w-100">
+               <div class="col-md-5 mt-4 mt-md-0 text-center">
+                   <img src="images/Tomato3.png" alt="TAG 1002" class="product-main-img img-fluid mb-3">
+                   <div class="text-md-right text-center">
                         <a href="#" class="btn-download-pdf">
-                           <i class="far fa-file-pdf mr-2"></i> Download PDF
-                       </a>
+                            <i class="far fa-file-pdf mr-2"></i> Download PDF
+                        </a>
                    </div>
                </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer-dark py-4">
+    <footer class="footer-dark py-4 mt-5">
         <div class="container">
             <div class="footer-main-row d-flex justify-content-between align-items-center flex-wrap">
                <nav class="footer-links">
@@ -125,7 +125,8 @@
                    <a href="#">R&D</a>
                    <a href="#">LINKS</a>
                    <a href="#">SITEMAP</a>
-                   <a href="contact.html">CONTACT</a> </nav>
+                   <a href="contact.html">CONTACT</a> 
+               </nav>
                <div class="social-icons">
                    <a href="#" class="social-dot"><i class="fab fa-linkedin-in"></i></a>
                    <a href="#" class="social-dot"><i class="fab fa-instagram"></i></a>
@@ -140,6 +141,12 @@
            </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-menu').classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
