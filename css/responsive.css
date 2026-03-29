@@ -1,0 +1,101 @@
+/* ============================================================
+   RESPONSIVE STYLES (Desktop First)
+   ============================================================ */
+
+/* 1. Планшети та малі ноутбуки (1024px) */
+@media (max-width: 1024px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: center !important;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Мобільне меню "Бургер" */
+    .menu-toggle {
+        display: inline-block;
+        background: #7c945b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    .main-menu {
+        display: none; /* Ховаємо звичайне меню */
+        flex-direction: column;
+        background: #f8f9fa;
+        width: 100%;
+    }
+
+    .main-menu.active {
+        display: flex; /* Показуємо при кліку */
+    }
+
+    .main-menu a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hero-title { font-size: 32px; }
+}
+
+/* 2. Планшети (768px) */
+@media (max-width: 768px) {
+    .col-md-6, .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center !important;
+    }
+
+    .vm-image-style {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-main-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Таблиця характеристик у картці товару */
+    .char-table, .char-table tr, .char-table td {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* 3. Великі смартфони (640px) */
+@media (max-width: 640px) {
+    .hero-wrapper { height: auto; padding: 100px 0; }
+    .activities-title { font-size: 24px; }
+    .product-title { font-size: 28px; }
+}
+
+/* 4. Смартфони (480px) */
+@media (max-width: 480px) {
+    .search-input { width: 150px; }
+    .btn-send { width: 100%; margin-top: 10px; }
+    .d-flex.align-items-center { flex-direction: column; }
+    .captcha-img { margin-bottom: 10px; margin-right: 0 !important; }
+}
+
+/* 5. iPhone 4 та найменші екрани (320px) */
+@media (max-width: 320px) {
+    body { font-size: 13px; }
+    .main-logo { width: 180px; }
+    .hero-title { font-size: 22px; }
+    .section-dots { font-size: 18px; }
+}
+
+/* Додаткові стилі для функціоналу */
+.menu-toggle { display: none; } /* Ховаємо кнопку на десктопі */
