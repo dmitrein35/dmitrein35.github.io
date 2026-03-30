@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <title>Agridera - Cara Cara</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center py-4">
+            <a href="index.html"><img src="images/logo.png" alt="Agridera Logo" class="main-logo"></a>
+            <div class="text-right">
+               <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+               <nav class="main-menu">
+                   <a href="index.html">HOME</a>
+                   <a href="tomato.html">PRODUCTS</a>
+               </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-page-wrapper">
+        <div class="container">
+            <a href="index.html" class="back-link mt-3 d-inline-block">
+                <i class="fas fa-long-arrow-alt-left"></i> Return to all products
+            </a>
+            <div class="row mt-4">
+               <div class="col-md-7">
+                   <h1 class="product-title">CARA CARA</h1>
+                   <h2 class="product-subtitle">Pink Navel Specialty <br> Low Acid Selection</h2>
+                   <div class="section-dots text-left mb-4">*****</div>
+                   <h3 class="char-title">CHARACTERISTICS</h3>
+                   <div class="resistance-block mb-4">
+                       <strong>Key Features</strong><br>
+                       <span class="text-muted">Rose-colored flesh; Seedless; High Vitamin A content</span>
+                   </div>
+                   <table class="char-table w-100">
+                       <tr>
+                           <td class="char-cell align-top">
+                                <h4 class="char-sub-title">Fruit</h4>
+                                <ul class="char-list">
+                                    <li>Beautiful pink interior.</li>
+                                    <li>Exceptionally sweet.</li>
+                                </ul>
+                           </td>
+                           <td class="char-cell cell-spacing align-top">
+                                <h4 class="char-sub-title">Season</h4>
+                                <ul class="char-list">
+                                    <li>Winter</li>
+                                    <li>Spring</li>
+                                </ul>
+                           </td>
+                       </tr>
+                   </table>
+               </div>
+               <div class="col-md-5 mt-4 mt-md-0 text-center">
+                   <img src="images/orange4.jpg" alt="Cara Cara" class="product-main-img img-fluid mb-3">
+                   <a href="#" class="btn-download-pdf"><i class="far fa-file-pdf mr-2"></i> Download PDF</a>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-dark py-4 mt-5">
+        <div class="container text-center">
+            <p class="m-0">AGRIDERA SEEDS & AGRICULTURE LTD. © 2026</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
