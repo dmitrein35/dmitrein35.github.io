@@ -29,17 +29,36 @@
             border-radius: 8px;
             border: 1px solid #eee;
             padding: 0 !important;
+            transition: 0.3s;
         }
+        
+        /* Стили для ссылок внутри карточек */
+        .tomato-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 0;
+        }
+
         .tomato-img {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
             display: block !important;
+            cursor: pointer;
+            transition: 0.4s ease;
         }
+
         .card-product {
             border: none;
             transition: 0.3s;
             background: transparent;
+        }
+
+        /* Эффект увеличения всей карточки при наведении */
+        .card-product:hover .tomato-item {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
         }
     </style>
 </head>
@@ -78,8 +97,8 @@
 
     <div class="bg-custom-variant">
         <main class="container py-5">
-            <h1 class="section-heading text-dark-blue">Agridera Fresh Market Orange Hybrids</h1>
-            <div class="section-dots mb-4">*****</div>
+            <h1 class="section-heading text-dark-blue text-center">Agridera Fresh Market Orange Hybrids</h1>
+            <div class="section-dots mb-4 text-center">*****</div>
 
             <div class="row section-desc mb-4">
                 <div class="col-12">
@@ -118,7 +137,9 @@
                 <div class="col-md-4 col-sm-6 mb-4" v-for="product in products.slice(0, 5)" :key="product.id">
                     <div class="card-product text-center">
                         <div class="tomato-item mb-3 shadow-sm">
-                            <img :src="product.image" :alt="product.title" class="tomato-img">
+                            <a :href="product.link">
+                                <img :src="product.image" :alt="product.title" class="tomato-img">
+                            </a>
                         </div>
                         <h5 v-if="product.title" class="font-weight-bold text-dark">{{ product.title }}</h5>
                         <p v-if="product.short_text" class="small text-secondary">{{ product.short_text }}</p>
