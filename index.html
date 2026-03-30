@@ -2,24 +2,36 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=320, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agridera Seeds - Home</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
     <style>
-        /* Стили для корректного отображения цельной картинки */
+        .products-strip {
+            width: 100%;
+            overflow: hidden;
+            background-color: #fff;
+        }
         .products-banner-wrapper {
             width: 100%;
-            background-color: #fff;
             padding: 20px 0;
+            display: flex;
+            justify-content: center;
         }
         .products-full-img {
             display: block;
-            margin: 0 auto;
             max-width: 100%;
             height: auto;
+        }
+        
+        /* Фикс для Safari на iPhone */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -50,6 +62,7 @@
                 </nav>
             </div>
         </header>
+
         <div class="hero-content container text-center">
             <h1 class="hero-title">Agridera Seeds and Agriculture Ltd</h1>
             <a href="#" class="btn-read-more">READ MORE</a>
