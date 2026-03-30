@@ -29,7 +29,7 @@ var app = new Vue({
                 title: "Cara Cara", 
                 short_text: "Рожевий апельсин з низькою кислотністю.", 
                 image: "images/orange4.jpg",
-                link: "chetyre.html"
+                link: "chetiri.html" // ИСПРАВЛЕНО: теперь совпадает с файлом chetiri.html
             },
             { 
                 id: 5, 
