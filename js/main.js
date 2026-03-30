@@ -1,27 +1,38 @@
-new Vue({
+var app = new Vue({
     el: '#app',
     data: {
+        // Твой массив с 5 товарами (Вариант 2 - Апельсины)
         products: [
-            { id: 1, title: "Orange 1", short_text: "Description 1", image: "images/Tomato1.png" },
-            { id: 2, title: "Orange 2", short_text: "Description 2", image: "images/Tomato2.png" },
-            { id: 3, title: "Orange 3", short_text: "Description 3", image: "images/Tomato3.png" },
-            { id: 4, title: "Orange 4", short_text: "Description 4", image: "images/Tomato4.png" },
-            { id: 5, title: "Orange 5", short_text: "Description 5", image: "images/Tomato5.png" },
-            { id: 6, title: "Orange 6", short_text: "Description 6", image: "images/Tomato6.png" },
-            { id: 7, title: "Orange 7", short_text: "Description 7", image: "images/Tomato1.png" }, // добавь свои новые фото
-            { id: 8, title: "Orange 8", short_text: "Description 8", image: "images/Tomato2.png" }
-        ],
-        cart: JSON.parse(localStorage.getItem('cart')) || []
-    },
-    methods: {
-        addToCart(id) {
-            if (!this.cart.includes(id)) {
-                this.cart.push(id);
-                localStorage.setItem('cart', JSON.stringify(this.cart));
+            { 
+                id: 1, 
+                title: "Orange Navel", 
+                short_text: "Соковитий сорт з яскравим смаком.", 
+                image: "img/orange1.jpg" 
+            },
+            { 
+                id: 2, 
+                title: "Valencia Orange", 
+                short_text: "Найкращий вибір для свіжого соку.", 
+                image: "img/orange2.jpg" 
+            },
+            { 
+                id: 3, 
+                title: "Blood Orange", 
+                short_text: "Унікальний сорт з червоною м'якоттю.", 
+                image: "img/orange3.jpg" 
+            },
+            { 
+                id: 4, 
+                title: "Cara Cara", 
+                short_text: "Рожевий апельсин з низькою кислотністю.", 
+                image: "img/orange4.jpg" 
+            },
+            { 
+                id: 5, 
+                title: "Seville Orange", 
+                short_text: "Гіркуватий сорт для кращого мармеладу.", 
+                image: "img/orange5.jpg" 
             }
-        },
-        checkInCart(id) {
-            return this.cart.includes(id);
-        }
+        ]
     }
 });
