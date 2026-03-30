@@ -2,16 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=320, initial-scale=1.0">
-    <title>Agridera - Tomato Hybrids</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agridera - Orange Hybrids</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/main.js" defer></script>
+
+    <style>
+        /* Пастельный фон по заданию (Вариант 2 - Апельсины) */
+        .bg-custom-variant {
+            background-color: #fff4e6 !important;
+        }
+        /* Фиксация высоты блоков с изображениями (ПР6 пункт 7) */
+        .tomato-item {
+            height: 220px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 8px;
+        }
+        .tomato-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .card-product {
+            border: none;
+            transition: 0.3s;
+            background: transparent;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="bg-white border-bottom">
+<div id="app"> <header class="bg-white border-bottom">
         <div class="container d-flex justify-content-between align-items-center py-4">
             <a href="index.html">
                <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
@@ -22,7 +53,7 @@
                    <input type="text" class="search-input">
                    <i class="fas fa-search"></i>
                </div>
-               <button class="menu-toggle">
+               <button class="menu-toggle" onclick="document.querySelector('.main-menu').classList.toggle('active')">
                    <i class="fas fa-bars"></i>
                </button>
                <nav class="main-menu">
@@ -38,44 +69,44 @@
     </header>
 
     <section class="tomato-banner-container">
-        <img src="images/image7.png" alt="Tomato Banner" class="tomato-banner-img">
+        <img src="images/orange-banner.png" alt="Orange Banner" class="tomato-banner-img">
     </section>
 
-    <div class="bg-light-pink">
+    <div class="bg-custom-variant">
         <main class="container py-5">
-            <h1 class="section-heading text-dark-blue">Agridera Fresh Market Tomato Hybrids</h1>
+            <h1 class="section-heading text-dark-blue">Agridera Fresh Market Orange Hybrids</h1>
             <div class="section-dots mb-4">*****</div>
 
             <div class="row section-desc mb-4">
                 <div class="col-12">
-                    <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of tomato seeds. <strong>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</strong> In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
-                    <p>Currently, emphasis is placed on combining Tomato Yellow Leaf Curl Virus (TYLCV) and Tomato Spotted Wilt Virus (TSWV) resistances with other soil borne diseases into superior tomato breeding lines and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistance to ToBRFV virus (Tomato Brown Rugose Fruit Virus).</p>
-                    <p>In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, red fruit color, flavor, crack resistance, shelf life, and high/low temperature fruit set. Combinations of quality features and disease resistance are sought in a variety of types, namely round and elongated shapes.</p>
+                    <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of seeds. <strong>We invest intensively in research and development to provide solutions to growers and consumers.</strong></p>
+                    <p>Currently, emphasis is placed on combining disease resistances with high quality traits adapted to different markets globally.</p>
+                    <p>In terms of horticultural traits, breeding is for earliness, firmness, color, flavor, and shelf life.</p>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col-12 border-left-red pl-4">
-                    <p class="m-0">Agridera Tomato breeding programs are focusing on three main segments: Greenhouse Indeterminate Tomatoes, Open-field Indeterminate Tomatoes, and Bush Type Open-field Tomatoes.</p>
+                    <p class="m-0">Our breeding programs are focusing on three main segments: Greenhouse, Open-field Indeterminate, and Bush Type Varieties.</p>
                 </div>
             </div>
 
             <div class="breeding-programs-box mb-4">
                 <div class="row">
                     <div class="col-md-4 breeding-col mb-3">
-                        <h5 class="font-weight-bold">Greenhouse Tomato Breeding Program</h5>
+                        <h5 class="font-weight-bold">Greenhouse Breeding Program</h5>
                         <hr>
-                        <p class="small">This breeding is aimed for the Spanish and Turkish markets. For single and cluster picks, round fruit shape and resistances of TYLCV, TSWV, Nematodes and FORL. Some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+                        <p class="small">Aimed for the Spanish and Turkish markets. Focus on yield and resistance.</p>
                     </div>
                      <div class="col-md-4 breeding-col mb-3">
-                        <h5 class="font-weight-bold">Open-field Indeterminate Tomatoes</h5>
+                        <h5 class="font-weight-bold">Open-field Varieties</h5>
                         <hr>
-                        <p class="small">This breeding is for Brazilian, Moroccan, and Turkish markets. The main focus is on large round shape fruits (200 grams plus); and resistances of TYLCV, TSWV, Nematodes and FORL.</p>
+                        <p class="small">Focus on large fruits (200 grams plus) and soil borne disease resistance.</p>
                     </div>
                     <div class="col-md-4 breeding-col mb-3">
-                        <h5 class="font-weight-bold">Open-field Bush Type Tomatoes</h5>
+                        <h5 class="font-weight-bold">Specialty Breeding</h5>
                         <hr>
-                        <p class="small">This breeding is for Mediterranean markets. We breed round and elongated shapes, standard sizes (140-180 grams), and beef sizes (min. 180 grams up to 300 grams and more).</p>
+                        <p class="small">We breed unique shapes and sizes for diverse Mediterranean markets.</p>
                     </div>
                 </div>
             </div>
@@ -86,28 +117,26 @@
                 </div>
             </div>
 
-            <div class="row tomato-grid-no-bg">
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="tomato-item"><img src="images/Tomato1.png" alt="Tomato 1" class="img-fluid tomato-img"></div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="tomato-item"><img src="images/Tomato2.png" alt="Tomato 2" class="img-fluid tomato-img"></div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="tomato-item">
-                        <a href="odin.html">
-                            <img src="images/Tomato3.png" alt="Tomato 3" class="img-fluid tomato-img clickable-product">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4" v-for="product in products" :key="product.id">
+                    <div class="card-product text-center">
+                        <div class="tomato-item mb-3 shadow-sm">
+                            <img :src="product.image" :alt="product.title" class="tomato-img">
+                        </div>
+                        <h5 class="font-weight-bold text-dark">{{ product.title }}</h5>
+                        <p class="small text-secondary">{{ product.short_text }}</p>
+                        
+                        <button v-if="!checkInCart(product.id)" 
+                                @click="addToCart(product.id)" 
+                                class="btn btn-success btn-sm px-4" 
+                                style="background-color: #7c945b; border: none;">
+                            Add to cart
+                        </button>
+                        
+                        <a v-else href="contact.html" class="btn btn-dark btn-sm px-4">
+                            Go to cart
                         </a>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="tomato-item"><img src="images/Tomato4.png" alt="Tomato 4" class="img-fluid tomato-img"></div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="tomato-item"><img src="images/Tomato5.png" alt="Tomato 5" class="img-fluid tomato-img"></div>
-                </div>
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="tomato-item"><img src="images/Tomato6.png" alt="Tomato 6" class="img-fluid tomato-img"></div>
                 </div>
             </div>
         </main>
@@ -137,14 +166,5 @@
         </div>
     </footer>
 
-    <script>
-        const btn = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.main-menu');
-        
-        btn.addEventListener('click', function() {
-            menu.classList.toggle('active');
-        });
-    </script>
-
-</body>
+</div> </body>
 </html>
