@@ -27,6 +27,7 @@
             justify-content: center;
             background: #fff;
             border-radius: 8px;
+            border: 1px solid #eee;
         }
         .tomato-img {
             width: 100%;
@@ -42,7 +43,8 @@
 </head>
 <body>
 
-<div id="app"> <header class="bg-white border-bottom">
+<div id="app"> 
+    <header class="bg-white border-bottom">
         <div class="container d-flex justify-content-between align-items-center py-4">
             <a href="index.html">
                <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
@@ -111,31 +113,14 @@
                 </div>
             </div>
 
-            <div class="row mb-5">
-                 <div class="col-12 border-left-red pl-4">
-                    <p class="m-0 text-dark-blue"><strong>Agridera operates through international and local distributers around the world.</strong></p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-6 mb-4" v-for="product in products" :key="product.id">
+            <div class="row mt-5">
+                <div class="col-md-4 col-sm-6 mb-4" v-for="product in products.slice(0, 5)" :key="product.id">
                     <div class="card-product text-center">
                         <div class="tomato-item mb-3 shadow-sm">
                             <img :src="product.image" :alt="product.title" class="tomato-img">
                         </div>
-                        <h5 class="font-weight-bold text-dark">{{ product.title }}</h5>
-                        <p class="small text-secondary">{{ product.short_text }}</p>
-                        
-                        <button v-if="!checkInCart(product.id)" 
-                                @click="addToCart(product.id)" 
-                                class="btn btn-success btn-sm px-4" 
-                                style="background-color: #7c945b; border: none;">
-                            Add to cart
-                        </button>
-                        
-                        <a v-else href="contact.html" class="btn btn-dark btn-sm px-4">
-                            Go to cart
-                        </a>
+                        <h5 v-if="product.title" class="font-weight-bold text-dark">{{ product.title }}</h5>
+                        <p v-if="product.short_text" class="small text-secondary">{{ product.short_text }}</p>
                     </div>
                 </div>
             </div>
