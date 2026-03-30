@@ -14,11 +14,11 @@
     <script src="js/main.js" defer></script>
 
     <style>
-        /* Пастельный фон по заданию (Вариант 2 - Апельсины) */
+        /* Пастельный фон по заданию */
         .bg-custom-variant {
             background-color: #fff4e6 !important;
         }
-        /* Фиксация высоты блоков с изображениями (ПР6 пункт 7) */
+        /* Фиксация высоты блоков с изображениями */
         .tomato-item {
             height: 220px !important;
             overflow: hidden !important;
@@ -32,7 +32,6 @@
             transition: 0.3s;
         }
         
-        /* Стили для ссылок внутри карточек */
         .tomato-item a {
             display: block;
             width: 100%;
@@ -55,10 +54,34 @@
             background: transparent;
         }
 
-        /* Эффект увеличения всей карточки при наведении */
         .card-product:hover .tomato-item {
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Стили для структуры как на фото */
+        .red-line-text {
+            border-left: 4px solid #ed1c24;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .white-breeding-box {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .breeding-col h5 {
+            color: #4b6352;
+            text-transform: none;
+            border-bottom: 2px solid #4b6352;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -102,35 +125,37 @@
 
             <div class="row section-desc mb-4">
                 <div class="col-12">
-                    <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of citrus hybrids. <strong>We invest intensively in research and development to provide high-quality solutions to growers and consumers globally.</strong></p>
-                    <p>Currently, emphasis is placed on combining disease resistances with superior Brix levels and fruit quality traits adapted to different markets around the world.</p>
+                    <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of citrus seeds. <strong>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</strong> In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
+                    
+                    <p>Currently, emphasis is placed on combining Citrus Tristeza Virus (CTV) and Citrus Stubborn Disease resistances with other soil-borne diseases into superior orange breeding lines and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistance to Mal Secco and other fungal pathogens.</p>
+                    
+                    <p>In terms of horticultural traits, breeding is for earliness, different fruit sizes, rind thickness, deep orange color, flavor, seedlessness, shelf life, and high juice content. Combinations of quality features and disease resistance are sought in a variety of types, namely navel, common, and pigmented oranges.</p>
                 </div>
             </div>
 
-            <div class="row mb-4">
-                <div class="col-12 border-left-red pl-4">
-                    <p class="m-0">Our breeding programs are focusing on three main segments: Early Season Navels, Mid-Season Universal Hybrids, and Late-Season Juice Varieties.</p>
-                </div>
+            <div class="red-line-text">
+                Agridera Orange breeding programs are focusing on three main segments: Early Season Navels, Mid-Season Universal Hybrids, and Late-Season Juice Varieties.
             </div>
 
-            <div class="breeding-programs-box mb-4">
+            <div class="white-breeding-box">
                 <div class="row">
                     <div class="col-md-4 breeding-col mb-3">
-                        <h5 class="font-weight-bold">Early Navel Program</h5>
-                        <hr>
-                        <p class="small">Aimed for the Spanish and Turkish markets. Focus on easy-peeling traits, large fruit size, and resistance to powdery mildew.</p>
-                    </div>
-                     <div class="col-md-4 breeding-col mb-3">
-                        <h5 class="font-weight-bold">Universal Hybrids</h5>
-                        <hr>
-                        <p class="small">Focus on high sugar content (Brix), large round fruits (250g+), and soil-borne disease resistance like Phytophthora.</p>
+                        <h5 class="font-weight-bold">Early Navel <br> Program</h5>
+                        <p class="small"><strong>This breeding is aimed for the Spanish and Turkish markets.</strong> For early harvest, easy peeling, large fruit size and resistances to common citrus viruses. Some hybrids may include more resistances, such as cold tolerance.</p>
                     </div>
                     <div class="col-md-4 breeding-col mb-3">
-                        <h5 class="font-weight-bold">Juice Varieties</h5>
-                        <hr>
-                        <p class="small">We breed high-yield juice types with thin skin and standard sizes for the Mediterranean processing industry.</p>
+                        <h5 class="font-weight-bold">Universal <br> Hybrids</h5>
+                        <p class="small"><strong>This breeding is for Moroccan, Egyptian, and Brazilian markets.</strong> The main focus is on large round shape fruits (220 grams plus); high Brix levels and resistance to Phytophthora and CTV. In the near future, F3 selections will be included.</p>
+                    </div>
+                    <div class="col-md-4 breeding-col mb-3">
+                        <h5 class="font-weight-bold">Juice & Industrial <br> Varieties</h5>
+                        <p class="small"><strong>This breeding is for Mediterranean processing markets.</strong> We breed round and oval shapes, standard sizes (160-200 grams), and high-yield juice types (min 50% juice content). We combine the resistances to Nematodes as basic resistances.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="red-line-text">
+                Agridera operates through international and local distributors around the world.
             </div>
 
             <div class="row mt-5">
@@ -172,5 +197,6 @@
             AGRIDERA SEEDS & AGRICULTURE LTD. © 2026
         </div>
     </footer>
-</div> </body>
+</div>
+</body>
 </html>
