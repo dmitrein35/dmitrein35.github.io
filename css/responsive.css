@@ -1,16 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
 img, 
 .tomato-banner-img, 
 .product-main-img, 
 .img-fluid,
 .contact-hero-img,
-.products-full-img {
+.products-full-img,
+.vm-image-style {
     max-width: 100% !important;
     height: auto !important;
-}
-
-html, body {
-    overflow-x: hidden;
-    width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -56,6 +65,7 @@ html, body {
         padding: 15px;
         border-bottom: 1px solid #eee;
         text-align: center;
+        width: 100%;
     }
 
     .hero-title { font-size: 32px; }
@@ -67,19 +77,25 @@ html, body {
         flex: 0 0 100% !important;
         max-width: 100% !important;
         text-align: center !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 
     .union-bg-section .row {
-        flex-direction: column;
+        flex-direction: column !important;
+        margin: 0 !important;
     }
+    
     .vm-image-style {
-        margin: 20px auto;
+        margin: 20px auto !important;
         display: block;
+        max-width: 90% !important;
     }
 
     .products-full-img {
-        max-width: 80% !important;
-        margin: 0 auto;
+        max-width: 85% !important; 
+        margin: 0 auto !important;
+        display: block;
     }
 
     .footer-main-row {
@@ -109,20 +125,17 @@ html, body {
     .captcha-img { margin-bottom: 15px; margin-right: 0 !important; }
 
     .hero-banner img, .contact-hero-img {
-        min-height: 200px !important;
+        min-height: 180px !important;
         object-fit: cover;
     }
+    
+    .hero-title { font-size: 24px; }
 }
 
 @media (max-width: 320px) {
     body { font-size: 13px; }
-    .main-logo { width: 150px !important; }
+    .main-logo { width: 140px !important; }
     .hero-title { font-size: 20px; }
-    .section-dots { font-size: 18px; }
-    
-    .tomato-banner-container {
-        height: auto !important;
-    }
 }
 
 @media (min-width: 1025px) {
