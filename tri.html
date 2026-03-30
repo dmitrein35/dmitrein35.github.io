@@ -10,9 +10,29 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <header class="bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center py-4">
+            <a href="index.html"><img src="images/logo.png" alt="Agridera Logo" class="main-logo"></a>
+            <div class="text-right">
+               <div class="search-field mb-2 d-flex align-items-center justify-content-end">
+                   <span class="search-label">SEARCH</span>
+                   <input type="text" class="search-input">
+                   <i class="fas fa-search ml-2" style="color: #4b6352;"></i>
+               </div>
+               <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+               <nav class="main-menu">
+                   <a href="index.html">HOME</a>
+                   <a href="contact.html">CONTACT</a> 
+               </nav>
+            </div>
+        </div>
+    </header>
+
     <div class="product-page-wrapper">
         <div class="container">
-            <a href="index.html" class="back-link mt-3 d-inline-block"><i class="fas fa-long-arrow-alt-left"></i> Return to all oranges</a>
+            <a href="index.html" class="back-link mt-3 d-inline-block">
+                <i class="fas fa-long-arrow-alt-left"></i> Return to all products
+            </a>
             <div class="row mt-4">
                <div class="col-md-7">
                    <h1 class="product-title">BLOOD ORANGE</h1>
@@ -21,15 +41,14 @@
                    <h3 class="char-title">CHARACTERISTICS</h3>
                    <div class="resistance-block mb-4">
                        <strong>Key Features</strong><br>
-                       <span class="text-muted">Unique red flesh; High antioxidants; Raspberry-like aroma</span>
+                       <span class="text-muted">Unique red flesh; Raspberry-like aroma; Antioxidant rich</span>
                    </div>
                    <table class="char-table w-100">
                        <tr>
                            <td class="char-cell align-top">
                                 <h4 class="char-sub-title">Fruit</h4>
                                 <ul class="char-list">
-                                    <li>Distinctive deep ruby color.</li>
-                                    <li>Thinner easy-to-peel skin.</li>
+                                    <li>Deep ruby interior.</li>
                                     <li>Intense sweet-tart flavor.</li>
                                 </ul>
                            </td>
@@ -41,26 +60,25 @@
                                 </ul>
                            </td>
                        </tr>
-                       <tr>
-                           <td class="char-cell pt-4 align-top">
-                                <h4 class="char-sub-title">Specs</h4>
-                                <ul class="char-list">
-                                    <li>Weight: 150 – 250 grams.</li>
-                                    <li>Brix: 11 – 12.5%.</li>
-                                </ul>
-                           </td>
-                           <td class="char-cell cell-spacing pt-4 align-top">
-                                <h4 class="char-sub-title">Color</h4>
-                                <ul class="char-list"><li>Ruby Red</li></ul>
-                           </td>
-                       </tr>
                    </table>
                </div>
                <div class="col-md-5 mt-4 mt-md-0 text-center">
                    <img src="images/orange3.jpg" alt="Blood Orange" class="product-main-img img-fluid mb-3">
+                   <a href="#" class="btn-download-pdf"><i class="far fa-file-pdf mr-2"></i> Download PDF</a>
                </div>
             </div>
         </div>
     </div>
+
+    <footer class="footer-dark py-4 mt-5">
+        <div class="container text-center">
+            <p class="m-0">AGRIDERA SEEDS & AGRICULTURE LTD. © 2026</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
