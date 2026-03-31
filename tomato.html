@@ -159,14 +159,14 @@
             </div>
 
             <div class="row mt-5">
-                <div class="col-md-4 col-sm-6 mb-4" v-for="product in products.slice(0, 5)" :key="product.id">
+                <div class="col-md-4 col-sm-6 mb-4" v-for="product in products" :key="product.id">
                     <div class="card-product text-center">
                         <div class="tomato-item mb-3 shadow-sm">
-                            <a :href="product.link">
+                            <a :href="'tomato_one.html#' + product.id">
                                 <img :src="product.image" :alt="product.title" class="tomato-img">
                             </a>
                         </div>
-                        <h5 v-if="product.title" class="font-weight-bold text-dark">{{ product.title }}</h5>
+                        <h5 v-if="product.title" class="font-weight-bold text-dark text-uppercase">{{ product.title }}</h5>
                         <p v-if="product.short_text" class="small text-secondary">{{ product.short_text }}</p>
                     </div>
                 </div>
