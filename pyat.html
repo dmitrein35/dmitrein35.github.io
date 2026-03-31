@@ -15,7 +15,9 @@
     <div id="app">
         <header class="bg-white border-bottom">
             <div class="container d-flex justify-content-between align-items-center py-4">
-                <a href="index.html"><img src="images/logo.png" alt="Agridera Logo" class="main-logo"></a>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
+                </a>
                 <div class="text-right">
                    <div class="search-field mb-2 d-flex align-items-center justify-content-end">
                        <span class="search-label">SEARCH</span>
@@ -24,7 +26,12 @@
                    </div>
                    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
                    <nav class="main-menu">
-                       <a href="index.html">HOME</a><a href="tomato.html">PRODUCTS</a><a href="contact.html">CONTACT</a> 
+                       <a href="index.html">HOME</a>
+                       <a href="#">COMPANY PROFILE</a>
+                       <a href="tomato.html">PRODUCTS</a>
+                       <a href="#">SERVICES</a>
+                       <a href="#">R & D</a>
+                       <a href="contact.html">CONTACT</a> 
                    </nav>
                 </div>
             </div>
@@ -39,15 +46,19 @@
                    <div class="col-md-7">
                        <h1 class="product-title text-uppercase">Seville Orange</h1>
                        <h2 class="product-subtitle">Bitter Orange Variety <br> Gourmet & Industrial Use</h2>
+                       
                        <div class="section-dots text-left mb-4">*****</div>
+                       
                        <div class="high-yield-box mb-4">
                            <img src="images/natural.png" alt="Premium Quality" style="height: 80px; width: auto;">
                        </div>
+
                        <h3 class="char-title">CHARACTERISTICS</h3>
                        <div class="resistance-block mb-4">
                            <strong>Main Application</strong><br>
                            <span class="text-muted">High Pectin content; Aromatic essential oils; <br> Cold hardy rootstock</span>
                        </div>
+
                        <table class="char-table w-100">
                            <tr>
                                <td class="char-cell align-top">
@@ -96,10 +107,19 @@
             <div class="container">
                 <div class="footer-main-row d-flex justify-content-between align-items-center flex-wrap">
                    <nav class="footer-links">
-                       <a href="tomato.html">PRODUCTS</a><a href="contact.html">CONTACT</a> 
+                       <a href="#">PROFILE</a>
+                       <a href="#">MANAGEMENT</a>
+                       <a href="tomato.html">PRODUCTS</a>
+                       <a href="#">R&D</a>
+                       <a href="#">LINKS</a>
+                       <a href="#">SITEMAP</a>
+                       <a href="contact.html">CONTACT</a> 
                    </nav>
                    <div class="social-icons">
                        <a href="#" class="social-dot"><i class="fab fa-linkedin-in"></i></a>
+                       <a href="#" class="social-dot"><i class="fab fa-instagram"></i></a>
+                       <a href="#" class="social-dot"><i class="fab fa-youtube"></i></a>
+                       <a href="#" class="social-dot"><i class="fab fa-twitter"></i></a>
                        <a href="#" class="social-dot"><i class="fab fa-facebook-f"></i></a>
                    </div>
                 </div>
@@ -112,21 +132,32 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.main-menu').classList.toggle('active');
         });
+
         new Vue({
             el: '#app',
-            data: { productId: 'seville_orange_05', btnVisible: 0 },
+            data: { 
+                productId: 'seville_orange_05', 
+                btnVisible: 0 
+            },
             methods: {
                 addToCart(id) {
                     let cart = JSON.parse(localStorage.getItem('cart')) || {};
-                    if (!cart[id]) { cart[id] = true; localStorage.setItem('cart', JSON.stringify(cart)); }
+                    if (!cart[id]) { 
+                        cart[id] = true; 
+                        localStorage.setItem('cart', JSON.stringify(cart)); 
+                    }
                     this.btnVisible = 1;
                 },
                 checkInCart() {
                     let cart = JSON.parse(localStorage.getItem('cart')) || {};
-                    if (cart[this.productId]) this.btnVisible = 1;
+                    if (cart[this.productId]) {
+                        this.btnVisible = 1;
+                    }
                 }
             },
-            mounted() { this.checkInCart(); }
+            mounted() { 
+                this.checkInCart(); 
+            }
         });
     </script>
 </body>
