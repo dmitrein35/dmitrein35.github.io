@@ -12,7 +12,8 @@
 </head>
 <body>
 
-    <div id="app"> <header class="bg-white border-bottom">
+    <div id="app"> 
+        <header class="bg-white border-bottom">
             <div class="container d-flex justify-content-between align-items-center py-4">
                 <a href="index.html">
                    <img src="images/logo.png" alt="Agridera Logo" class="main-logo">
@@ -148,34 +149,26 @@
     </div>
 
     <script>
-        // Логіка меню (залишаємо як було)
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.main-menu').classList.toggle('active');
         });
 
-        // Ініціалізація Vue
         new Vue({
             el: '#app',
             data: {
-                productId: 'orange_navel_01', // Унікальний ID для цього товару
+                productId: 'orange_navel_01',
                 btnVisible: 0
             },
             methods: {
                 addToCart(id) {
-                    // Отримуємо кошик з localStorage
                     let cart = JSON.parse(localStorage.getItem('cart')) || {};
-                    
-                    // Додаємо товар в об'єкт, якщо його там немає
                     if (!cart[id]) {
                         cart[id] = true;
                         localStorage.setItem('cart', JSON.stringify(cart));
                     }
-                    
-                    // Змінюємо видимість кнопки
                     this.btnVisible = 1;
                 },
                 checkInCart() {
-                    // Перевіряємо наявність товару у localStorage
                     let cart = JSON.parse(localStorage.getItem('cart')) || {};
                     if (cart[this.productId]) {
                         this.btnVisible = 1;
@@ -185,7 +178,6 @@
                 }
             },
             mounted() {
-                // Викликаємо перевірку при завантаженні сторінки
                 this.checkInCart();
             }
         });
