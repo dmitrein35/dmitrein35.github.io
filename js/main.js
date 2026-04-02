@@ -49,7 +49,11 @@ new Vue({
             }
         ],
         product: {},
-        btnVisible: 0
+        btnVisible: 0,
+        // Нові змінні для ПР7
+        cart: [],           // Масив для товарів у кошику
+        contactFields: {},  // Об'єкт для полів форми (v-model)
+        orderMade: false    // Стан для відображення результату після відправки
     },
     methods: {
         getProduct() {
@@ -71,10 +75,37 @@ new Vue({
             if (this.product && cart[this.product.id]) {
                 this.btnVisible = 1;
             }
+        },
+        // ПР7: Функція отримання товарів для сторінки кошика
+        getCart() {
+            let cartData = JSON.parse(localStorage.getItem('cart')) || {};
+            // Фільтруємо основний масив products, залишаючи лише ті, чий ID є в localStorage
+            this.cart = this.products.filter(item => cartData[item.id]);
+        },
+        // ПР7: Видалення товару з кошика та сховища
+        removeFromCart(id) {
+            let cartData = JSON.parse(localStorage.getItem('cart')) || {};
+            if (cartData[id]) {
+                delete cartData[id]; // Видаляємо ключ із об'єкта
+                localStorage.setItem('cart', JSON.stringify(cartData));
+                this.getCart(); // Оновлюємо масив cart, щоб таблиця перерендерилась
+            }
+        },
+        // ПР7: Обробка відправки форми
+        makeOrder() {
+            // Виводимо дані в консоль для перевірки
+            console.log("Замовлення оформлено користувачем:", this.contactFields);
+            
+            this.orderMade = true; // Змінюємо стан (ховаємо форму, показуємо результат)
+            
+            // Видаляємо все з кошика після замовлення
+            localStorage.removeItem('cart');
+            this.cart = [];
         }
     },
     mounted() {
         this.getProduct();
         this.checkInCart();
+        this.getCart(); // Викликаємо при завантаженні, щоб на сторінці контактів одразу був список
     }
 });
